@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #778899;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MenuController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@809932-bigthumbnail.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="509.0" fitWidth="639.0" layoutX="258.0" layoutY="33.0" opacity="0.12" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="58.0" AnchorPane.leftAnchor="258.0" AnchorPane.rightAnchor="130.955810546875" AnchorPane.topAnchor="33.0">
+         <image>
+            <Image url="@logo.png" />
+         </image>
+      </ImageView>
+      <ImageView blendMode="DARKEN" fitHeight="169.0" fitWidth="206.0" layoutX="26.0" layoutY="59.0" pickOnBounds="true">
+         <image>
+            <Image url="@menubutton_02.gif" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+      </ImageView>
+      <JFXButton fx:id="s1" alignment="CENTER" contentDisplay="TOP" layoutX="26.0" layoutY="255.0" onAction="#menu" prefHeight="88.0" prefWidth="206.0" style="-fx-background-color: #b30000;" text="Ajouter" textFill="#fcfafa">
+         <graphic>
+            <ImageView fitHeight="90.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ic_note_add_black_48dp.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <tooltip>
+            <Tooltip text="Ajouter" />
+         </tooltip>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></JFXButton>
+      <JFXButton alignment="CENTER" contentDisplay="TOP" layoutX="26.0" layoutY="402.0" onAction="#stat1" prefHeight="50.0" prefWidth="206.0" style="-fx-background-color: #ffffff;" text="Statistique fichier " textFill="#b30000">
+         <tooltip>
+            <Tooltip text="Récupération et statistique" />
+         </tooltip>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="86.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ic_timeline_black_48dp.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

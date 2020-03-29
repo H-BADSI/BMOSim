@@ -1,0 +1,13 @@
+HHH000412: Hibernate Core {5.2.9.Final}
+HHH000206: hibernate.properties not found
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/enterprise]
+HHH10001001: Connection properties: {user=root, password=****}
+HHH10001003: Autocommit mode: false
+HHH000115: Hibernate connection pool size: 10 (min=1)
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@addeee] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5cd560] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@118f726'
+HHH000397: Using ASTQueryTranslatorFactory

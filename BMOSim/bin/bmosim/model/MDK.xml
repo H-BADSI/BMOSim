@@ -1,0 +1,175 @@
+<MDK name="bmosim" description="Business Model Ontology Simulator">
+
+<Agents>
+
+<!-- child -->
+<Agent class="bmosim.agents.CUS" nbOfInstances="3" GUI="true" logLevel="FINEST">
+<Attributes 
+budgetAllowed="100" 
+customerAge="15" 
+qualityNeeded="10" 
+timeToDelivery = "5" 
+stObjectTypes = "1 2" 
+stChannelsUsed = "1 2"
+/></Agent>
+
+<!-- young -->
+<Agent class="bmosim.agents.CUS" nbOfInstances="3" GUI="true" logLevel="FINEST">
+<Attributes 
+budgetAllowed="200" 
+customerAge="20" 
+qualityNeeded="4" 
+timeToDelivery = "7" 
+stObjectTypes = "1 2 3" 
+stChannelsUsed = "1 2"
+/></Agent>
+
+<!-- adult -->
+<Agent class="bmosim.agents.CUS" nbOfInstances="3" GUI="true" logLevel="FINEST">
+<Attributes 
+budgetAllowed="800" 
+customerAge="35" 
+qualityNeeded="2" 
+timeToDelivery = "3" 
+stObjectTypes = "1 2 3" 
+stChannelsUsed = "1 2"
+/></Agent>
+
+<!-- old -->
+<Agent class="bmosim.agents.CUS" nbOfInstances="3" GUI="true" logLevel="FINEST">
+<Attributes 
+budgetAllowed="150" 
+customerAge="65" 
+qualityNeeded="7" 
+timeToDelivery = "10" 
+stObjectTypes = "1 3" 
+stChannelsUsed = "1 2"
+/></Agent>
+
+<!-- commercial -->
+<Agent class="bmosim.agents.COM" nbOfInstances="1" GUI="true" logLevel="FINEST">
+<Attributes 
+ontologyUse = "false"
+aSpeed = "500"
+versatility = "4"
+errorRate = "6" 
+
+stMyRoles = "advertising" 
+stChannelsUsed = "1 2 3" 
+/></Agent>
+
+<Agent class="bmosim.agents.COM" nbOfInstances="1" GUI="true" logLevel="FINEST">
+<Attributes 
+ontologyUse = "false"
+aSpeed = "500"
+versatility = "4"
+errorRate = "6" 
+
+stMyRoles = "receiving" 
+stChannelsUsed = "1 2 3" 
+/></Agent>
+
+<Agent class="bmosim.agents.COM" nbOfInstances="1" GUI="true" logLevel="FINEST">
+<Attributes 
+ontologyUse = "false"
+aSpeed = "500"
+versatility = "4"
+errorRate = "6" 
+
+stMyRoles = "preparing" 
+stChannelsUsed = "1 2 3" 
+/></Agent>
+
+<Agent class="bmosim.agents.COM" nbOfInstances="1" GUI="true" logLevel="FINEST">
+<Attributes 
+ontologyUse = "false"
+aSpeed = "500"
+versatility = "4"
+errorRate = "6" 
+
+stMyRoles = "treating" 
+stChannelsUsed = "1 2 3" 
+/></Agent>
+
+<Agent class="bmosim.agents.COM" nbOfInstances="1" GUI="true" logLevel="FINEST">
+<Attributes 
+ontologyUse = "false"
+aSpeed = "500"
+versatility = "4"
+errorRate = "6" 
+
+stMyRoles = "billing" 
+stChannelsUsed = "1 2 3" 
+/></Agent>
+
+<Agent class="bmosim.agents.COM" nbOfInstances="1" GUI="true" logLevel="FINEST">
+<Attributes 
+ontologyUse = "false"
+aSpeed = "500"
+versatility = "4"
+errorRate = "6" 
+
+stMyRoles = "delivering" 
+stChannelsUsed = "1 2 3" 
+/></Agent>
+
+<Agent class="bmosim.agents.COM" nbOfInstances="1" GUI="true" logLevel="FINEST">
+<Attributes 
+ontologyUse = "false"
+aSpeed = "500"
+versatility = "4"
+errorRate = "6" 
+
+stMyRoles = "managing_cs" 
+stChannelsUsed = "1 2 3" 
+/></Agent>
+
+<Agent class="bmosim.agents.COM" nbOfInstances="1" GUI="true" logLevel="FINEST">
+<Attributes 
+ontologyUse = "false"
+aSpeed = "500"
+versatility = "4"
+errorRate = "6" 
+
+stMyRoles = "refunding" 
+stChannelsUsed = "1 2 3" 
+/></Agent>
+
+<!-- <Agent class="bmosim.agents.SUP" nbOfInstances="1" GUI="true" logLevel="FINEST"> -->
+<!-- <Attributes  -->
+<!-- ontologyUse = "false" -->
+<!-- aSpeed = "500" -->
+<!-- versatility = "4" -->
+<!-- errorRate = "6"  -->
+<!-- stMyRoles = "survey anarep loyman"  -->
+<!-- stChannelsUsed = "1 2 3" -->
+<!-- stAnalysisType = "1 2 3" -->
+<!-- stRequestType = "1 2" -->
+<!-- /></Agent> -->
+
+<!-- <Agent class="bmosim.agents.ANA" nbOfInstances="1" GUI="true" logLevel="FINEST"> -->
+<!-- <Attributes  -->
+<!-- ontologyUse = "false" -->
+<!-- aSpeed = "500" -->
+<!-- versatility = "4" -->
+<!-- errorRate = "6"  -->
+<!-- stMyRoles = "lead profiling feedback"  -->
+<!-- stAnalysisType = "1 2 3" -->
+<!-- /></Agent> -->
+
+<!-- manager -->
+<Agent class="bmosim.agents.MAN" nbOfInstances="1" GUI="true" logLevel="FINEST">
+<Attributes 
+ontologyUse = "true"
+aSpeed = "500"
+versatility = "4"
+errorRate = "6" 
+
+stMyRoles = "answering" 
+stEvaluationTypes = "1 2 3" 
+stStrategytypes = "1 2 3"
+leadership = "3"
+/></Agent>
+
+</Agents>
+</MDK>
