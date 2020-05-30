@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="94.0" style="-fx-background-color: #208a68;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bmosim.ihm3.controller.sideBar">
+   <children>
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="400.0" layoutX="94.0" layoutY="160.0" maxHeight="86.0" maxWidth="282.0" minHeight="48.0" minWidth="282.0" overLayVisible="false" prefHeight="48.0" prefWidth="282.0" style="-fx-background-radius: 50 50 50 50;" />
+      <ImageView fx:id="logo" fitHeight="94.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0">
+         <image>
+            <Image url="@../images/logo4.png" />
+         </image>
+      </ImageView>
+      <VBox layoutY="82.0" prefHeight="521.0" prefWidth="94.0">
+         <children>
+            <HBox fx:id="home1" alignment="CENTER" prefHeight="48.0" prefWidth="94.0">
+               <children>
+                  <BorderPane fx:id="home" maxHeight="48.0" maxWidth="94.0" minHeight="48.0" minWidth="94.0" prefHeight="48.0" prefWidth="94.0">
+                     <left>
+                        <Pane fx:id="phome" prefHeight="48.0" prefWidth="0.0" style="-fx-background-color: #3e9bb0;" BorderPane.alignment="CENTER" />
+                     </left>
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                     <center>
+                        <ImageView fx:id="m1" fitHeight="47.0" fitWidth="65.0" onMouseClicked="#goHome" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../images/home1.png" />
+                           </image>
+                        </ImageView>
+                     </center>
+                  </BorderPane>
+               </children>
+            </HBox>
+            <HBox fx:id="home1" alignment="CENTER" prefHeight="48.0" prefWidth="94.0">
+               <children>
+                  <BorderPane fx:id="stat" maxHeight="48.0" maxWidth="94.0" minHeight="48.0" minWidth="94.0" prefHeight="48.0" prefWidth="94.0">
+                     <left>
+                        <Pane fx:id="pstat" prefHeight="48.0" prefWidth="0.0" style="-fx-background-color: #3e9bb0;" BorderPane.alignment="CENTER" />
+                     </left>
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                     <center>
+                        <ImageView fx:id="m2" fitHeight="47.0" fitWidth="65.0" onMouseClicked="#goStat" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../images/home.png" />
+                           </image>
+                        </ImageView>
+                     </center>
+                  </BorderPane>
+               </children>
+            </HBox>
+            <HBox fx:id="home3" alignment="CENTER" prefHeight="45.0" prefWidth="94.0">
+               <children>
+                  <BorderPane fx:id="model" maxHeight="48.0" maxWidth="94.0" minHeight="48.0" minWidth="94.0" prefHeight="48.0" prefWidth="94.0">
+                     <left>
+                        <Pane fx:id="pmodel" prefHeight="45.0" prefWidth="0.0" style="-fx-background-color: #3e9bb0;" BorderPane.alignment="CENTER" />
+                     </left>
+                     <center>
+                        <ImageView fx:id="m4" fitHeight="47.0" fitWidth="65.0" onMouseClicked="#goModel" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../images/code.png" />
+                           </image>
+                        </ImageView>
+                     </center>
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                  </BorderPane>
+               </children>
+            </HBox>
+            <HBox fx:id="home31" alignment="CENTER" prefHeight="47.0" prefWidth="94.0">
+               <children>
+                  <BorderPane fx:id="metaModel" maxHeight="48.0" maxWidth="94.0" minHeight="48.0" minWidth="59.0" prefHeight="48.0" prefWidth="59.0">
+                     <left>
+                        <Pane fx:id="pmmodel" prefHeight="48.0" prefWidth="0.0" style="-fx-background-color: #3e9bb0;" BorderPane.alignment="CENTER" />
+                     </left>
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                     <center>
+                        <ImageView fx:id="m5" fitHeight="47.0" fitWidth="65.0" onMouseClicked="#goMetaModel" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../images/connection.png" />
+                           </image>
+                        </ImageView>
+                     </center>
+                  </BorderPane>
+               </children>
+            </HBox>
+            <HBox prefHeight="112.0" prefWidth="94.0" />
+            <HBox fx:id="home2" alignment="CENTER" prefHeight="63.0" prefWidth="94.0">
+               <children>
+                  <BorderPane fx:id="conf" maxHeight="48.0" maxWidth="94.0" minHeight="48.0" minWidth="94.0" prefHeight="48.0" prefWidth="94.0">
+                     <left>
+                        <Pane fx:id="pconf" prefHeight="48.0" prefWidth="0.0" style="-fx-background-color: #3e9bb0;" BorderPane.alignment="CENTER" />
+                     </left>
+                     <center>
+                        <ImageView fx:id="m3" fitHeight="47.0" fitWidth="65.0" onMouseClicked="#goConf" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../images/setting.png" />
+                           </image>
+                        </ImageView>
+                     </center>
+                  </BorderPane>
+               </children>
+            </HBox>
+            <HBox fx:id="home311" alignment="CENTER" prefHeight="51.0" prefWidth="94.0">
+               <children>
+                  <BorderPane fx:id="simulate" maxHeight="68.0" maxWidth="94.0" minHeight="48.0" minWidth="94.0" prefHeight="68.0" prefWidth="94.0" style="-fx-background-color: #005c4d;">
+                     <center>
+                        <ImageView fx:id="m6" fitHeight="47.0" fitWidth="65.0" onMouseClicked="#goSimulate" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../images/gloves.png" />
+                           </image>
+                        </ImageView>
+                     </center>
+                  </BorderPane>
+               </children>
+               <padding>
+                  <Insets top="24.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

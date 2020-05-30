@@ -1,8 +1,16 @@
 package bmosim.control;
-
 import java.io.File;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.stream.IntStream;
 import javax.xml.parsers.ParserConfigurationException;
+
+import bmosim.ihm3.bdd;
+import madkit.kernel.Scheduler;
+import madkit.kernel.Scheduler.SimulationState;
 import org.xml.sax.SAXException;
 import javafx.fxml.FXML;
 import madkit.kernel.Agent;
@@ -20,17 +28,23 @@ public class Generator extends Agent{
 	ReturnCode code =null;
 	static Ent enterprise ;
 	public static boolean alive = true;
-	
-	public static void main() {	
+
+	static int idSim;
+	static int ord=1;
+	static int nbInst;
+	static int idInst;
+
+
+	public void main(){
 		executeThisAgent(1,false);
-	}	
-	
-	public static void main(Ent ent) {	
+	}
+
+	public static void main(Ent ent) {
 		enterprise = ent;
-		executeThisAgent(1,true 
+		executeThisAgent(1,true
 //				Madkit.LevelOption.agentLogLevel.toString(),"OFF"
 				);
-	}	
+	}
 	
 //	@Override
 //	public void setupFrame(JFrame frame) {
@@ -48,6 +62,9 @@ public class Generator extends Agent{
 		createGroupIfAbsent(AGR.COMMUNITY, AGR.EX_GROUP);
 		
 		requestRole(AGR.COMMUNITY, AGR.CONTROL_GROUP, AGR.LAUNCHER_ROLE);
+
+
+
 		
 	}
 	@FXML
@@ -55,22 +72,20 @@ public class Generator extends Agent{
 		
 		launchAgent(new DB(false),true);
 		launchAgent(new Schedul(),true);
-		
 		try {
-//			launchXmlAgents("bmosim\\model\\MDK.xml");
-			launchXmlAgents("bmosim"+File.separatorChar+"model"+File.separatorChar+"MDK.xml");
+			launchXmlAgents(Main.fileDirect);
 		} catch (SAXException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (ParserConfigurationException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
 		launchAgent(new Observer(),true);
-		while (alive) pause (100);
+		while (alive) pause (500);
+
+
 
 //		int nb[] = new int[8];
 //		nb=enterprise.nb();
@@ -93,6 +108,7 @@ public class Generator extends Agent{
 		//SchedulingMessage m = new SchedulingMessage(SchedulingAction.RUN);
 		//sendMessage("BMOSimulator","Control","scheduler",m);
 	}
+
 	public void end(){
 		//sendMessage(AGR.COMMUNITY,AGR.CONTROL_GROUP,AGR.SCHEDULER_ROLE,new SchedulingMessage(SchedulingAction.SHUTDOWN));
 		//System.out.println("END Generator");

@@ -31,9 +31,10 @@ public class DefaultCoreCapability extends WrappedIndividualImpl implements Core
      */
      
     public Collection<? extends ValueConfiguration> getIsCreatedBy() {
-        return getDelegate().getPropertyValues(getOwlIndividual(),
-                                               Vocabulary.OBJECT_PROPERTY_ISCREATEDBY,
-                                               DefaultValueConfiguration.class);
+//        return getDelegate().getPropertyValues(getOwlIndividual(),
+////                                               Vocabulary.OBJECT_PROPERTY_ISCREATEDBY,
+////                                               DefaultValueConfiguration.class);
+        return null;
     }
 
     public boolean hasIsCreatedBy() {
@@ -41,15 +42,15 @@ public class DefaultCoreCapability extends WrappedIndividualImpl implements Core
     }
 
     public void addIsCreatedBy(ValueConfiguration newIsCreatedBy) {
-        getDelegate().addPropertyValue(getOwlIndividual(),
-                                       Vocabulary.OBJECT_PROPERTY_ISCREATEDBY,
-                                       newIsCreatedBy);
+//        getDelegate().addPropertyValue(getOwlIndividual(),
+//                                       Vocabulary.OBJECT_PROPERTY_ISCREATEDBY,
+//                                       newIsCreatedBy);
     }
 
     public void removeIsCreatedBy(ValueConfiguration oldIsCreatedBy) {
-        getDelegate().removePropertyValue(getOwlIndividual(),
-                                          Vocabulary.OBJECT_PROPERTY_ISCREATEDBY,
-                                          oldIsCreatedBy);
+//        getDelegate().removePropertyValue(getOwlIndividual(),
+//                                          Vocabulary.OBJECT_PROPERTY_ISCREATEDBY,
+//                                          oldIsCreatedBy);
     }
 
 
@@ -58,9 +59,10 @@ public class DefaultCoreCapability extends WrappedIndividualImpl implements Core
      */
      
     public Collection<? extends ValueConfiguration> getIsNeededBy() {
-        return getDelegate().getPropertyValues(getOwlIndividual(),
-                                               Vocabulary.OBJECT_PROPERTY_ISNEEDEDBY,
-                                               DefaultValueConfiguration.class);
+//        return getDelegate().getPropertyValues(getOwlIndividual(),
+//                                               Vocabulary.OBJECT_PROPERTY_ISNEEDEDBY,
+//                                               DefaultValueConfiguration.class);
+        return null;
     }
 
     public boolean hasIsNeededBy() {
@@ -68,15 +70,15 @@ public class DefaultCoreCapability extends WrappedIndividualImpl implements Core
     }
 
     public void addIsNeededBy(ValueConfiguration newIsNeededBy) {
-        getDelegate().addPropertyValue(getOwlIndividual(),
-                                       Vocabulary.OBJECT_PROPERTY_ISNEEDEDBY,
-                                       newIsNeededBy);
+//        getDelegate().addPropertyValue(getOwlIndividual(),
+//                                       Vocabulary.OBJECT_PROPERTY_ISNEEDEDBY,
+//                                       newIsNeededBy);
     }
 
     public void removeIsNeededBy(ValueConfiguration oldIsNeededBy) {
-        getDelegate().removePropertyValue(getOwlIndividual(),
-                                          Vocabulary.OBJECT_PROPERTY_ISNEEDEDBY,
-                                          oldIsNeededBy);
+//        getDelegate().removePropertyValue(getOwlIndividual(),
+//                                          Vocabulary.OBJECT_PROPERTY_ISNEEDEDBY,
+//                                          oldIsNeededBy);
     }
 
 
@@ -85,9 +87,10 @@ public class DefaultCoreCapability extends WrappedIndividualImpl implements Core
      */
      
     public Collection<? extends ValueProposition> getIsRequiredBy() {
-        return getDelegate().getPropertyValues(getOwlIndividual(),
-                                               Vocabulary.OBJECT_PROPERTY_ISREQUIREDBY,
-                                               DefaultValueProposition.class);
+//        return getDelegate().getPropertyValues(getOwlIndividual(),
+//                                               Vocabulary.OBJECT_PROPERTY_ISREQUIREDBY,
+//                                               DefaultValueProposition.class);
+        return null;
     }
 
     public boolean hasIsRequiredBy() {
@@ -95,15 +98,15 @@ public class DefaultCoreCapability extends WrappedIndividualImpl implements Core
     }
 
     public void addIsRequiredBy(ValueProposition newIsRequiredBy) {
-        getDelegate().addPropertyValue(getOwlIndividual(),
-                                       Vocabulary.OBJECT_PROPERTY_ISREQUIREDBY,
-                                       newIsRequiredBy);
+//        getDelegate().addPropertyValue(getOwlIndividual(),
+//                                       Vocabulary.OBJECT_PROPERTY_ISREQUIREDBY,
+//                                       newIsRequiredBy);
     }
 
     public void removeIsRequiredBy(ValueProposition oldIsRequiredBy) {
-        getDelegate().removePropertyValue(getOwlIndividual(),
-                                          Vocabulary.OBJECT_PROPERTY_ISREQUIREDBY,
-                                          oldIsRequiredBy);
+//        getDelegate().removePropertyValue(getOwlIndividual(),
+//                                          Vocabulary.OBJECT_PROPERTY_ISREQUIREDBY,
+//                                          oldIsRequiredBy);
     }
 
 
@@ -112,7 +115,8 @@ public class DefaultCoreCapability extends WrappedIndividualImpl implements Core
      */
      
     public Collection<? extends String> getReasoning() {
-		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, String.class);
+//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, String.class);
+        return null;
     }
 
     public boolean hasReasoning() {
@@ -120,11 +124,11 @@ public class DefaultCoreCapability extends WrappedIndividualImpl implements Core
     }
 
     public void addReasoning(String newReasoning) {
-	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, newReasoning);
+//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, newReasoning);
     }
 
     public void removeReasoning(String oldReasoning) {
-		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, oldReasoning);
+//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, oldReasoning);
     }
 
 
@@ -133,7 +137,8 @@ public class DefaultCoreCapability extends WrappedIndividualImpl implements Core
      */
      
     public Collection<? extends Object> getResourceCategory() {
-		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_RESOURCECATEGORY, Object.class);
+//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_RESOURCECATEGORY, Object.class);
+        return null;
     }
 
     public boolean hasResourceCategory() {
@@ -141,11 +146,11 @@ public class DefaultCoreCapability extends WrappedIndividualImpl implements Core
     }
 
     public void addResourceCategory(Object newResourceCategory) {
-	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_RESOURCECATEGORY, newResourceCategory);
+//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_RESOURCECATEGORY, newResourceCategory);
     }
 
     public void removeResourceCategory(Object oldResourceCategory) {
-		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_RESOURCECATEGORY, oldResourceCategory);
+//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_RESOURCECATEGORY, oldResourceCategory);
     }
 
 
@@ -154,7 +159,8 @@ public class DefaultCoreCapability extends WrappedIndividualImpl implements Core
      */
      
     public Collection<? extends String> getSynonyms() {
-		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, String.class);
+//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, String.class);
+        return null;
     }
 
     public boolean hasSynonyms() {
@@ -162,11 +168,11 @@ public class DefaultCoreCapability extends WrappedIndividualImpl implements Core
     }
 
     public void addSynonyms(String newSynonyms) {
-	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, newSynonyms);
+//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, newSynonyms);
     }
 
     public void removeSynonyms(String oldSynonyms) {
-		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, oldSynonyms);
+//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, oldSynonyms);
     }
 
 

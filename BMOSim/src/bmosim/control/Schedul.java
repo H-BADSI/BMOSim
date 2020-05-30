@@ -1,20 +1,21 @@
 package bmosim.control;
 
+import java.sql.SQLException;
 import java.util.logging.Level;
 
+import bmosim.ihm3.controller.simulate;
 import bmosim.model.AGR;
 import madkit.kernel.AbstractAgent;
 import madkit.kernel.Scheduler;
 import madkit.simulation.activator.GenericBehaviorActivator;
 
 
-
 public class Schedul extends Scheduler{
 	
-	int payCycle = 1000;
-	int simulationDuration = 1000;
-	int stepDelay = 100;
-	
+	public static int payCycle;
+	public static int simulationDuration;
+	public static int stepDelay;
+
 //	private static GenericBehaviorActivator<AbstractAgent> activatorResetSettings;
 	private static GenericBehaviorActivator<AbstractAgent> activatorDoStep;
 	private static GenericBehaviorActivator<AbstractAgent> activatorSatisfaction;
@@ -27,8 +28,12 @@ public class Schedul extends Scheduler{
 	private static GenericBehaviorActivator<AbstractAgent> activatorPurchasesNb;
 	private static GenericBehaviorActivator<AbstractAgent> activatorTurnover;
 	private static GenericBehaviorActivator<AbstractAgent> activatorRefund;
-	
+	private static GenericBehaviorActivator<AbstractAgent> activatorUpdateDB;
+
+
+
 	public void activate () {
+//		simulate.tf2.setText("activate");
 		getLogger().setLevel(Level.FINE);
 		setSimulationDuration(simulationDuration);
 		setDelay(stepDelay);
@@ -41,7 +46,6 @@ public class Schedul extends Scheduler{
 		addActivator(activatorDoStep);
 		activatorSatisfaction= new GenericBehaviorActivator<AbstractAgent>(AGR.COMMUNITY, AGR.CONTROL_GROUP, AGR.WATCHER_ROLE,"satisfaction");
 		addActivator(activatorSatisfaction);
-		
 		activatornbSatisfyingOffers= new GenericBehaviorActivator<AbstractAgent>(AGR.COMMUNITY, AGR.CONTROL_GROUP, AGR.WATCHER_ROLE,"satisfyingOffers");
 		addActivator(activatornbSatisfyingOffers);
 		activatornbAcceptableOffers= new GenericBehaviorActivator<AbstractAgent>(AGR.COMMUNITY, AGR.CONTROL_GROUP, AGR.WATCHER_ROLE,"acceptableOffers");
@@ -58,10 +62,43 @@ public class Schedul extends Scheduler{
 		addActivator(activatorTurnover);
 		activatorRefund= new GenericBehaviorActivator<AbstractAgent>(AGR.COMMUNITY, AGR.CONTROL_GROUP, AGR.WATCHER_ROLE,"refund");
 		addActivator(activatorRefund);
-		
+
 		activatorPayDay= new GenericBehaviorActivator<AbstractAgent>(AGR.COMMUNITY, AGR.EX_GROUP,AGR.CUS_EX_ROLE,"payDay");
 		addActivator(activatorPayDay);
+
+		activatorUpdateDB= new GenericBehaviorActivator<AbstractAgent>(AGR.COMMUNITY, AGR.CONTROL_GROUP, AGR.WATCHER_ROLE,"updateDB");
+		addActivator(activatorUpdateDB);
 //		setSimulationState(SimulationState.RUNNING);
+		setSimulationState(SimulationState.RUNNING);
+
+//		new Thread(new Runnable() {
+//			public void run() {
+//				for (int i=0; i <= 5; i++) {
+//					System.out.println("run() method of Runnable interface: "+ i);
+//				}
+//			}
+//		}).start();
+//		for (int j=0; j <= 5; j++) {
+//			System.out.println("main() method: "+ j);
+//		}
+
+//		Thread thread = new Thread(){
+//			public void run(){
+//				try {
+//					Main.insertValues();
+//				} catch (SQLException e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		};
+//
+//		thread.start();
+//		try {
+//			Thread.sleep(stepDelay);
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
+
 	}
 	
 	@Override
@@ -102,12 +139,27 @@ public class Schedul extends Scheduler{
 		
 //		if (logger != null)	logger.info("Activating --------> activatorTurnover " + activatorTurnover);
 		activatorRefund.execute();
-		
-		setGVT(getGVT() + 1);
+
+		if (getGVT() % 10 ==0){
+			activatorUpdateDB.execute();
+		}
+
+        setGVT(getGVT() + 1);
 	}
-	
-	public void end(){
-//		activatorDoStep.killAgents();
+
+	public static void stop(){
+		activatorDoStep.killAgents();
+	}
+
+
+    public void end(){
+		activatorDoStep.killAgents();
+
+        try {
+            Main.reexecute();
+        } catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

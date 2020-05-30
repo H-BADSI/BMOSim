@@ -31,9 +31,10 @@ public class DefaultActor extends WrappedIndividualImpl implements Actor {
      */
      
     public Collection<? extends PartnershipAgreement> getIsRelatedVia() {
-        return getDelegate().getPropertyValues(getOwlIndividual(),
-                                               Vocabulary.OBJECT_PROPERTY_ISRELATEDVIA,
-                                               DefaultPartnershipAgreement.class);
+//        return getDelegate().getPropertyValues(getOwlIndividual(),
+//                                               Vocabulary.OBJECT_PROPERTY_ISRELATEDVIA,
+//                                               DefaultPartnershipAgreement.class);
+        return null;
     }
 
     public boolean hasIsRelatedVia() {
@@ -41,15 +42,16 @@ public class DefaultActor extends WrappedIndividualImpl implements Actor {
     }
 
     public void addIsRelatedVia(PartnershipAgreement newIsRelatedVia) {
-        getDelegate().addPropertyValue(getOwlIndividual(),
-                                       Vocabulary.OBJECT_PROPERTY_ISRELATEDVIA,
-                                       newIsRelatedVia);
+//        getDelegate().addPropertyValue(getOwlIndividual(),
+//                                       Vocabulary.OBJECT_PROPERTY_ISRELATEDVIA,
+//                                       newIsRelatedVia);
+
     }
 
     public void removeIsRelatedVia(PartnershipAgreement oldIsRelatedVia) {
-        getDelegate().removePropertyValue(getOwlIndividual(),
-                                          Vocabulary.OBJECT_PROPERTY_ISRELATEDVIA,
-                                          oldIsRelatedVia);
+//        getDelegate().removePropertyValue(getOwlIndividual(),
+//                                          Vocabulary.OBJECT_PROPERTY_ISRELATEDVIA,
+//                                          oldIsRelatedVia);
     }
 
 
@@ -58,7 +60,8 @@ public class DefaultActor extends WrappedIndividualImpl implements Actor {
      */
      
     public Collection<? extends String> getReasoning() {
-		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, String.class);
+//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, String.class);
+        return null;
     }
 
     public boolean hasReasoning() {
@@ -66,11 +69,11 @@ public class DefaultActor extends WrappedIndividualImpl implements Actor {
     }
 
     public void addReasoning(String newReasoning) {
-	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, newReasoning);
+//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, newReasoning);
     }
 
     public void removeReasoning(String oldReasoning) {
-		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, oldReasoning);
+//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, oldReasoning);
     }
 
 
@@ -79,7 +82,8 @@ public class DefaultActor extends WrappedIndividualImpl implements Actor {
      */
      
     public Collection<? extends String> getSynonyms() {
-		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, String.class);
+//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, String.class);
+        return null;
     }
 
     public boolean hasSynonyms() {
@@ -87,11 +91,11 @@ public class DefaultActor extends WrappedIndividualImpl implements Actor {
     }
 
     public void addSynonyms(String newSynonyms) {
-	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, newSynonyms);
+//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, newSynonyms);
     }
 
     public void removeSynonyms(String oldSynonyms) {
-		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, oldSynonyms);
+//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, oldSynonyms);
     }
 
 

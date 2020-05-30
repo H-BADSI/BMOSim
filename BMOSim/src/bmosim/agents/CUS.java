@@ -232,7 +232,7 @@ public class CUS extends AbsBMOAgent{
 			if (getLogger() != null) getLogger().info(" pay ");
 			code = null ;
 			sendPayment(ordredOffer);
-			timer =  (int) (timeToWaitResponse);					//  <--- à revoir
+			timer =  (int) (timeToWaitResponse);					//  <--- ï¿½ revoir
 			nextStep = "check_payment";
 		};break;
 		case "check_payment":{
@@ -272,7 +272,7 @@ public class CUS extends AbsBMOAgent{
 				if (timer > 0)	timer--; else {
 					problem = MCS.delayed ;				// not currently used
 					addScore--;
-					timer = satisfyingOffer.object.time*(int)((timeTolerance-1)*10);  //  <--- à revoir
+					timer = satisfyingOffer.object.time*(int)((timeTolerance-1)*10);  //  <--- ï¿½ revoir
 					nextStep = "check_late";
 					}
 		};break;
@@ -379,7 +379,7 @@ public class CUS extends AbsBMOAgent{
 				if (timer < 0) {
 					addScore--;
 					updateScore(ordredOffer.seller,addScore);
-					nextStep = "contact_cs";			//<--- à revoir nombre d'essais de négociation
+					nextStep = "contact_cs";			//<--- ï¿½ revoir nombre d'essais de nï¿½gociation
 				}
 				else timer--;
 			}
@@ -532,7 +532,7 @@ public class CUS extends AbsBMOAgent{
 		}
 		if (!sufficiantOffers.isEmpty()){					//************choosing the best offer******************
 			satisfyingOffer = offersList.get(chooseOffer(sufficiantOffers));
-			knownSellers.get(isSellerKnown(satisfyingOffer.seller)).score++;	//TODO: à verifier
+			knownSellers.get(isSellerKnown(satisfyingOffer.seller)).score++;	//TODO: ï¿½ verifier
 		} else {	if (!insufficiantOffers.isEmpty()){			//************choosing the least acceptable offer******
 					satisfyingOffer = offersList.get(chooseOffer(insufficiantOffers));
 						}else {
@@ -590,7 +590,7 @@ public class CUS extends AbsBMOAgent{
 		dialog = new EnumMessage<Conversation>(Conversation.order, offre);
 		sendMessage(AGR.COMMUNITY, AGR.EX_GROUP, Role.Com.TRE, dialog);
 	}
-	private boolean checkContract(Offer offer, EnumMessage<Conversation> m){        // à completer 
+	private boolean checkContract(Offer offer, EnumMessage<Conversation> m){        // ï¿½ completer 
 		
 		Offer contract = (Offer) m.getContent()[0];
 		if (contract != null){

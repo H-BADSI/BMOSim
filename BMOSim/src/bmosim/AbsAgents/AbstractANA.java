@@ -44,7 +44,7 @@ public abstract class AbstractANA extends AbsEtsAgent{
 				System.out.println("lead analysis");
 			};break;
 			case Role.Ana.PROF:{
-				System.out.println("profiling analysis");
+				profiling();
 			};break;
 			case Role.Ana.FB:{
 				System.out.println("feedback");
@@ -53,4 +53,5 @@ public abstract class AbstractANA extends AbsEtsAgent{
 			}
 
 	}
+	public abstract void profiling();
 }

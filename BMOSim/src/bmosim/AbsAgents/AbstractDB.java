@@ -1,5 +1,7 @@
 package bmosim.AbsAgents;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 
 import org.hibernate.Session;
@@ -23,6 +25,9 @@ import madkit.kernel.Agent;
 import madkit.kernel.AgentAddress;
 import madkit.kernel.Message;
 import madkit.message.EnumMessage;
+
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
 
 public abstract class AbstractDB extends Agent{
 
@@ -150,6 +155,7 @@ public abstract class AbstractDB extends Agent{
 		public abstract DBneed gettingNotTreatedNeed();
 		
 		public abstract void getCustomer(AgentAddress cusAddr);
+//		public abstract void getCustomers();//brahim
 		
 		
 
@@ -167,7 +173,23 @@ public abstract class AbstractDB extends Agent{
 	    	session.close();
 	    	return db;
 	    }
-	    
+	    /*brahim*/
+
+		private static <T> List<T> loadAllData(Class<T> type, Session session) {
+			CriteriaBuilder builder = session.getCriteriaBuilder();
+			CriteriaQuery<T> criteria = builder.createQuery(type);
+			criteria.from(type);
+			List<T> data = session.createQuery(criteria).getResultList();
+			return data;
+		}
+		public ArrayList<DBcustomer> gettingCustomers(){
+			Session session = sessionFactory.openSession();
+			ArrayList<DBcustomer> dbs = new ArrayList<>();
+			dbs.addAll(loadAllData(DBcustomer.class,session));
+			session.close();
+			return dbs;
+		}
+	    /*brahim*/
 		public DBneed gettingNeed(int iD){
 			Session session = sessionFactory.openSession();
 			DBneed db = session.get(DBneed.class,iD).clone();

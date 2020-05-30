@@ -31,9 +31,10 @@ public class DefaultValueNetworkActivity extends WrappedIndividualImpl implement
      */
      
     public Collection<? extends Resource> getCreates() {
-        return getDelegate().getPropertyValues(getOwlIndividual(),
-                                               Vocabulary.OBJECT_PROPERTY_CREATES,
-                                               DefaultResource.class);
+//        return getDelegate().getPropertyValues(getOwlIndividual(),
+//                                               Vocabulary.OBJECT_PROPERTY_CREATES,
+//                                               DefaultResource.class);
+        return null;
     }
 
     public boolean hasCreates() {
@@ -41,26 +42,27 @@ public class DefaultValueNetworkActivity extends WrappedIndividualImpl implement
     }
 
     public void addCreates(Resource newCreates) {
-        getDelegate().addPropertyValue(getOwlIndividual(),
-                                       Vocabulary.OBJECT_PROPERTY_CREATES,
-                                       newCreates);
+//        getDelegate().addPropertyValue(getOwlIndividual(),
+//                                       Vocabulary.OBJECT_PROPERTY_CREATES,
+//                                       newCreates);
     }
 
     public void removeCreates(Resource oldCreates) {
-        getDelegate().removePropertyValue(getOwlIndividual(),
-                                          Vocabulary.OBJECT_PROPERTY_CREATES,
-                                          oldCreates);
+//        getDelegate().removePropertyValue(getOwlIndividual(),
+//                                          Vocabulary.OBJECT_PROPERTY_CREATES,
+//                                          oldCreates);
     }
 
 
     /* ***************************************************
      * Object Property http://www.owl-ontologies.com/unnamed.owl#implements
      */
-     
+
     public Collection<? extends ValueProposition> getImplements() {
-        return getDelegate().getPropertyValues(getOwlIndividual(),
-                                               Vocabulary.OBJECT_PROPERTY_IMPLEMENTS,
-                                               DefaultValueProposition.class);
+        return null;
+//        return getDelegate().getPropertyValues(getOwlIndividual(),
+//                                               Vocabulary.OBJECT_PROPERTY_IMPLEMENTS,
+//                                               DefaultValueProposition.class);
     }
 
     public boolean hasImplements() {
@@ -68,26 +70,27 @@ public class DefaultValueNetworkActivity extends WrappedIndividualImpl implement
     }
 
     public void addImplements(ValueProposition newImplements) {
-        getDelegate().addPropertyValue(getOwlIndividual(),
-                                       Vocabulary.OBJECT_PROPERTY_IMPLEMENTS,
-                                       newImplements);
+//        getDelegate().addPropertyValue(getOwlIndividual(),
+//                                       Vocabulary.OBJECT_PROPERTY_IMPLEMENTS,
+//                                       newImplements);
     }
 
     public void removeImplements(ValueProposition oldImplements) {
-        getDelegate().removePropertyValue(getOwlIndividual(),
-                                          Vocabulary.OBJECT_PROPERTY_IMPLEMENTS,
-                                          oldImplements);
+//        getDelegate().removePropertyValue(getOwlIndividual(),
+//                                          Vocabulary.OBJECT_PROPERTY_IMPLEMENTS,
+//                                          oldImplements);
     }
 
 
     /* ***************************************************
      * Object Property http://www.owl-ontologies.com/unnamed.owl#needs
      */
-     
+
     public Collection<? extends Resource> getNeeds() {
-        return getDelegate().getPropertyValues(getOwlIndividual(),
-                                               Vocabulary.OBJECT_PROPERTY_NEEDS,
-                                               DefaultResource.class);
+//        return getDelegate().getPropertyValues(getOwlIndividual(),
+//                                               Vocabulary.OBJECT_PROPERTY_NEEDS,
+//                                               DefaultResource.class);
+        return null;
     }
 
     public boolean hasNeeds() {
@@ -95,24 +98,25 @@ public class DefaultValueNetworkActivity extends WrappedIndividualImpl implement
     }
 
     public void addNeeds(Resource newNeeds) {
-        getDelegate().addPropertyValue(getOwlIndividual(),
-                                       Vocabulary.OBJECT_PROPERTY_NEEDS,
-                                       newNeeds);
+//        getDelegate().addPropertyValue(getOwlIndividual(),
+//                                       Vocabulary.OBJECT_PROPERTY_NEEDS,
+//                                       newNeeds);
     }
 
     public void removeNeeds(Resource oldNeeds) {
-        getDelegate().removePropertyValue(getOwlIndividual(),
-                                          Vocabulary.OBJECT_PROPERTY_NEEDS,
-                                          oldNeeds);
+//        getDelegate().removePropertyValue(getOwlIndividual(),
+//                                          Vocabulary.OBJECT_PROPERTY_NEEDS,
+//                                          oldNeeds);
     }
 
 
     /* ***************************************************
      * Data Property http://www.owl-ontologies.com/unnamed.owl#ActivityLevel
      */
-     
+
     public Collection<? extends Object> getActivityLevel() {
-		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_ACTIVITYLEVEL, Object.class);
+        return null;
+//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_ACTIVITYLEVEL, Object.class);
     }
 
     public boolean hasActivityLevel() {
@@ -120,20 +124,21 @@ public class DefaultValueNetworkActivity extends WrappedIndividualImpl implement
     }
 
     public void addActivityLevel(Object newActivityLevel) {
-	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_ACTIVITYLEVEL, newActivityLevel);
+//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_ACTIVITYLEVEL, newActivityLevel);
     }
 
     public void removeActivityLevel(Object oldActivityLevel) {
-		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_ACTIVITYLEVEL, oldActivityLevel);
+//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_ACTIVITYLEVEL, oldActivityLevel);
     }
 
 
     /* ***************************************************
      * Data Property http://www.owl-ontologies.com/unnamed.owl#reasoning
      */
-     
+
     public Collection<? extends String> getReasoning() {
-		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, String.class);
+        return null;
+//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, String.class);
     }
 
     public boolean hasReasoning() {
@@ -141,20 +146,21 @@ public class DefaultValueNetworkActivity extends WrappedIndividualImpl implement
     }
 
     public void addReasoning(String newReasoning) {
-	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, newReasoning);
+//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, newReasoning);
     }
 
     public void removeReasoning(String oldReasoning) {
-		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, oldReasoning);
+//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, oldReasoning);
     }
 
 
     /* ***************************************************
      * Data Property http://www.owl-ontologies.com/unnamed.owl#synonyms
      */
-     
+
     public Collection<? extends String> getSynonyms() {
-		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, String.class);
+        return null;
+//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, String.class);
     }
 
     public boolean hasSynonyms() {
@@ -162,20 +168,21 @@ public class DefaultValueNetworkActivity extends WrappedIndividualImpl implement
     }
 
     public void addSynonyms(String newSynonyms) {
-	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, newSynonyms);
+//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, newSynonyms);
     }
 
     public void removeSynonyms(String oldSynonyms) {
-		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, oldSynonyms);
+//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, oldSynonyms);
     }
 
 
     /* ***************************************************
      * Data Property http://www.owl-ontologies.com/unnamed.owl#valueNetworkActivityNature
      */
-     
+
     public Collection<? extends Object> getValueNetworkActivityNature() {
-		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_VALUENETWORKACTIVITYNATURE, Object.class);
+        return null;
+//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_VALUENETWORKACTIVITYNATURE, Object.class);
     }
 
     public boolean hasValueNetworkActivityNature() {
@@ -183,11 +190,11 @@ public class DefaultValueNetworkActivity extends WrappedIndividualImpl implement
     }
 
     public void addValueNetworkActivityNature(Object newValueNetworkActivityNature) {
-	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_VALUENETWORKACTIVITYNATURE, newValueNetworkActivityNature);
+//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_VALUENETWORKACTIVITYNATURE, newValueNetworkActivityNature);
     }
 
     public void removeValueNetworkActivityNature(Object oldValueNetworkActivityNature) {
-		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_VALUENETWORKACTIVITYNATURE, oldValueNetworkActivityNature);
+//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_VALUENETWORKACTIVITYNATURE, oldValueNetworkActivityNature);
     }
 
 

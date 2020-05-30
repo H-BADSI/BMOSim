@@ -1,0 +1,41 @@
+
+AnchorPane{
+    -fx-background-color: #021a11;
+}
+#an{
+    -fx-background-color: #021a11;
+}
+
+Label{
+    -fx-text-fill: white;
+}
+#chart{
+    -fx-background-color: black;
+}
+/*.chart-vertical-grid-lines {*/
+    /*-fx-stroke: white;*/
+/*}*/
+/*.chart-horizontal-grid-lines {*/
+    /*-fx-stroke: white;*/
+/*}*/
+.chart{
+    -fx-background-color: #303030;
+    -fx-text-fill: black;
+}
+.chart-alternative-row-fill {
+    -fx-fill: black;
+    -fx-stroke: gray;
+    -fx-stroke-width: 0;
+}
+.chart-series-line {
+    -fx-stroke-width: 2px;
+    -fx-effect: null;
+}
+
+.combo-box .cell{
+    -fx-text-fill: white;
+
+}
+.chart-legend{
+    -fx-text-fill: black;
+}

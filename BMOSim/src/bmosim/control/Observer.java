@@ -1,5 +1,6 @@
 package bmosim.control;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -50,21 +51,24 @@ public class Observer extends Watcher{
 			new PropertyProbe<COM,Integer>
 			(AGR.COMMUNITY, AGR.EX_GROUP, Role.Com.REF,"fund");
 	
-	List<CUS> customers;
-	List<COM> commercials;
-	ArrayList<Seller> sellersList;
-	Double globalScore;
-	Double scoreSum;
-	ArrayList<Double> stepScore = new ArrayList<Double>();
-	
-	Double satOffersNb;
-	Double accOffersNb;
-	Double unAccOffersNb;
-	Double updateOffersWaitingTime;
-	Double ordersTotalNb;
-	Double purchasesTotalNb;
-	Double turnover;
-	Double refund;
+	static List<CUS> customers;
+	static List<COM> commercials;
+	static ArrayList<Seller> sellersList;
+	static Double globalScore;
+	static Double scoreSum;
+	static ArrayList<Double> stepScore = new ArrayList<Double>();
+
+	static Double satOffersNb;
+	static Double accOffersNb;
+	static Double unAccOffersNb;
+	static Double updateOffersWaitingTime;
+	static Double ordersTotalNb;
+	static Double purchasesTotalNb;
+	static Double turnover;
+	static Double refund;
+	static Double avgT;
+
+
 	
 	public void activate(){
 		getLogger().setLevel(Level.FINEST);
@@ -78,7 +82,10 @@ public class Observer extends Watcher{
 		addProbe(nbOfPurchasesProbe);
 		addProbe(turnoverProbe);
 		addProbe(refundProbe);
+
+
 	}
+
 	public void satisfaction(){
 		customers = customerSatisfactionProbe.getCurrentAgentsList();
 		globalScore = 0.0;
@@ -91,13 +98,14 @@ public class Observer extends Watcher{
 		}
 		stepScore.add(globalScore);
 		if (getLogger() != null) getLogger().info("avgSat= "+globalScore.toString());
-		
+
 	}
 	public void satisfyingOffers(){
 		customers = nbSatisfyingOffersProbe.getCurrentAgentsList();
 		satOffersNb = 0.0;
 		for (int i=0; i<customers.size();i++){
 			satOffersNb += nbSatisfyingOffersProbe.getPropertyValue(customers.get(i));
+//			System.out.println("**************"+nbSatisfyingOffersProbe.getPropertyValue(customers.get(i)));
 		}
 		if (getLogger() != null) getLogger().info("nbsat= "+satOffersNb.toString());
 		Double avg = satOffersNb/customers.size();
@@ -111,6 +119,7 @@ public class Observer extends Watcher{
 		}
 		if (getLogger() != null) getLogger().info("nbacc= "+accOffersNb.toString());
 		Double avg = accOffersNb/customers.size();
+		avgT=avg;
 		if (getLogger() != null) getLogger().info("nbaccAVG= "+avg.toString());
 	}
 	public void unAcceptableOffers(){
@@ -119,7 +128,7 @@ public class Observer extends Watcher{
 		for (int i=0; i<customers.size();i++){
 			unAccOffersNb += nbUnacceptableOffersProbe.getPropertyValue(customers.get(i));
 		}
-		if (getLogger() != null) getLogger().info("nbunacc= "+unAccOffersNb.toString());
+			if (getLogger() != null) getLogger().info("nbunacc= "+unAccOffersNb.toString());
 		Double avg = unAccOffersNb/customers.size();
 		if (getLogger() != null) getLogger().info("nbunaccAVG= "+avg.toString());
 	}
@@ -171,4 +180,9 @@ public class Observer extends Watcher{
 		}
 		if (getLogger() != null) getLogger().info("refundProbe= "+refund.toString());
 	}
+
+	public void updateDB()  {
+			Main.insertValues(Generator.idInst);
+	}
+
 }

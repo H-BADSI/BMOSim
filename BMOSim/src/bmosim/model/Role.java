@@ -12,7 +12,7 @@ public class Role {
 	    public final static String DEL="delivering";
 	    public final static String MCS="managing_cs";
 	    public final static String REF="refunding";
-	    
+
 	    public class Adv{
 	    	public final static String CHECK = "check_offer";
 	    	public final static String SEND = "send";

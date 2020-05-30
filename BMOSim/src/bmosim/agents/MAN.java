@@ -2,6 +2,7 @@ package bmosim.agents;
 
 import java.io.File;
 
+import bmosim.ihm3.controller.simulate;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
@@ -30,6 +31,7 @@ public class MAN extends AbstractMAN{
 	}
 	
 	public void initOffersInDB(){
+//        simulate.tf1.setText("activate");
 		//objType,
 		//buyPrice, sellPrice, quality, prodQuantity, lifeTime,
 		//offerQuantity, offerPrice, deliveryTime
@@ -63,97 +65,90 @@ public class MAN extends AbstractMAN{
 		addOfferInDB(p12,-1,92,3);
 		
 		
-		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
-		OWLOntologyIRIMapper mapper = new AutoIRIMapper(new File ("C:"+File.separatorChar+"Users"+File.separatorChar+"Hichem"+File.separatorChar+"Google Drive"+File.separatorChar+"search"+File.separatorChar+"workspace"+File.separatorChar+"BMOSim"+File.separatorChar+"bin"+File.separatorChar+"bmosim"+File.separatorChar+"onto"), false);
-		manager.addIRIMapper(mapper);
-		File f = new File("C:"+File.separatorChar+"Users"+File.separatorChar+"Hichem"+File.separatorChar+"Google Drive"+File.separatorChar+"search"+File.separatorChar+"workspace"+File.separatorChar+"BMOSim"+File.separatorChar+"bin"+File.separatorChar+"bmosim"+File.separatorChar+"onto"+File.separatorChar+"BusModelOWL.owl");
-		
-		try {
-			OWLOntology bmoTest = manager.loadOntologyFromOntologyDocument(f);
-			MyFactory factory = new MyFactory(bmoTest);
-			ValueProposition vp1 = factory.createValueProposition("p1");
-			ValueProposition vp2 = factory.createValueProposition("p2");
-			ValueProposition vp3 = factory.createValueProposition("p3");
-			ValueProposition vp4 = factory.createValueProposition("p4");
-			ValueProposition vp5 = factory.createValueProposition("p5");
-			ValueProposition vp6 = factory.createValueProposition("p6");
-			ValueProposition vp7 = factory.createValueProposition("p7");
-			ValueProposition vp8 = factory.createValueProposition("p8");
-			ValueProposition vp9 = factory.createValueProposition("p9");
-			ValueProposition vp10 = factory.createValueProposition("p10");
-			ValueProposition vp11 = factory.createValueProposition("p11");
-			ValueProposition vp12 = factory.createValueProposition("p12");
-			
-			CustomerSegment cs1 = factory.createCustomerSegment("1");
-			CustomerSegment cs2 = factory.createCustomerSegment("2");
-			CustomerSegment cs3 = factory.createCustomerSegment("3");
-			CustomerSegment cs4 = factory.createCustomerSegment("4");
-			
-			vp1.addTargets(cs2);
-			vp1.addTargets(cs4);
-			vp2.addTargets(cs2);
-			vp2.addTargets(cs3);
-			vp3.addTargets(cs2);
-			vp3.addTargets(cs3);
-			vp4.addTargets(cs2);
-			vp4.addTargets(cs3);
-			vp5.addTargets(cs1);
-			vp5.addTargets(cs4);
-			vp6.addTargets(cs1);
-			vp6.addTargets(cs4);
-			vp7.addTargets(cs2);
-			vp7.addTargets(cs4);
-			vp8.addTargets(cs4);
-			vp9.addTargets(cs2);
-			vp9.addTargets(cs3);
-			vp10.addTargets(cs2);
-			vp10.addTargets(cs3);
-			vp11.addTargets(cs4);
-			vp12.addTargets(cs1);
-			vp12.addTargets(cs4);
-			
-			cs1.addIsTargetedBy(vp5);
-			cs1.addIsTargetedBy(vp6);
-			cs1.addIsTargetedBy(vp12);
-			cs2.addIsTargetedBy(vp1);
-			cs2.addIsTargetedBy(vp2);
-			cs2.addIsTargetedBy(vp3);
-			cs2.addIsTargetedBy(vp4);
-			cs2.addIsTargetedBy(vp7);
-			cs2.addIsTargetedBy(vp9);
-			cs2.addIsTargetedBy(vp10);
-			cs3.addIsTargetedBy(vp2);
-			cs3.addIsTargetedBy(vp3);
-			cs3.addIsTargetedBy(vp4);
-			cs3.addIsTargetedBy(vp9);
-			cs3.addIsTargetedBy(vp10);
-			cs4.addIsTargetedBy(vp1);
-			cs4.addIsTargetedBy(vp5);
-			cs4.addIsTargetedBy(vp6);
-			cs4.addIsTargetedBy(vp7);
-			cs4.addIsTargetedBy(vp8);
-			cs4.addIsTargetedBy(vp11);
-			cs4.addIsTargetedBy(vp12);
-			
-//			OWLReasoner reasoner = new Reasoner.ReasonerFactory().createReasoner(bmoTest);
-//			reasoner.precomputeInferences(InferenceType.OBJECT_PROPERTY_ASSERTIONS);
-//			List<InferredAxiomGenerator<? extends OWLAxiom>> isTargeted = new ArrayList<InferredAxiomGenerator<? extends OWLAxiom>>();
-//			isTargeted.add
-			
-			try {
-				manager.saveOntology(bmoTest);
-			} catch (OWLOntologyStorageException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
-		} catch (OWLOntologyCreationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		
-		
+		//OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
+//		OWLOntologyIRIMapper mapper = new AutoIRIMapper(new File ("C:\\Users\\BRAHIM\\Downloads\\3juil2019\\demo\\BMOSim\\BMOSim\\src\\bmosim\\onto"), false);
+		//manager.addIRIMapper(mapper);
+		File f = new File("C:\\Users\\BRAHIM\\Downloads\\3juil2019\\demo\\BMOSim\\BMOSim\\src\\bmosim\\onto\\BusModelOWL.owl");
+
+		//OWLOntology bmoTest = manager.loadOntologyFromOntologyDocument(f);
+//			MyFactory factory = new MyFactory(bmoTest);
+//			ValueProposition vp1 = factory.createValueProposition("p1");
+//			ValueProposition vp2 = factory.createValueProposition("p2");
+//			ValueProposition vp3 = factory.createValueProposition("p3");
+//			ValueProposition vp4 = factory.createValueProposition("p4");
+//			ValueProposition vp5 = factory.createValueProposition("p5");
+//			ValueProposition vp6 = factory.createValueProposition("p6");
+//			ValueProposition vp7 = factory.createValueProposition("p7");
+//			ValueProposition vp8 = factory.createValueProposition("p8");
+//			ValueProposition vp9 = factory.createValueProposition("p9");
+//			ValueProposition vp10 = factory.createValueProposition("p10");
+//			ValueProposition vp11 = factory.createValueProposition("p11");
+//			ValueProposition vp12 = factory.createValueProposition("p12");
+//
+//			CustomerSegment cs1 = factory.createCustomerSegment("1");
+//			CustomerSegment cs2 = factory.createCustomerSegment("2");
+//			CustomerSegment cs3 = factory.createCustomerSegment("3");
+//			CustomerSegment cs4 = factory.createCustomerSegment("4");
+//
+//			vp1.addTargets(cs2);
+//			vp1.addTargets(cs4);
+//			vp2.addTargets(cs2);
+//			vp2.addTargets(cs3);
+//			vp3.addTargets(cs2);
+//			vp3.addTargets(cs3);
+//			vp4.addTargets(cs2);
+//			vp4.addTargets(cs3);
+//			vp5.addTargets(cs1);
+//			vp5.addTargets(cs4);
+//			vp6.addTargets(cs1);
+//			vp6.addTargets(cs4);
+//			vp7.addTargets(cs2);
+//			vp7.addTargets(cs4);
+//			vp8.addTargets(cs4);
+//			vp9.addTargets(cs2);
+//			vp9.addTargets(cs3);
+//			vp10.addTargets(cs2);
+//			vp10.addTargets(cs3);
+//			vp11.addTargets(cs4);
+//			vp12.addTargets(cs1);
+//			vp12.addTargets(cs4);
+//
+//			cs1.addIsTargetedBy(vp5);
+//			cs1.addIsTargetedBy(vp6);
+//			cs1.addIsTargetedBy(vp12);
+//			cs2.addIsTargetedBy(vp1);
+//			cs2.addIsTargetedBy(vp2);
+//			cs2.addIsTargetedBy(vp3);
+//			cs2.addIsTargetedBy(vp4);
+//			cs2.addIsTargetedBy(vp7);
+//			cs2.addIsTargetedBy(vp9);
+//			cs2.addIsTargetedBy(vp10);
+//			cs3.addIsTargetedBy(vp2);
+//			cs3.addIsTargetedBy(vp3);
+//			cs3.addIsTargetedBy(vp4);
+//			cs3.addIsTargetedBy(vp9);
+//			cs3.addIsTargetedBy(vp10);
+//			cs4.addIsTargetedBy(vp1);
+//			cs4.addIsTargetedBy(vp5);
+//			cs4.addIsTargetedBy(vp6);
+//			cs4.addIsTargetedBy(vp7);
+//			cs4.addIsTargetedBy(vp8);
+//			cs4.addIsTargetedBy(vp11);
+//			cs4.addIsTargetedBy(vp12);
+
+////			OWLReasoner reasoner = new Reasoner.ReasonerFactory().createReasoner(bmoTest);
+////			reasoner.precomputeInferences(InferenceType.OBJECT_PROPERTY_ASSERTIONS);
+////			List<InferredAxiomGenerator<? extends OWLAxiom>> isTargeted = new ArrayList<InferredAxiomGenerator<? extends OWLAxiom>>();
+////			isTargeted.add
+
+//			try {
+//				manager.saveOntology(bmoTest);
+//			} catch (OWLOntologyStorageException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+
+
 	}
 
 	/*private void loadReports ()

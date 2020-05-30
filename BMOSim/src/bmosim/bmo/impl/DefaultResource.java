@@ -16,7 +16,7 @@ import org.semanticweb.owlapi.model.OWLOntology;
  * Source Class: DefaultResource <br>
  * @version generated on Thu Oct 26 02:05:01 WAT 2017 by Hichem
  */
-public class DefaultResource extends WrappedIndividualImpl implements Resource {
+public abstract class DefaultResource extends WrappedIndividualImpl implements Resource {
 
     public DefaultResource(OWLOntology ontology, IRI iri) {
         super(ontology, iri);
@@ -30,144 +30,144 @@ public class DefaultResource extends WrappedIndividualImpl implements Resource {
      * Object Property http://www.owl-ontologies.com/unnamed.owl#isCreatedBy
      */
      
-    public Collection<? extends ValueConfiguration> getIsCreatedBy() {
-        return getDelegate().getPropertyValues(getOwlIndividual(),
-                                               Vocabulary.OBJECT_PROPERTY_ISCREATEDBY,
-                                               DefaultValueConfiguration.class);
-    }
-
-    public boolean hasIsCreatedBy() {
-	   return !getIsCreatedBy().isEmpty();
-    }
-
-    public void addIsCreatedBy(ValueConfiguration newIsCreatedBy) {
-        getDelegate().addPropertyValue(getOwlIndividual(),
-                                       Vocabulary.OBJECT_PROPERTY_ISCREATEDBY,
-                                       newIsCreatedBy);
-    }
-
-    public void removeIsCreatedBy(ValueConfiguration oldIsCreatedBy) {
-        getDelegate().removePropertyValue(getOwlIndividual(),
-                                          Vocabulary.OBJECT_PROPERTY_ISCREATEDBY,
-                                          oldIsCreatedBy);
-    }
-
-
-    /* ***************************************************
-     * Object Property http://www.owl-ontologies.com/unnamed.owl#isNeededBy
-     */
-     
-    public Collection<? extends ValueConfiguration> getIsNeededBy() {
-        return getDelegate().getPropertyValues(getOwlIndividual(),
-                                               Vocabulary.OBJECT_PROPERTY_ISNEEDEDBY,
-                                               DefaultValueConfiguration.class);
-    }
-
-    public boolean hasIsNeededBy() {
-	   return !getIsNeededBy().isEmpty();
-    }
-
-    public void addIsNeededBy(ValueConfiguration newIsNeededBy) {
-        getDelegate().addPropertyValue(getOwlIndividual(),
-                                       Vocabulary.OBJECT_PROPERTY_ISNEEDEDBY,
-                                       newIsNeededBy);
-    }
-
-    public void removeIsNeededBy(ValueConfiguration oldIsNeededBy) {
-        getDelegate().removePropertyValue(getOwlIndividual(),
-                                          Vocabulary.OBJECT_PROPERTY_ISNEEDEDBY,
-                                          oldIsNeededBy);
-    }
-
-
-    /* ***************************************************
-     * Object Property http://www.owl-ontologies.com/unnamed.owl#isRequiredBy
-     */
-     
-    public Collection<? extends ValueProposition> getIsRequiredBy() {
-        return getDelegate().getPropertyValues(getOwlIndividual(),
-                                               Vocabulary.OBJECT_PROPERTY_ISREQUIREDBY,
-                                               DefaultValueProposition.class);
-    }
-
-    public boolean hasIsRequiredBy() {
-	   return !getIsRequiredBy().isEmpty();
-    }
-
-    public void addIsRequiredBy(ValueProposition newIsRequiredBy) {
-        getDelegate().addPropertyValue(getOwlIndividual(),
-                                       Vocabulary.OBJECT_PROPERTY_ISREQUIREDBY,
-                                       newIsRequiredBy);
-    }
-
-    public void removeIsRequiredBy(ValueProposition oldIsRequiredBy) {
-        getDelegate().removePropertyValue(getOwlIndividual(),
-                                          Vocabulary.OBJECT_PROPERTY_ISREQUIREDBY,
-                                          oldIsRequiredBy);
-    }
-
-
-    /* ***************************************************
-     * Data Property http://www.owl-ontologies.com/unnamed.owl#reasoning
-     */
-     
-    public Collection<? extends String> getReasoning() {
-		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, String.class);
-    }
-
-    public boolean hasReasoning() {
-		return !getReasoning().isEmpty();
-    }
-
-    public void addReasoning(String newReasoning) {
-	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, newReasoning);
-    }
-
-    public void removeReasoning(String oldReasoning) {
-		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, oldReasoning);
-    }
-
-
-    /* ***************************************************
-     * Data Property http://www.owl-ontologies.com/unnamed.owl#resourceCategory
-     */
-     
-    public Collection<? extends Object> getResourceCategory() {
-		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_RESOURCECATEGORY, Object.class);
-    }
-
-    public boolean hasResourceCategory() {
-		return !getResourceCategory().isEmpty();
-    }
-
-    public void addResourceCategory(Object newResourceCategory) {
-	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_RESOURCECATEGORY, newResourceCategory);
-    }
-
-    public void removeResourceCategory(Object oldResourceCategory) {
-		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_RESOURCECATEGORY, oldResourceCategory);
-    }
-
-
-    /* ***************************************************
-     * Data Property http://www.owl-ontologies.com/unnamed.owl#synonyms
-     */
-     
-    public Collection<? extends String> getSynonyms() {
-		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, String.class);
-    }
-
-    public boolean hasSynonyms() {
-		return !getSynonyms().isEmpty();
-    }
-
-    public void addSynonyms(String newSynonyms) {
-	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, newSynonyms);
-    }
-
-    public void removeSynonyms(String oldSynonyms) {
-		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, oldSynonyms);
-    }
+//    public Collection<? extends ValueConfiguration> getIsCreatedBy() {
+//        return getDelegate().getPropertyValues(getOwlIndividual(),
+//                                               Vocabulary.OBJECT_PROPERTY_ISCREATEDBY,
+//                                               DefaultValueConfiguration.class);
+//    }
+//
+//    public boolean hasIsCreatedBy() {
+//	   return !getIsCreatedBy().isEmpty();
+//    }
+//
+//    public void addIsCreatedBy(ValueConfiguration newIsCreatedBy) {
+//        getDelegate().addPropertyValue(getOwlIndividual(),
+//                                       Vocabulary.OBJECT_PROPERTY_ISCREATEDBY,
+//                                       newIsCreatedBy);
+//    }
+//
+//    public void removeIsCreatedBy(ValueConfiguration oldIsCreatedBy) {
+//        getDelegate().removePropertyValue(getOwlIndividual(),
+//                                          Vocabulary.OBJECT_PROPERTY_ISCREATEDBY,
+//                                          oldIsCreatedBy);
+//    }
+//
+//
+//    /* ***************************************************
+//     * Object Property http://www.owl-ontologies.com/unnamed.owl#isNeededBy
+//     */
+//
+//    public Collection<? extends ValueConfiguration> getIsNeededBy() {
+//        return getDelegate().getPropertyValues(getOwlIndividual(),
+//                                               Vocabulary.OBJECT_PROPERTY_ISNEEDEDBY,
+//                                               DefaultValueConfiguration.class);
+//    }
+//
+//    public boolean hasIsNeededBy() {
+//	   return !getIsNeededBy().isEmpty();
+//    }
+//
+//    public void addIsNeededBy(ValueConfiguration newIsNeededBy) {
+//        getDelegate().addPropertyValue(getOwlIndividual(),
+//                                       Vocabulary.OBJECT_PROPERTY_ISNEEDEDBY,
+//                                       newIsNeededBy);
+//    }
+//
+//    public void removeIsNeededBy(ValueConfiguration oldIsNeededBy) {
+//        getDelegate().removePropertyValue(getOwlIndividual(),
+//                                          Vocabulary.OBJECT_PROPERTY_ISNEEDEDBY,
+//                                          oldIsNeededBy);
+//    }
+//
+//
+//    /* ***************************************************
+//     * Object Property http://www.owl-ontologies.com/unnamed.owl#isRequiredBy
+//     */
+//
+//    public Collection<? extends ValueProposition> getIsRequiredBy() {
+//        return getDelegate().getPropertyValues(getOwlIndividual(),
+//                                               Vocabulary.OBJECT_PROPERTY_ISREQUIREDBY,
+//                                               DefaultValueProposition.class);
+//    }
+//
+//    public boolean hasIsRequiredBy() {
+//	   return !getIsRequiredBy().isEmpty();
+//    }
+//
+//    public void addIsRequiredBy(ValueProposition newIsRequiredBy) {
+//        getDelegate().addPropertyValue(getOwlIndividual(),
+//                                       Vocabulary.OBJECT_PROPERTY_ISREQUIREDBY,
+//                                       newIsRequiredBy);
+//    }
+//
+//    public void removeIsRequiredBy(ValueProposition oldIsRequiredBy) {
+//        getDelegate().removePropertyValue(getOwlIndividual(),
+//                                          Vocabulary.OBJECT_PROPERTY_ISREQUIREDBY,
+//                                          oldIsRequiredBy);
+//    }
+//
+//
+//    /* ***************************************************
+//     * Data Property http://www.owl-ontologies.com/unnamed.owl#reasoning
+//     */
+//
+//    public Collection<? extends String> getReasoning() {
+//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, String.class);
+//    }
+//
+//    public boolean hasReasoning() {
+//		return !getReasoning().isEmpty();
+//    }
+//
+//    public void addReasoning(String newReasoning) {
+//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, newReasoning);
+//    }
+//
+//    public void removeReasoning(String oldReasoning) {
+//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, oldReasoning);
+//    }
+//
+//
+//    /* ***************************************************
+//     * Data Property http://www.owl-ontologies.com/unnamed.owl#resourceCategory
+//     */
+//
+//    public Collection<? extends Object> getResourceCategory() {
+//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_RESOURCECATEGORY, Object.class);
+//    }
+//
+//    public boolean hasResourceCategory() {
+//		return !getResourceCategory().isEmpty();
+//    }
+//
+//    public void addResourceCategory(Object newResourceCategory) {
+//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_RESOURCECATEGORY, newResourceCategory);
+//    }
+//
+//    public void removeResourceCategory(Object oldResourceCategory) {
+//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_RESOURCECATEGORY, oldResourceCategory);
+//    }
+//
+//
+//    /* ***************************************************
+//     * Data Property http://www.owl-ontologies.com/unnamed.owl#synonyms
+//     */
+//
+//    public Collection<? extends String> getSynonyms() {
+//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, String.class);
+//    }
+//
+//    public boolean hasSynonyms() {
+//		return !getSynonyms().isEmpty();
+//    }
+//
+//    public void addSynonyms(String newSynonyms) {
+//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, newSynonyms);
+//    }
+//
+//    public void removeSynonyms(String oldSynonyms) {
+//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, oldSynonyms);
+//    }
 
 
 }

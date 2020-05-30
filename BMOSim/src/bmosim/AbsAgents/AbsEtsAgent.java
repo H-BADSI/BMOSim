@@ -133,7 +133,7 @@ public abstract class AbsEtsAgent extends AbsBMOAgent{
 	}
 	
 	public String customerSegmentation(DBcustomer cusInfo){
-		// à réecrire en se basant sur l'ontologie
+		// ï¿½ rï¿½ecrire en se basant sur l'ontologie
 		String x = "";
 		if (cusInfo.getAge() <= 16){x = "1";}
 		if (cusInfo.getAge() >= 17 && cusInfo.getAge() <= 29){x = "2";}
@@ -149,7 +149,7 @@ public abstract class AbsEtsAgent extends AbsBMOAgent{
     	ArrayList<String> targetOffers = new ArrayList<String>();
     	
     	FileManager.get().addLocatorClassLoader(AbsEtsAgent.class.getClassLoader());
-    	Model model = FileManager.get().loadModel("C:"+File.separatorChar+"Users"+File.separatorChar+"Hichem"+File.separatorChar+"Google Drive"+File.separatorChar+"search"+File.separatorChar+"workspace"+File.separatorChar+"BMOSim"+File.separatorChar+"bin"+File.separatorChar+"bmosim"+File.separatorChar+"onto"+File.separatorChar+"BusModelOWL.owl");
+    	Model model = FileManager.get().loadModel("C:\\Users\\BRAHIM\\Downloads\\3juil2019\\demo\\BMOSim\\BMOSim\\src\\bmosim\\onto\\BusModelOWL.owl");
     	String x = String.valueOf(customerSegmentation(cusInfo));
     	String queryString = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> "
     		+ "PREFIX bmo: <http://www.owl-ontologies.com/businessmodelontology.owl#> "

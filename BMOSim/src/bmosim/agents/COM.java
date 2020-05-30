@@ -91,7 +91,7 @@ public class COM extends AbstractCOM{
 	}
 	public void saveCustomerData(){
 		cusinfo = (ParamCusAgent) dialog.getContent()[0];
-		cusID = dialog.getSender(); // ********** à supprimer ??
+		cusID = dialog.getSender(); // ********** ï¿½ supprimer ??
 		reqDB = new EnumMessage<Queries>(Queries.SAVE_CUSTOMER_DATA,cusID,cusneed,cusinfo);
 		code = sendMessage (AGR.COMMUNITY,AGR.IN_GROUP, AGR.DB_IN_ROLE,reqDB);		
 		
@@ -147,7 +147,7 @@ public class COM extends AbstractCOM{
 	{
 		Offer offre = new Offer();	
 		/*
-		 * TODO: préparer une offre personnalisée pour le client
+		 * TODO: prï¿½parer une offre personnalisï¿½e pour le client
 		 * utiliser cusneed et cusinfo
 		*/
 
@@ -235,11 +235,11 @@ public class COM extends AbstractCOM{
 	
 							// **** Treating Order Methods **** //
 	
-	public Offer getAltContract (	Offer requestedOffer,	// l'offre commandée par le client
+	public Offer getAltContract (	Offer requestedOffer,	// l'offre commandï¿½e par le client
 									List<DBoffer> altOffers,// les offres alternatives
 									DBcustomer cusData,		// informations sur le client
 									double AvgCusScore){	// score moyen des clients
-		//TODO: à completer en tenant compte des informations client pour une offre plus efficace
+		//TODO: ï¿½ completer en tenant compte des informations client pour une offre plus efficace
 		if (!altOffers.isEmpty()){
 			Offer contract = new Offer();
 			int x = (int) (altOffers.size()*Math.random());
@@ -589,7 +589,7 @@ public class COM extends AbstractCOM{
 		// save feedback
 		
 		
-		// ne pas oublier d'annuler la livraison d'un objet si reclamation n°
+		// ne pas oublier d'annuler la livraison d'un objet si reclamation nï¿½
 	}
 	
 							// **** Refunding Methods **** //

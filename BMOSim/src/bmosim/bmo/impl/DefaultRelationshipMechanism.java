@@ -31,7 +31,8 @@ public class DefaultRelationshipMechanism extends WrappedIndividualImpl implemen
      */
      
     public Collection<? extends Object> getCustomerEquity() {
-		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_CUSTOMEREQUITY, Object.class);
+//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_CUSTOMEREQUITY, Object.class);
+        return null;
     }
 
     public boolean hasCustomerEquity() {
@@ -39,11 +40,11 @@ public class DefaultRelationshipMechanism extends WrappedIndividualImpl implemen
     }
 
     public void addCustomerEquity(Object newCustomerEquity) {
-	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_CUSTOMEREQUITY, newCustomerEquity);
+//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_CUSTOMEREQUITY, newCustomerEquity);
     }
 
     public void removeCustomerEquity(Object oldCustomerEquity) {
-		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_CUSTOMEREQUITY, oldCustomerEquity);
+//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_CUSTOMEREQUITY, oldCustomerEquity);
     }
 
 
@@ -52,7 +53,8 @@ public class DefaultRelationshipMechanism extends WrappedIndividualImpl implemen
      */
      
     public Collection<? extends String> getReasoning() {
-		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, String.class);
+//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, String.class);
+        return null;
     }
 
     public boolean hasReasoning() {
@@ -60,11 +62,11 @@ public class DefaultRelationshipMechanism extends WrappedIndividualImpl implemen
     }
 
     public void addReasoning(String newReasoning) {
-	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, newReasoning);
+//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, newReasoning);
     }
 
     public void removeReasoning(String oldReasoning) {
-		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, oldReasoning);
+//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, oldReasoning);
     }
 
 
@@ -73,7 +75,8 @@ public class DefaultRelationshipMechanism extends WrappedIndividualImpl implemen
      */
      
     public Collection<? extends String> getSynonyms() {
-		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, String.class);
+//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, String.class);
+        return null;
     }
 
     public boolean hasSynonyms() {
@@ -81,11 +84,11 @@ public class DefaultRelationshipMechanism extends WrappedIndividualImpl implemen
     }
 
     public void addSynonyms(String newSynonyms) {
-	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, newSynonyms);
+//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, newSynonyms);
     }
 
     public void removeSynonyms(String oldSynonyms) {
-		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, oldSynonyms);
+//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, oldSynonyms);
     }
 
 

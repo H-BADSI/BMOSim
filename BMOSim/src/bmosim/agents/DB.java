@@ -365,6 +365,13 @@ public class DB extends AbstractDB{
     	DBcustomer cusinfo = gettingCustomer(cusAddr.hashCode());
     	sendReply(query,new EnumMessage<Queries>(Queries.CUSTOMER_INFO,cusinfo));
     }
+
+    /*brahim*/
+//	public void getCustomers(){
+//		ArrayList<DBcustomer> cusinfo = gettingCustomers();
+//		sendReply(query,new EnumMessage<Queries>(Queries.CUSTOMER_INFO,cusinfo));
+//	}
+	/*brahim*/
     
     public void getOrder(int ordID){
     	DBorder ordinfo = gettingOrder(ordID);

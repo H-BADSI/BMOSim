@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bmosim.ihm3.controller.simulate">
+   <children>
+      <VBox prefHeight="600.0" prefWidth="94.0">
+         <fx:include source="sideBar.fxml" />
+      </VBox>
+      <Pane layoutX="94.0" prefHeight="28.0" prefWidth="806.0">
+         <fx:include source="topBar.fxml" />
+      </Pane>
+
+      <Label layoutX="375.0" layoutY="55.0" prefHeight="39.0" prefWidth="178.0" text="Simulation">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="simName" alignment="CENTER" focusColor="#16d7d4" layoutX="233.0" layoutY="142.0" promptText="simulation name" unFocusColor="#2ea1a1">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="nbSim" alignment="CENTER" focusColor="#16d7d4" layoutX="429.0" layoutY="142.0" promptText="number of simulations" unFocusColor="#2ea1a1">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="simFile" editable="true" focusColor="#16d7d4" layoutX="622.0" layoutY="142.0" promptText="Simulation file" unFocusColor="#2ea1a1" />
+      <HBox layoutX="232.0" layoutY="301.0" prefHeight="65.0" prefWidth="530.0">
+         <children>
+            <ImageView fx:id="ph1" fitHeight="63.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/timer.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="25.0" />
+               </HBox.margin>
+               <effect>
+                  <DropShadow color="WHITE" height="68.44" radius="27.79" spread="0.26" width="44.72" />
+               </effect>
+            </ImageView>
+            <Label fx:id="a1" prefHeight="8.0" prefWidth="72.0" style="-fx-background-color: #25ae87; -fx-background-radius: 10;" visible="false">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" top="22.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="ph2" fitHeight="63.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/timer.png" />
+               </image>
+               <effect>
+                  <DropShadow color="WHITE" height="68.44" radius="27.79" spread="0.26" width="44.72" />
+               </effect>
+            </ImageView>
+            <Label fx:id="a2" prefHeight="8.0" prefWidth="72.0" style="-fx-background-color: #25ae87; -fx-background-radius: 10;" visible="false">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" top="22.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="ph3" fitHeight="63.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/timer.png" />
+               </image>
+               <effect>
+                  <DropShadow color="WHITE" height="68.44" radius="27.79" spread="0.26" width="44.72" />
+               </effect>
+            </ImageView>
+            <Label fx:id="a3" prefHeight="10.0" prefWidth="72.0" style="-fx-background-color: #25ae87; -fx-background-radius: 10;" visible="false">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" top="22.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="ph4" fitHeight="63.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/timer.png" />
+               </image>
+               <effect>
+                  <DropShadow color="WHITE" height="68.44" radius="27.79" spread="0.26" width="44.72" />
+               </effect>
+            </ImageView>
+         </children>
+      </HBox>
+      <Label layoutX="260.0" layoutY="380.0" style="-fx-font-weight: BOLD;" text="connect DB" />
+      <Label layoutX="400.0" layoutY="380.0" style="-fx-font-weight: BOLD;" text="refresh DB" />
+      <Label layoutX="536.0" layoutY="380.0" style="-fx-font-weight: BOLD;" text="interracting" />
+      <Label layoutX="695.0" layoutY="380.0" prefHeight="17.0" prefWidth="45.0" style="-fx-font-weight: BOLD;" text="finish" />
+      <JFXButton fx:id="simulate" layoutX="301.0" layoutY="472.0" onAction="#simulate" prefHeight="29.0" prefWidth="94.0" style="-fx-background-color: #02b06d;" text="simulate" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="#c3bdbd" glyphName="PLAY" size="20" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="pause" layoutX="446.0" layoutY="472.0" onAction="#pause" prefHeight="29.0" prefWidth="100.0" style="-fx-background-color: gray;" text="    pause " textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="#c3bdbd" glyphName="PAUSE" size="20" wrappingWidth="15.857142269611359" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="stop" layoutX="594.0" layoutY="472.0" onAction="#stop" prefHeight="29.0" prefWidth="100.0" style="-fx-background-color: #b00239;" text="     stop      " textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="#c3bdbd" glyphName="STOP" size="20" wrappingWidth="15.857142269611359" />
+         </graphic>
+      </JFXButton>
+
+   </children>
+</AnchorPane>
