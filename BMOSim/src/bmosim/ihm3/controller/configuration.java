@@ -42,15 +42,15 @@ import static java.util.Arrays.asList;
 public class configuration implements Initializable{
 
     @FXML
-    private JFXComboBox pack1;
-    @FXML
-    private JFXComboBox pack2;
-    @FXML
     private JFXTextField xmlDest;
+    @FXML
+    private JFXTextField agDest;
     @FXML
     private JFXButton update;
     @FXML
     private Label label;
+    @FXML
+    private Label label2;
     @FXML
     private JFXTextField simVars;
     @FXML
@@ -79,7 +79,7 @@ public class configuration implements Initializable{
 
 
     @FXML
-    void updateSet() throws TransformerException {
+    void updateSet() {
         Node SimulationSet;
         if(doc.getElementsByTagName("SimulationSet").item(0)==null){
             System.out.println("NULL");
@@ -108,7 +108,7 @@ public class configuration implements Initializable{
     }
 
     @FXML
-    void addVariable(ActionEvent event) throws TransformerException {
+    void addVariable(ActionEvent event){
         vars.add(String.valueOf(simVars.getText()));
         Node variables;
         if(doc.getElementsByTagName("variables").item(0)==null){
@@ -130,7 +130,7 @@ public class configuration implements Initializable{
         add.setDisable(true);
     }
     @FXML
-    void delete(ActionEvent event) throws TransformerException {
+    void delete(ActionEvent event) {
         ArrayList<String> as = new ArrayList<>();
         for (Object o:dvar.getCheckModel().getCheckedItems()) {
             as.add((String) o);
@@ -165,31 +165,20 @@ public class configuration implements Initializable{
     }
 
     @FXML
-    void update() throws TransformerException {
+    void update() {
         root.removeChild(doc.getElementsByTagName("sroot").item(0));
-        Node p1=doc.createElement("package1");
-        p1.setTextContent(String.valueOf(pack1.getValue()));
-        Element p2=doc.createElement("package2");
-        p2.setTextContent(String.valueOf(pack2.getValue()));
+        Node agentDest=doc.createElement("agDest");
+        agentDest.setTextContent(String.valueOf(agDest.getText()));
         Element xmlDest=doc.createElement("xmlDest");
         xmlDest.setTextContent(this.xmlDest.getText());
         Element sroot=doc.createElement("sroot");
-        sroot.appendChild(p1);
-        sroot.appendChild(p2);
+        sroot.appendChild(agentDest);
         sroot.appendChild(xmlDest);
         root.appendChild(sroot);
 
         funct.writeXML(doc,"src/bmosim/ihm3/conf/conf.xml");
         getVariables();
 
-    }
-
-    void getPack1(){
-        pack1.getItems().addAll(funct.getFilesNames("src"));
-    }
-
-    void getPack2(){
-        pack2.getItems().addAll(funct.getFilesNames("src/"+pack1.getValue()));
     }
 
     void getVariables(){
@@ -207,20 +196,83 @@ public class configuration implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        getPack1();
-        pack1.valueProperty().addListener(new ChangeListener<String>() {
-            @Override public void changed(ObservableValue ov, String t, String t1) {
-                pack2.setDisable(false);
-                getPack2();
+        agDest.setText(funct.getClassDirectory());
+        xmlDest.setText(funct.getXmlDirectory());
+        ArrayList<Integer> simset = funct.getSimSet();
+        duration.setText(simset.get(0).toString());
+        paycycle.setText(simset.get(1).toString());
+        stepdelay.setText(simset.get(2).toString());
+
+        duration.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue,
+                                String newValue) {
+                if (!newValue.matches("\\d*")) {
+                    duration.setText(newValue.replaceAll("[^\\d]", ""));
+                }
+                if (duration.getText().length() > 4) {
+                    String s = duration.getText().substring(0, 4);
+                    duration.setText(s);
+                }
             }
         });
+
+        stepdelay.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue,
+                                String newValue) {
+                if (!newValue.matches("\\d*")) {
+                    stepdelay.setText(newValue.replaceAll("[^\\d]", ""));
+                }
+                if (stepdelay.getText().length() > 4) {
+                    String s = stepdelay.getText().substring(0, 4);
+                    stepdelay.setText(s);
+                }
+            }
+        });
+
+        paycycle.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue,
+                                String newValue) {
+                if (!newValue.matches("\\d*")) {
+                    paycycle.setText(newValue.replaceAll("[^\\d]", ""));
+                }
+                if (paycycle.getText().length() > 4) {
+                    String s = paycycle.getText().substring(0, 4);
+                    paycycle.setText(s);
+                }
+            }
+        });
+
+        agDest.textProperty().addListener(new ChangeListener<String>() {
+            @Override public void changed(ObservableValue ov, String t, String t1) {
+                File f = new File(t1);
+                if(f.exists()){
+                    label2.setText("directory exists");
+                    label2.setTextFill(Color.GREEN);
+                    if(label.getTextFill()==Color.GREEN){
+                        update.setDisable(false);
+                    }
+                }else {
+                    label2.setText("directory does not exist");
+                    label2.setTextFill(Color.RED);
+                    update.setDisable(true);
+                }
+
+            }
+        });
+
+
         xmlDest.textProperty().addListener(new ChangeListener<String>() {
             @Override public void changed(ObservableValue ov, String t, String t1) {
                 File f = new File(t1);
                 if(f.exists()){
                     label.setText("directory exists");
                     label.setTextFill(Color.GREEN);
-                    update.setDisable(false);
+                    if(label2.getTextFill()==Color.GREEN){
+                        update.setDisable(false);
+                    }
                 }else {
                     label.setText("directory does not exist");
                     label.setTextFill(Color.RED);

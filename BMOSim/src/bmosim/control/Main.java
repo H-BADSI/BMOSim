@@ -1,69 +1,27 @@
 package bmosim.control;
 
+import bmosim.ihm3.Repository.FeedRepo.InstanceRepo;
+import bmosim.ihm3.Repository.FeedRepo.SimulationRepo;
 
-import bmosim.ihm3.bdd;
-import bmosim.ihm3.controller.simulate;
-import bmosim.ihm3.model.simulation;
-
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Arrays;
-
 
 public class Main {
 
-	public static Connection con;
-
 	public static String fileDirect;
+	public static Generator g;
+	public static String simState="RUNNING";
 
-	public static void connect(String db) throws SQLException, ClassNotFoundException, InterruptedException {
-		con= bdd.connect(db);
-
-	}
-
-
-    public static int getIdInst(int ord,int idSim)throws SQLException {
-        Statement stmt = Main.con.createStatement();
-        String q ="select idinstance from inst where ord="+ord+" and idSimulation="+idSim;
-        ResultSet rs = stmt.executeQuery(q);
-        if(rs.next()){
-            return rs.getInt("idinstance");
-        }
-        return 0;
-    }
-
-	public static void insertValues(int id){
-        try {
-            Statement stmt2 = Main.con.createStatement();
-            String q2 = "insert into vals (avgSat,nbsat,nbacc,nbunacc,waitTimeAVG,ordersTotalNb,purchasesTotalNb," +
-                    "turnoverProbe,refundProbe,nbCustomer,idInstance)" +
-                    " values ("+Observer.globalScore+","+Observer.satOffersNb+","+Observer.accOffersNb+"," +
-                    Observer.unAccOffersNb+","+Observer.avgT+","+Observer.ordersTotalNb+","+Observer.purchasesTotalNb
-                    +","+Observer.turnover+","+Observer.refund+","+Observer.customers.size()+","+id+")";
-            stmt2.executeUpdate(q2);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static void executeInst() throws SQLException {
-        Statement stmt1 = Main.con.createStatement();
-        String q1 = "insert into inst (ord,idSimulation) values ("+Generator.ord+","+Generator.idSim+")";
-        stmt1.executeUpdate(q1);
-        Generator.idInst=getIdInst(Generator.ord,Generator.idSim);
-        Generator g = new Generator();
+    public static void executeInst(){
+        new InstanceRepo().insertInst(Generator.idSim,Generator.ord);
+        Generator.idInst=new InstanceRepo().getIdInstByIdSimAndOrd(Generator.idSim,Generator.ord);
+        g = new Generator();
         g.main();
     }
 
-    public static void execute(Integer i, String name, String fileDir, ArrayList<Integer> simSet) throws SQLException, ClassNotFoundException, InterruptedException {
-        connect("stat");
-        Statement stmt = con.createStatement();
-        String q = "insert into simulation (name) values ('"+name+"')";
-        stmt.executeUpdate(q);
-        Generator.idSim= simulation.getLastIdSim();
+    public static void execute(Integer i, String name, String fileDir, ArrayList<Integer> simSet){
+        new SimulationRepo().insertSim(name);
+        Generator.idSim= new SimulationRepo().getLastId();
+
         Generator.nbInst=i;
         fileDirect=fileDir;
         Schedul.simulationDuration=simSet.get(0);
@@ -73,22 +31,60 @@ public class Main {
         executeInst();
     }
 
-	public static void reexecute() throws SQLException {
-			if(Generator.ord<Generator.nbInst){
-				Generator.ord++;
-                executeInst();
-			}
-
-//			simulate.tf3.setText("activate");
-	}
-
-	public static void stop(){
-	    Schedul.stop();
+    public static void reexecute() {
+        if(Generator.ord<Generator.nbInst){
+            Generator.ord++;
+            executeInst();
+        }
     }
 
-	public static void main(String[] args) throws InterruptedException, SQLException, ClassNotFoundException {
-		//Generator.main();
 
-	}
+//    public static int getIdInst(int ord,int idSim)throws SQLException {
+//        Statement stmt = bmosim.ihm3.Main.conStat.createStatement();
+//        String q ="select idinstance from instance where ord="+ord+" and idSimulation="+idSim;
+//        ResultSet rs = stmt.executeQuery(q);
+//        if(rs.next()){
+//            return rs.getInt("idinstance");
+//        }
+//        return 0;
+//    }
+
+//	public static void insertValues(int id){
+//        try {
+//            Statement stmt2 = bmosim.ihm3.Main.conStat.createStatement();
+//            String q2 = "insert into Feed (avgSat,nbSat,nbAcc,nbunAcc,waitAvgTime,ordersTotalNb,purchasesTotalNb," +
+//                    "turnoverProbe,refundProbe,idInstance)" +
+//                    " values ("+Observer.globalScore+","+Observer.satOffersNb+","+Observer.accOffersNb+"," +
+//                    Observer.unAccOffersNb+","+Observer.avgT+","+Observer.ordersTotalNb+","+Observer.purchasesTotalNb
+//                    +","+Observer.turnover+","+Observer.refund+","+id+")";
+////            System.out.println(q2);
+//            stmt2.executeUpdate(q2);
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+////            Alert alert = new Alert(Alert.AlertType.WARNING);
+////            alert.setTitle("Warning");
+////            alert.setHeaderText("Values was not inserted");
+////            alert.setContentText("Check database configurations ");
+////
+////            alert.showAndWait();
+//        }
+//        catch (NullPointerException e){
+//            e.printStackTrace();
+////            Alert alert = new Alert(Alert.AlertType.WARNING);
+////            alert.setTitle("Warning");
+////            alert.setHeaderText("Simulation cannot be executed !");
+////            alert.setContentText("Check database configurations ");
+////
+////            alert.showAndWait();
+//        }
+//    }
+
+
+
+
+//	public static void main(String[] args) throws InterruptedException, SQLException, ClassNotFoundException {
+//		//Generator.main();
+//
+//	}
 
 }

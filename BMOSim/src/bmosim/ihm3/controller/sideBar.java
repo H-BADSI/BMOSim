@@ -6,6 +6,7 @@ import com.jfoenix.controls.JFXHamburger;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -51,6 +52,9 @@ public class sideBar implements Initializable{
     private JFXDrawer drawer;
 
     @FXML
+    private JFXDrawer drawer2;
+
+    @FXML
     private ImageView m1;
     @FXML
     private ImageView m2;
@@ -65,19 +69,17 @@ public class sideBar implements Initializable{
     @FXML
     private ImageView logo;
 
+    double xOffset = 0;
+    double yOffset = 0;
+
     BoxBlur bb1 = new BoxBlur(10.0f,0.0f,1);
     BoxBlur bb2 = new BoxBlur(0.0f,0.0f,0);
-
-    void setImage(ImageView im,String path){
-        File file = new File(path);
-        im.setImage(new Image(file.toURI().toString()));
-    }
 
     void go(String path,MouseEvent event) throws IOException {
         Parent p =FXMLLoader.load(getClass().getResource(path));
         Scene scene = new Scene (p);
-        Stage appStage = (Stage) ((ImageView) event.getSource()).getScene().getWindow();
-//        appStage.hide();
+        Stage appStage = (Stage) ((BorderPane) event.getSource()).getScene().getWindow();
+//         appStage.hide();
         String dark = getClass().getResource("../css/dark.css").toExternalForm();
         String light = getClass().getResource("../css/light.css").toExternalForm();
         if (Main.dark_light) {
@@ -87,19 +89,46 @@ public class sideBar implements Initializable{
             scene.getStylesheets().clear();
             scene.getStylesheets().add(light);
         }
+        p.setOnMousePressed(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                xOffset = event.getSceneX();
+                yOffset = event.getSceneY();
+            }
+        });
+        appStage.setX(Main.x);
+        appStage.setY(Main.y);
         appStage.setScene(scene);
-        appStage.sizeToScene();
+//        appStage.sizeToScene();
+        p.setOnMouseDragged(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                Main.x=event.getScreenX() - xOffset;
+                Main.y=event.getScreenY() - yOffset;
+                appStage.setX(event.getScreenX() - xOffset);
+                appStage.setY(event.getScreenY() - yOffset);
+            }
+        });
+
         appStage.show();
     }
 
     @FXML
     void goHome(MouseEvent event) throws Exception {
-        go("../view/simulate.fxml",event);
+        go("../view/home.fxml",event);
     }
 
     @FXML
     void goConf(MouseEvent event) throws IOException {
-        go("../view/configuration.fxml",event);
+//        go("../view/configuration.fxml",event);
+        if(drawer2.isHidden()){
+            drawer2.open();
+            drawer.close();
+            drawer2.setLayoutX(240);
+        }else {
+            drawer2.close();
+            drawer2.setLayoutX(-161);
+        }
     }
 
     @FXML
@@ -109,7 +138,7 @@ public class sideBar implements Initializable{
 
     @FXML
     void goModel(MouseEvent event) throws IOException {
-        go("../view/sample1.fxml",event);
+        go("../view/createFile.fxml",event);
     }
 
     @FXML
@@ -118,27 +147,31 @@ public class sideBar implements Initializable{
     }
 
     @FXML
-    void goStat(MouseEvent event) throws IOException {
+    void goStat(MouseEvent event) {
         if(drawer.isHidden()){
             drawer.open();
+            drawer2.close();
+            drawer.setLayoutX(240);
         }else {
             drawer.close();
+            drawer.setLayoutX(-282);
         }
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        setImage(logo,"C:\\Users\\BRAHIM\\Downloads\\3juil2019\\demo\\BMOSim\\BMOSim\\src\\bmosim\\ihm3\\images\\logo4.png");
-        setImage(m1,"C:\\Users\\BRAHIM\\Downloads\\3juil2019\\demo\\BMOSim\\BMOSim\\src\\bmosim\\ihm3\\images\\home1.png");
-        setImage(m2,"C:\\Users\\BRAHIM\\Downloads\\3juil2019\\demo\\BMOSim\\BMOSim\\src\\bmosim\\ihm3\\images\\home.png");
-        setImage(m3,"C:\\Users\\BRAHIM\\Downloads\\3juil2019\\demo\\BMOSim\\BMOSim\\src\\bmosim\\ihm3\\images\\setting.png");
-        setImage(m4,"C:\\Users\\BRAHIM\\Downloads\\3juil2019\\demo\\BMOSim\\BMOSim\\src\\bmosim\\ihm3\\images\\code.png");
-        setImage(m5,"C:\\Users\\BRAHIM\\Downloads\\3juil2019\\demo\\BMOSim\\BMOSim\\src\\bmosim\\ihm3\\images\\connection.png");
-        setImage(m6,"C:\\Users\\BRAHIM\\Downloads\\3juil2019\\demo\\BMOSim\\BMOSim\\src\\bmosim\\ihm3\\images\\gloves.png");
+        funct.setImage(m1,"src/bmosim/ihm3/images/home1.png");
+        funct.setImage(m2,"src/bmosim/ihm3/images/home.png");
+        funct.setImage(m3,"src/bmosim/ihm3/images/setting.png");
+        funct.setImage(m4,"src/bmosim/ihm3/images/code.png");
+        funct.setImage(m5,"src/bmosim/ihm3/images/connection.png");
+        funct.setImage(m6,"src/bmosim/ihm3/images/gloves.png");
         try {
             HBox box = FXMLLoader.load(getClass().getResource("../view/stat.fxml"));
             drawer.setSidePane(box);
+            HBox box2 = FXMLLoader.load(getClass().getResource("../view/conf.fxml"));
+            drawer2.setSidePane(box2);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -209,6 +242,5 @@ public class sideBar implements Initializable{
                 }
             }
         });
-
     }
 }

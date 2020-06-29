@@ -1,39 +1,197 @@
-
-AnchorPane{
+.anchorpane{
     -fx-background-color: white;
 }
-#an{
-    -fx-background-color: white;
-}
-
+/*.login-text{*/
+    /*-fx-cursor-color: white;*/
+    /*-fx-text-fill: white;*/
+/*}*/
 Label{
     -fx-text-fill: black;
 }
-
-
-/*.chart-plot-background {*/
-    /*-fx-background-color: #e2ecfe;*/
-/*}*/
-.chart-vertical-grid-lines {
-    -fx-stroke: #6e6e6e;
+.admin{
+    -fx-background-color: transparent;
 }
-.chart-horizontal-grid-lines {
-    -fx-stroke: #6e6e6e;
+.white-label{
+    -fx-text-fill: white;
 }
-.chart-alternative-row-fill {
-    -fx-fill: #c7c7c7;
-    -fx-stroke: trasparent;
-    -fx-stroke-width: 0;
+.title{
+    -fx-background-color:  linear-gradient(from 0px 0px to 0px 44px,#dddddd, white);
+}
+.menu-label{
+    -fx-text-fill: white;
+}
+.logo{
+    -fx-image: url("../images/logo11.png");
+}
+.top-top{
+    -fx-background-color: #dddddd;
+}
+.light{
+    -fx-image: url("../images/idea.png");
+}
+.reduce{
+    -fx-image: url("../images/minus.png");
+
+}
+.close{
+    -fx-image: url("../images/power.png");
+
+}
+.light:hover{
+    -fx-opacity: 0.5;
+}
+.reduce:hover{
+    -fx-image: url("../images/minus-blue.png");
+}
+.close:hover{
+    -fx-image: url("../images/power-red.png");
+}
+.homeIm{
+    -fx-image: url("../../ihm3/images/logo6.png");
+}
+.homePage{
+    -fx-image: url("../../ihm3/images/home-page-green.png");
+}
+.execution{
+    -fx-image: url("../../ihm3/images/execution-green.png");
+}
+.configuration{
+    -fx-image: url("../../ihm3/images/configuration-green.png");
+}
+.stat1{
+    -fx-image: url("../../ihm3/images/stat1.png");
+}
+.stat2{
+    -fx-image: url("../../ihm3/images/stat2.png");
+}
+.stat3{
+    -fx-image: url("../../ihm3/images/stat3.png");
+}
+.model{
+    -fx-image: url("../../ihm3/images/model-green.png");
+}
+.meta-model{
+    -fx-image: url("../../ihm3/images/meta-model-green.png");
+}
+
+.chart-line-symbol {
+    -fx-background-color: #f9d900, white;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px;
 }
 .chart-series-line {
-    -fx-stroke-width: 2px;
-    -fx-effect: null;
+    -fx-stroke: #f9d900;
+    -fx-stroke-width: 4px;
+    -fx-effect: dropshadow( two-pass-box , rgba(0,0,0,0.3) , 8, 0.0 , 0 , 3 );
 }
-.chart-legend{
-    -fx-text-fill: white;
+.default-color0.chart-line-symbol { -fx-background-color: #f9d900, white; }
+.default-color1.chart-line-symbol { -fx-background-color: #a9e200, white; }
+.default-color2.chart-line-symbol { -fx-background-color: #22bad9, white; }
+.default-color3.chart-line-symbol { -fx-background-color: #0181e2, white; }
+.default-color4.chart-line-symbol { -fx-background-color: #2f357f, white; }
+.default-color5.chart-line-symbol { -fx-background-color: #860061, white; }
+.default-color6.chart-line-symbol { -fx-background-color: #c62b00, white; }
+.default-color7.chart-line-symbol { -fx-background-color: #ff5700, white; }
+.default-color0.chart-series-line { -fx-stroke: #f9d900; }
+.default-color1.chart-series-line { -fx-stroke: #a9e200; }
+.default-color2.chart-series-line { -fx-stroke: #22bad9; }
+.default-color3.chart-series-line { -fx-stroke: #0181e2; }
+.default-color4.chart-series-line { -fx-stroke: #2f357f; }
+.default-color5.chart-series-line { -fx-stroke: #860061; }
+.default-color6.chart-series-line { -fx-stroke: #c62b00; }
+.default-color7.chart-series-line { -fx-stroke: #ff5700; }
+.chart-row-fill{
+
+}
+
+/* ====== BAR CHART =========================================================== */
+/* TODO flip gradient vertical for negative bars */
+.chart-bar {
+    -fx-bar-fill: #22bad9;
+    -fx-background-color: linear-gradient(derive(-fx-bar-fill,-30%), derive(-fx-bar-fill,-40%)),
+    linear-gradient(derive(-fx-bar-fill,80%), derive(-fx-bar-fill, 0%)),
+    linear-gradient(derive(-fx-bar-fill,30%), derive(-fx-bar-fill,-10%));
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 5 5 0 0, 4 4 0 0, 3 3 0 0;
+}
+
+.negative.chart-bar {
+    -fx-background-color: linear-gradient(to top, derive(-fx-bar-fill,-30%), derive(-fx-bar-fill,-40%)),
+    linear-gradient(to top, derive(-fx-bar-fill, 80%), derive(-fx-bar-fill,0%)),
+    linear-gradient(to top, derive(-fx-bar-fill,30%), derive(-fx-bar-fill,-10%));
+    -fx-background-radius: 0 0 5 5, 0 0 4 4, 0 0 3 3;
+}
+.bar-chart:horizontal .chart-bar, .stacked-bar-chart:horizontal .chart-bar {
+    -fx-background-color: linear-gradient(to left, derive(-fx-bar-fill,-30%), derive(-fx-bar-fill,-40%)),
+    linear-gradient(to left, derive(-fx-bar-fill,80%), derive(-fx-bar-fill, 0%)),
+    linear-gradient(to left, derive(-fx-bar-fill,30%), derive(-fx-bar-fill,-10%));
+    -fx-background-radius: 0 5 5 0, 0 4 4 0, 0 3 3 0;
+}
+.bar-chart:horizontal .negative.chart-bar, .stacked-bar-chart:horizontal .negative.chart-bar {
+    -fx-background-color: linear-gradient(to right, derive(-fx-bar-fill,-30%), derive(-fx-bar-fill,-40%)),
+    linear-gradient(to right, derive(-fx-bar-fill, 80%), derive(-fx-bar-fill, 0%)),
+    linear-gradient(to right, derive(-fx-bar-fill,30%), derive(-fx-bar-fill,-10%));
+    -fx-background-radius: 5 0 0 5, 4 0 0 4, 3 0 0 3;
+}
+.default-color0.chart-bar { -fx-bar-fill: #a9e200; }
+.default-color1.chart-bar { -fx-bar-fill: #22bad9; }
+.default-color2.chart-bar { -fx-bar-fill: #860061; }
+.default-color3.chart-bar { -fx-bar-fill: #ff5700; }
+.default-color4.chart-bar { -fx-bar-fill: #f9d900; }
+.default-color5.chart-bar { -fx-bar-fill: #2f357f; }
+.default-color6.chart-bar { -fx-bar-fill: #c62b00; }
+.default-color7.chart-bar { -fx-bar-fill: #0181e2; }
+.bar-legend-symbol {
+    -fx-padding: 8px;
 }
 
 .combo-box .cell{
     -fx-text-fill: black;
 
+}
+/* -------------- STYLES FOR THE DEFAULT LISTVIEW-BASED COMBOBOX ------------- */
+
+/* Customise the ListCell that appears in the ComboBox button itself */
+.text-field {
+    -fx-text-fill: black;
+}
+.combo-box{
+    -fx-text-fill: black;
+}
+.combo-box > .list-cell {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-padding: 0.25em 0 0.166667em 0.583333em; /* 3 0 2 7 */
+    -fx-cell-size: 1.7500em; /* 21 */
+}
+
+.combo-box-popup > .list-view {
+    -fx-background-color: -fx-box-border, -fx-control-inner-background;
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 8, 0.0 , 0 , 0 );
+}
+
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
+    -fx-padding: 4 0 4 5;
+
+    /* No alternate highlighting */
+    -fx-background-color: -fx-control-inner-background;
+}
+
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected,
+.combo-box-popup  > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:hover {
+    -fx-background: -fx-accent;
+    -fx-background-color: -fx-selection-bar;
+    -fx-text-fill: -fx-selection-bar-text;
+}
+
+.combo-box-popup  > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:hover {
+    -fx-background-color: -fx-cell-hover-color;
+    -fx-text-fill: -fx-text-inner-color;
+}
+
+.combo-box-popup > .list-view > .placeholder > .label {
+    -fx-text-fill: derive(-fx-control-inner-background,-30%);
 }

@@ -1,6 +1,5 @@
 package bmosim.control;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -8,6 +7,7 @@ import java.util.logging.Level;
 import bmosim.agents.COM;
 import bmosim.agents.CUS;
 import bmosim.exchange.objects.Seller;
+import bmosim.ihm3.Repository.FeedRepo.FeedRepo;
 import bmosim.model.AGR;
 import bmosim.model.Role;
 import madkit.kernel.Watcher;
@@ -71,7 +71,7 @@ public class Observer extends Watcher{
 
 	
 	public void activate(){
-		getLogger().setLevel(Level.FINEST);
+		getLogger().setLevel(Level.OFF); /*brahim*/
 		requestRole(AGR.COMMUNITY, AGR.CONTROL_GROUP, AGR.WATCHER_ROLE);
 		addProbe(customerSatisfactionProbe);
 		addProbe(nbSatisfyingOffersProbe);
@@ -95,6 +95,7 @@ public class Observer extends Watcher{
 			for (int j=0; j< sellersList.size();j++) scoreSum += sellersList.get(j).score ;
 			scoreSum = scoreSum / sellersList.size();
 			globalScore += scoreSum;
+			if(globalScore.isNaN()) globalScore=0.0;//BRAHIM
 		}
 		stepScore.add(globalScore);
 		if (getLogger() != null) getLogger().info("avgSat= "+globalScore.toString());
@@ -106,6 +107,7 @@ public class Observer extends Watcher{
 		for (int i=0; i<customers.size();i++){
 			satOffersNb += nbSatisfyingOffersProbe.getPropertyValue(customers.get(i));
 //			System.out.println("**************"+nbSatisfyingOffersProbe.getPropertyValue(customers.get(i)));
+			if(satOffersNb.isNaN()) satOffersNb=0.0;//BRAHIM
 		}
 		if (getLogger() != null) getLogger().info("nbsat= "+satOffersNb.toString());
 		Double avg = satOffersNb/customers.size();
@@ -116,6 +118,7 @@ public class Observer extends Watcher{
 		accOffersNb = 0.0;
 		for (int i=0; i<customers.size();i++){
 			accOffersNb += nbAcceptableOffersProbe.getPropertyValue(customers.get(i));
+			if(accOffersNb.isNaN()) accOffersNb=0.0;//BRAHIM
 		}
 		if (getLogger() != null) getLogger().info("nbacc= "+accOffersNb.toString());
 		Double avg = accOffersNb/customers.size();
@@ -127,6 +130,7 @@ public class Observer extends Watcher{
 		unAccOffersNb = 0.0;
 		for (int i=0; i<customers.size();i++){
 			unAccOffersNb += nbUnacceptableOffersProbe.getPropertyValue(customers.get(i));
+			if(unAccOffersNb.isNaN()) unAccOffersNb=0.0;//BRAHIM
 		}
 			if (getLogger() != null) getLogger().info("nbunacc= "+unAccOffersNb.toString());
 		Double avg = unAccOffersNb/customers.size();
@@ -137,6 +141,7 @@ public class Observer extends Watcher{
 		updateOffersWaitingTime = 0.0;
 		for (int i=0; i<customers.size();i++){
 			updateOffersWaitingTime += waitingTimeAVGProbe.getPropertyValue(customers.get(i));
+			if(updateOffersWaitingTime.isNaN()) updateOffersWaitingTime=0.0;//BRAHIM
 		}
 		Double avg = updateOffersWaitingTime/customers.size();
 		if (getLogger() != null) getLogger().info("waitTimeAVG= "+avg.toString());
@@ -146,6 +151,7 @@ public class Observer extends Watcher{
 		ordersTotalNb = 0.0;
 		for (int i=0; i<customers.size();i++){
 			ordersTotalNb += nbOrdersProbe.getPropertyValue(customers.get(i));
+			if(ordersTotalNb.isNaN()) ordersTotalNb=0.0;//BRAHIM
 		}
 		if (getLogger() != null) getLogger().info("ordersTotalNb= "+ordersTotalNb.toString());
 		Double avg = ordersTotalNb/customers.size();
@@ -157,6 +163,7 @@ public class Observer extends Watcher{
 		purchasesTotalNb = 0.0;
 		for (int i=0; i<customers.size();i++){
 			purchasesTotalNb += nbOfPurchasesProbe.getPropertyValue(customers.get(i));
+			if(purchasesTotalNb.isNaN()) purchasesTotalNb=0.0;//BRAHIM
 		}
 		if (getLogger() != null) getLogger().info("purchasesTotalNb= "+purchasesTotalNb.toString());
 		Double avg = purchasesTotalNb/customers.size();
@@ -168,6 +175,7 @@ public class Observer extends Watcher{
 		turnover = 0.0;
 		for (int i=0; i<commercials.size();i++){
 			turnover += turnoverProbe.getPropertyValue(commercials.get(i));
+			if(turnover.isNaN()) turnover=0.0;//BRAHIM
 		}
 		if (getLogger() != null) getLogger().info("turnoverProbe= "+turnover.toString());
 	}
@@ -177,12 +185,15 @@ public class Observer extends Watcher{
 		refund = 0.0;
 		for (int i=0; i<commercials.size();i++){
 			refund += refundProbe.getPropertyValue(commercials.get(i));
+			if(refund.isNaN()) refund=0.0;//BRAHIM
 		}
 		if (getLogger() != null) getLogger().info("refundProbe= "+refund.toString());
 	}
 
 	public void updateDB()  {
-			Main.insertValues(Generator.idInst);
+			new FeedRepo().insertFeeds(Generator.idInst,Observer.globalScore,Observer.satOffersNb,Observer.accOffersNb,
+					Observer.unAccOffersNb,Observer.avgT,Observer.ordersTotalNb.intValue(),Observer.purchasesTotalNb.intValue()
+                    ,Observer.turnover,Observer.refund);
 	}
 
 }

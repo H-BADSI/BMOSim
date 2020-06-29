@@ -10,28 +10,28 @@ import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
-import org.w3c.dom.Document;
-import org.w3c.dom.Node;
-import org.xml.sax.SAXException;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.ResourceBundle;
 
 
 public class simulate implements Initializable{
+
+
+    @FXML
+    StackPane root;
 
     @FXML
     JFXTextField nbSim;
@@ -49,48 +49,45 @@ public class simulate implements Initializable{
     private Label a1,a2,a3;
 
     @FXML
-    private RotateTransition rt1,rt2,rt3,rt4;
+    private RotateTransition rt1,rt2,rt3,rt4,rt5;
 
     @FXML
-    private JFXButton stop,simulate;
+    private JFXButton pause,stop,simulate;
 
     @FXML
-    public  JFXTextField tf1,tf2,tf3,tf4;
+    private ImageView err1;
 
     @FXML
-    public static String t1,t2,t3,t4;
+    private ImageView err2;
+
 
     ArrayList<Integer> simSet = new ArrayList<>();
 
+    public boolean running=false;
 
-    public void stop(javafx.scene.input.MouseEvent mouseEvent) {
-        System.out.println("+++++++++++++++");
-        System.out.println("+++++++++++++++");
-        System.out.println("+++++++++++++++");
-        System.out.println("+++++++++++++++");
-        System.out.println("+++++++++++++++");
-//        Main.stop();
+    void go(String path,ActionEvent event) throws IOException {
+        Parent p = FXMLLoader.load(getClass().getResource(path));
+        Scene scene = new Scene (p);
+        Stage appStage = (Stage) ((JFXButton) event.getSource()).getScene().getWindow();
+//        appStage.hide();
+        String dark = getClass().getResource("../css/dark.css").toExternalForm();
+        String light = getClass().getResource("../css/light.css").toExternalForm();
+        if (bmosim.ihm3.Main.dark_light) {
+            scene.getStylesheets().clear();
+            scene.getStylesheets().add(dark);
+        } else {
+            scene.getStylesheets().clear();
+            scene.getStylesheets().add(light);
+        }
+        appStage.setScene(scene);
+        appStage.sizeToScene();
+        appStage.show();
     }
-    public void pause(javafx.scene.input.MouseEvent mouseEvent) {
-        System.out.println("+++++++++++++++");
-        System.out.println("+++++++++++++++");
-        System.out.println("+++++++++++++++");
-        System.out.println("+++++++++++++++");
-        System.out.println("+++++++++++++++");
-//        Main.stop();
-    }
-
-    void setImage(ImageView im,String path){
-        File file = new File(path);
-        im.setImage(new Image(file.toURI().toString()));
-    }
-
-
 
     public void activate() {
         rt1= new RotateTransition(Duration.seconds(5),ph1);
-        rt2= new RotateTransition(Duration.seconds(5),ph2);
-        rt3= new RotateTransition(Duration.seconds(simSet.get(0)/50),ph3);
+        rt2= new RotateTransition(Duration.seconds(8),ph2);
+        rt3= new RotateTransition(Duration.seconds(simSet.get(0)/21),ph3);
         rt4= new RotateTransition(Duration.seconds(5),ph4);
         RotateTransition r[] = {rt1,rt2,rt3,rt4};
         for (RotateTransition rr:r) {
@@ -98,178 +95,183 @@ public class simulate implements Initializable{
             rr.setAutoReverse(false);
             rr.setFromAngle(0);
         }
-        rt1.setToAngle(1080);
-        rt2.setToAngle(1080);
-        rt3.setToAngle(1080);
-        rt4.setToAngle(1080);
-        simulate.setDisable(true);
-        setImage(ph1,"C:\\Users\\BRAHIM\\Downloads\\3juil2019\\demo\\BMOSim\\BMOSim\\src\\bmosim\\ihm3\\images\\fan.png");
+        rt1.setToAngle(360*5);
+        rt2.setToAngle(360*8);
+        rt3.setToAngle(360*simSet.get(0)/50);
+        rt4.setToAngle(360*5);
+        funct.setImage(ph1,"src/bmosim/ihm3/images/fan.png");
 
         rt1.play();
         rt1.setOnFinished(new EventHandler<ActionEvent>() {
-                              @Override
-                              public void handle(ActionEvent event) {
-                                  setImage(ph1,"C:\\Users\\BRAHIM\\Downloads\\3juil2019\\demo\\BMOSim\\BMOSim\\src\\bmosim\\ihm3\\images\\success.png");
-
-                                  setImage(ph2,"C:\\Users\\BRAHIM\\Downloads\\3juil2019\\demo\\BMOSim\\BMOSim\\src\\bmosim\\ihm3\\images\\fan.png");
-                                  rt2.play();
-                              }
-                          }
-
+              @Override
+              public void handle(ActionEvent event) {
+                  funct.setImage(ph1,"src/bmosim/ihm3/images/success.png");
+                  funct.setImage(ph2,"src/bmosim/ihm3/images/fan.png");
+                  rt2.play();
+              }
+          }
         );
         rt2.setOnFinished(new EventHandler<ActionEvent>() {
-                              @Override
-                              public void handle(ActionEvent event) {
-
-                                  setImage(ph2,"C:\\Users\\BRAHIM\\Downloads\\3juil2019\\demo\\BMOSim\\BMOSim\\src\\bmosim\\ihm3\\images\\success.png");
-
-                                  a1.setVisible(true);
-                                  setImage(ph3,"C:\\Users\\BRAHIM\\Downloads\\3juil2019\\demo\\BMOSim\\BMOSim\\src\\bmosim\\ihm3\\images\\fan.png");
-
-                                  ph3.setStyle("-fx-fill: #3b0843");
-                                  rt3.play();
-                              }
-                          }
-
+              @Override
+              public void handle(ActionEvent event) {
+                  pause.setDisable(false);
+                  stop.setDisable(false);
+                  funct.setImage(ph2,"src/bmosim/ihm3/images/success.png");
+                  a1.setVisible(true);
+                  funct.setImage(ph3,"src/bmosim/ihm3/images/fan.png");
+                  rt3.play();
+              }
+          }
         );
         rt3.setOnFinished(new EventHandler<ActionEvent>() {
-                              @Override
-                              public void handle(ActionEvent event) {
-
-                                  setImage(ph3,"C:\\Users\\BRAHIM\\Downloads\\3juil2019\\demo\\BMOSim\\BMOSim\\src\\bmosim\\ihm3\\images\\success.png");
-
-                                  a2.setVisible(true);
-                                  setImage(ph4,"C:\\Users\\BRAHIM\\Downloads\\3juil2019\\demo\\BMOSim\\BMOSim\\src\\bmosim\\ihm3\\images\\fan.png");
-
-                                  rt4.play();
-                              }
-                          }
-
+              @Override
+              public void handle(ActionEvent event) {
+                  funct.setImage(ph3,"src/bmosim/ihm3/images/success.png");
+                  a2.setVisible(true);
+                  funct.setImage(ph4,"src/bmosim/ihm3/images/fan.png");
+                  rt4.play();
+              }
+          }
         );
         rt4.setOnFinished(new EventHandler<ActionEvent>() {
-                              @Override
-                              public void handle(ActionEvent event) {
+              @Override
+              public void handle(ActionEvent event) {
+                  funct.setImage(ph4,"src/bmosim/ihm3/images/success.png");
+                  a3.setVisible(true);
+                  simulate.setDisable(false);
+                  pause.setDisable(true);
+                  stop.setDisable(true);
+                  running=false;
 
-                                  setImage(ph4,"C:\\Users\\BRAHIM\\Downloads\\3juil2019\\demo\\BMOSim\\BMOSim\\src\\bmosim\\ihm3\\images\\success.png");
-
-                                  simulate.setDisable(false);
-                                  a3.setVisible(true);
-                              }
-                          }
-
+              }
+          }
         );
     }
 
     @FXML
-    void simulate() throws SQLException, ClassNotFoundException, IOException, SAXException, ParserConfigurationException, InterruptedException {
-        a1.setVisible(false);
-        a2.setVisible(false);
-        a3.setVisible(false);
-        setImage(ph1,"C:\\Users\\BRAHIM\\Downloads\\3juil2019\\demo\\BMOSim\\BMOSim\\src\\bmosim\\ihm3\\images\\timer.png");
-        setImage(ph2,"C:\\Users\\BRAHIM\\Downloads\\3juil2019\\demo\\BMOSim\\BMOSim\\src\\bmosim\\ihm3\\images\\timer.png");
-        setImage(ph3,"C:\\Users\\BRAHIM\\Downloads\\3juil2019\\demo\\BMOSim\\BMOSim\\src\\bmosim\\ihm3\\images\\timer.png");
-        setImage(ph4,"C:\\Users\\BRAHIM\\Downloads\\3juil2019\\demo\\BMOSim\\BMOSim\\src\\bmosim\\ihm3\\images\\timer.png");
-//
-        simSet.addAll(funct.getSimSet());
-        activate();
-//        Main.execute(Integer.valueOf(nbSim.getText()),simName.getText(), funct.getXmlDirectory()+"\\"+simFile.getValue(),simSet);
-//        ArrayList<Integer> a = new ArrayList<>(Arrays.asList(500,50,50));
-//        Main.execute(1,"","C:\\Users\\BRAHIM\\Downloads\\3juil2019\\demo\\BMOSim\\BMOSim\\src\\bmosim\\model\\MDK.xml"
-//                ,a);
-    }
-
-    String getXmlDirectory() throws ParserConfigurationException, IOException, SAXException {
-        File file = new File("src/bmosim/ihm3/conf/conf.xml");
-
-        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-        DocumentBuilder db = dbf.newDocumentBuilder();
-
-        Document doc = db.parse(file);
-        Node xmldest = doc.getElementsByTagName("xmlDest").item(0);
-        return xmldest.getTextContent();
-    }
-
-    public boolean containsIgnoreCase(String str, String subString) {
-        return str.toLowerCase().contains(subString.toLowerCase());
-    }
-
-
-    ArrayList<String> getXmlFiles(String s) throws IOException, SAXException, ParserConfigurationException {
-        ArrayList<String> as = new ArrayList<>();
-
-        File folder = new File(getXmlDirectory());
-        File[] listOfFiles = folder.listFiles();
-
-        if(s==null){
-            for (int i = 0; i <listOfFiles.length; i++) {
-                if(containsIgnoreCase(listOfFiles[i].getName(),".xml"))
-                    as.add(listOfFiles[i].getName());
-            }
-        }else{
-            for (int i = 0; i <listOfFiles.length; i++) {
-                if(containsIgnoreCase(listOfFiles[i].getName(),s) && containsIgnoreCase(listOfFiles[i].getName(),".xml")){
-                    as.add(listOfFiles[i].getName());
-                }
+    void pause(ActionEvent event) {
+        simulate.setDisable(false);
+        pause.setDisable(true);
+        Main.simState="PAUSED";
+        RotateTransition r[] = {rt1,rt2,rt3,rt4};
+        for (RotateTransition rr:r) {
+            if(rr.getStatus().toString()=="RUNNING"){
+                rt5=rr;
+                rt5.pause();
             }
         }
-        return as;
     }
 
+    @FXML
+    void stop(ActionEvent event) throws IOException {
+        Main.simState="SHUTDOWN";
+        go("../view/simulate.fxml",event);
+    }
 
+    @FXML
+    void simulate(ActionEvent event) throws IOException {
+
+//        Main.execute(Integer.valueOf(nbSim.getText()),simName.getText(), funct.getXmlDirectory()+"\\"+simFile.getValue(),simSet);
+
+
+        File f = new File(funct.getXmlDirectory()+"\\"+simFile.getValue());
+        f.exists();
+        if(!f.exists()){
+            bmosim.ihm3.Main.Alert(root,"Oups !","File doesn't exist","Try another file");
+        }else if(simName.getText().isEmpty()){
+            err1.setVisible(true);
+        }else{
+
+            if(!running){
+                err1.setVisible(false);
+                err2.setVisible(false);
+
+                simulate.setDisable(true);
+                pause.setDisable(true);
+                stop.setDisable(true);
+
+                a1.setVisible(false);
+                a2.setVisible(false);
+                a3.setVisible(false);
+                funct.setImage(ph1,"src/bmosim/ihm3/images/stopwatch.png");
+                funct.setImage(ph2,"src/bmosim/ihm3/images/stopwatch.png");
+                funct.setImage(ph3,"src/bmosim/ihm3/images/stopwatch.png");
+                funct.setImage(ph4,"src/bmosim/ihm3/images/stopwatch.png");
+                simSet.addAll(funct.getSimSet());
+                activate();
+                running=true;
+                Main.simState="RUNNING";
+
+                try {
+//                    Main.execute(1,"aasa","src/bmosim/model/MDK.xml",simSet);
+                    Main.execute(Integer.valueOf(nbSim.getText()),simName.getText(), funct.getXmlDirectory()+"\\"+simFile.getValue(),simSet);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    stop(event);
+                }
+            }else{
+                simulate.setDisable(true);
+                pause.setDisable(false);
+                Main.simState="RUNNING";
+                rt5.play();
+            }
+        }
+
+
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        simFile.getItems().addAll(funct.getXmlFilesNamesFilter(""));
 
+        simFile.getEditor().textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable,
+                                String oldValue, String newValue) {
+                    simFile.show();
+                    simFile.getItems().setAll(funct.getXmlFilesNamesFilter(newValue));
 
-        try {
-            simFile.getItems().addAll(getXmlFiles(""));
+            }
+        });
 
-            simFile.getEditor().textProperty().addListener(new ChangeListener<String>() {
-                @Override
-                public void changed(ObservableValue<? extends String> observable,
-                                    String oldValue, String newValue) {
-                    try {
-                        simFile.getItems().setAll(getXmlFiles(newValue));
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (SAXException e) {
-                        e.printStackTrace();
-                    } catch (ParserConfigurationException e) {
-                        e.printStackTrace();
-                    }
+        nbSim.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue,
+                                String newValue) {
+                if (!newValue.matches("\\d*")) {
+                    nbSim.setText(newValue.replaceAll("[^\\d]", ""));
                 }
-            });
-//            tf1.textProperty().addListener(new ChangeListener<String>() {
-//                @Override
-//                public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-//                    rt1.stop();
-//                }
-//            });
-//            tf2.textProperty().addListener(new ChangeListener<String>() {
-//                @Override
-//                public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-//                    rt2.stop();
-//                }
-//            });
-//            tf3.textProperty().addListener(new ChangeListener<String>() {
-//                @Override
-//                public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-//                    rt3.stop();
-//                }
-//            });
-//            tf4.textProperty().addListener(new ChangeListener<String>() {
-//                @Override
-//                public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                if (nbSim.getText().length() > 2) {
+                    String s = nbSim.getText().substring(0, 2);
+                    nbSim.setText(s);
+                }
+            }
+        });
+
+//         th = new Thread() {
 //
+//            public synchronized void run() {
+//                while (true){
+//                    try {
+//                        System.out.println("++"+Generator.alert);
+//                        if(Generator.alert.equals("alert")){
+//                            Alert alert = new Alert(Alert.AlertType.WARNING);
+//                            alert.setTitle("aa");
+//                            alert.setHeaderText("aaa");
+//                            alert.setContentText("aa");
+//
+//                            alert.showAndWait();
+//                        }
+//                        Thread.sleep(500);
+//
+//                    } catch (Exception e) {
+//                        e.printStackTrace();
+//                    }
 //                }
-//            });
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (SAXException e) {
-            e.printStackTrace();
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        }
+//
+//            }
+//
+//        };
 
 
     }

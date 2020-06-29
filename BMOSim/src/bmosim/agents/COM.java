@@ -19,6 +19,7 @@ import bmosim.model.OrderState;
 import bmosim.model.Role;
 import madkit.kernel.*;
 import madkit.message.EnumMessage;
+import org.apache.jena.base.Sys;
 
 public class COM extends AbstractCOM{
 	

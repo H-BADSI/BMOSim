@@ -1,12 +1,14 @@
 package bmosim.ihm3.controller;
 
 
+import bmosim.ihm3.Main;
 import com.jfoenix.controls.JFXDrawer;
 import com.jfoenix.controls.JFXHamburger;
 import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -14,6 +16,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.effect.BlurType;
 import javafx.scene.effect.DropShadow;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
@@ -41,7 +44,10 @@ public class stat implements Initializable{
     private BorderPane stat3;
 
     @FXML
-    private FontAwesomeIconView ch1,ch2,ch3;
+    private ImageView ch1,ch2,ch3;
+
+    private double xOffset=0;
+    private double yOffset=0;
 
     DropShadow ds1 = new DropShadow(BlurType.GAUSSIAN, Color.BLACK,0,50,0,0);
     DropShadow ds2 = new DropShadow();
@@ -51,8 +57,36 @@ public class stat implements Initializable{
         Scene scene = new Scene (p);
         Stage appStage = (Stage) ((BorderPane) event.getSource()).getScene().getWindow();
 //        appStage.hide();
+        String dark = getClass().getResource("../css/dark.css").toExternalForm();
+        String light = getClass().getResource("../css/light.css").toExternalForm();
+        if (Main.dark_light) {
+            scene.getStylesheets().clear();
+            scene.getStylesheets().add(dark);
+        } else {
+            scene.getStylesheets().clear();
+            scene.getStylesheets().add(light);
+        }
+        p.setOnMousePressed(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                xOffset = event.getSceneX();
+                yOffset = event.getSceneY();
+            }
+        });
+        appStage.setX(Main.x);
+        appStage.setY(Main.y);
         appStage.setScene(scene);
-        appStage.sizeToScene();
+//        appStage.sizeToScene();
+        p.setOnMouseDragged(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                Main.x=event.getScreenX() - xOffset;
+                Main.y=event.getScreenY() - yOffset;
+                appStage.setX(event.getScreenX() - xOffset);
+                appStage.setY(event.getScreenY() - yOffset);
+            }
+        });
+
         appStage.show();
     }
 

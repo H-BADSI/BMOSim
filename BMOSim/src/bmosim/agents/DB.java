@@ -319,8 +319,8 @@ public class DB extends AbstractDB{
     	session.close();
     	if (x.isEmpty()) return null; else return (DBneed)x.get(0);
     }
-    
-    public void getDelOrder(){
+
+	public void getDelOrder(){
     	Session session = sessionFactory.openSession();
     	@SuppressWarnings("unchecked")
     	List<DBorder> x = (List<DBorder>)session
@@ -367,10 +367,26 @@ public class DB extends AbstractDB{
     }
 
     /*brahim*/
-//	public void getCustomers(){
-//		ArrayList<DBcustomer> cusinfo = gettingCustomers();
-//		sendReply(query,new EnumMessage<Queries>(Queries.CUSTOMER_INFO,cusinfo));
-//	}
+	public void getCustomers(){
+		ArrayList<DBcustomer> cusinfo = gettingCustomers();
+		sendReply(query,new EnumMessage<Queries>(Queries.CUSTOMER_INFO,cusinfo));
+	}
+	public ArrayList<DBneed> gettingTreatedNeed(Integer cus){
+
+		Session session = sessionFactory.openSession();
+		@SuppressWarnings("unchecked")
+		List<DBneed> x = (List<DBneed>)session
+				.createQuery("from DBneed as need where need.customer_id="+cus)
+				.list();
+		session.close();
+		if (x.isEmpty()) return null; else return (ArrayList<DBneed>)x;
+	}
+
+	public void getCustomerNeeds(Integer cus){
+		ArrayList<DBneed> dBneeds = gettingTreatedNeed(cus);
+		sendReply(query,new EnumMessage<Queries>(Queries.CUSTOMER_DATA,dBneeds));
+	}
+
 	/*brahim*/
     
     public void getOrder(int ordID){

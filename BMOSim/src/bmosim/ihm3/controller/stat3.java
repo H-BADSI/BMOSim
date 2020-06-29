@@ -1,8 +1,7 @@
 package bmosim.ihm3.controller;
 
-import bmosim.ihm3.model.instance;
-import bmosim.ihm3.model.simulation;
-import bmosim.ihm3.model.vals;
+import bmosim.ihm3.Repository.FeedRepo.FeedRepo;
+import bmosim.ihm3.Repository.FeedRepo.SimulationRepo;
 import com.jfoenix.controls.JFXComboBox;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -21,8 +20,6 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Array;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.ResourceBundle;
@@ -72,7 +69,7 @@ public class stat3 implements Initializable{
         String cmp = String.valueOf(comp.getValue());
         for (Object var:vars.getCheckModel().getCheckedItems()) {
             String is=String.valueOf(i);
-            Double d=vals.getValuesByVar( sim,cmp, (String) var);
+            Double d=new FeedRepo().getFeedsByVar( sim,cmp, String.valueOf(var));
             series.getData().add(new XYChart.Data(var,d));
             i+=10;
         }
@@ -87,7 +84,7 @@ public class stat3 implements Initializable{
         try {
             fillCheckCombo();
 
-            ArrayList<String> sims = simulation.getSimulations("");
+            ArrayList<String> sims = new SimulationRepo().getSimulationsByName("");
             sim.getItems().addAll(sims);
 
             sim.getCheckModel().getCheckedItems().addListener(new ListChangeListener() {
@@ -95,7 +92,7 @@ public class stat3 implements Initializable{
                 public void onChanged(Change c) {
                     chart.getData().clear();
                     for (Object s:sim.getCheckModel().getCheckedItems()) {
-                        getVals((String) s);
+                        getVals(String.valueOf(s));
                     }
 
                 }
@@ -106,7 +103,7 @@ public class stat3 implements Initializable{
                 public void onChanged(Change c) {
                     chart.getData().clear();
                     for (Object s:sim.getCheckModel().getCheckedItems()) {
-                        getVals((String) s);
+                        getVals(String.valueOf(s));
                     }
                 }
             });
@@ -115,13 +112,12 @@ public class stat3 implements Initializable{
                 @Override public void changed(ObservableValue ov, String t, String t1) {
                     chart.getData().clear();
                     for (Object s:sim.getCheckModel().getCheckedItems()) {
-                        getVals((String) s);
+                        getVals(String.valueOf(s));
                     }
                 }
             });
 
-        } catch (SQLException e) {
-            e.printStackTrace();
+
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
         } catch (SAXException e) {

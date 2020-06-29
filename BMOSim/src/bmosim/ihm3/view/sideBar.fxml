@@ -2,6 +2,8 @@
 
 <?import com.jfoenix.controls.JFXDrawer?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -9,20 +11,19 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="94.0" style="-fx-background-color: #208a68;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bmosim.ihm3.controller.sideBar">
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="240.0" style="-fx-background-color: linear-gradient(from 0px 500px to 500px 0px, #43cea2, #185a9d);;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bmosim.ihm3.controller.sideBar">
    <children>
-      <JFXDrawer fx:id="drawer" defaultDrawerSize="400.0" layoutX="94.0" layoutY="160.0" maxHeight="86.0" maxWidth="282.0" minHeight="48.0" minWidth="282.0" overLayVisible="false" prefHeight="48.0" prefWidth="282.0" style="-fx-background-radius: 50 50 50 50;" />
-      <ImageView fx:id="logo" fitHeight="94.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0">
+      <ImageView id="logo" fx:id="logo" fitHeight="91.0" fitWidth="240.0" pickOnBounds="true" preserveRatio="true" styleClass="logo" AnchorPane.leftAnchor="0.0">
          <image>
-            <Image url="@../images/logo4.png" />
-         </image>
-      </ImageView>
-      <VBox layoutY="82.0" prefHeight="521.0" prefWidth="94.0">
+            <Image url="@../images/logo11.png" />
+         </image></ImageView>
+      <VBox layoutY="87.0" prefHeight="516.0" prefWidth="240.0">
          <children>
-            <HBox fx:id="home1" alignment="CENTER" prefHeight="48.0" prefWidth="94.0">
+            <HBox alignment="CENTER" prefHeight="48.0" prefWidth="94.0">
                <children>
-                  <BorderPane fx:id="home" maxHeight="48.0" maxWidth="94.0" minHeight="48.0" minWidth="94.0" prefHeight="48.0" prefWidth="94.0">
+                  <BorderPane fx:id="home" maxHeight="48.0" maxWidth="240.0" minHeight="48.0" minWidth="94.0" onMouseClicked="#goHome" prefHeight="48.0" prefWidth="240.0">
                      <left>
                         <Pane fx:id="phome" prefHeight="48.0" prefWidth="0.0" style="-fx-background-color: #3e9bb0;" BorderPane.alignment="CENTER" />
                      </left>
@@ -30,18 +31,28 @@
                         <Insets bottom="10.0" top="10.0" />
                      </HBox.margin>
                      <center>
-                        <ImageView fx:id="m1" fitHeight="47.0" fitWidth="65.0" onMouseClicked="#goHome" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                        <ImageView fx:id="m1" fitHeight="47.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                            <image>
                               <Image url="@../images/home1.png" />
                            </image>
+                           <effect>
+                              <DropShadow color="#064624" height="56.58" radius="26.307499999999997" spread="0.14" width="50.65" />
+                           </effect>
                         </ImageView>
                      </center>
+                     <right>
+                        <Label styleClass="menu-label" text="Home            " textFill="WHITE" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font>
+                        </Label>
+                     </right>
                   </BorderPane>
                </children>
             </HBox>
-            <HBox fx:id="home1" alignment="CENTER" prefHeight="48.0" prefWidth="94.0">
+            <HBox alignment="CENTER" prefHeight="48.0" prefWidth="94.0">
                <children>
-                  <BorderPane fx:id="stat" maxHeight="48.0" maxWidth="94.0" minHeight="48.0" minWidth="94.0" prefHeight="48.0" prefWidth="94.0">
+                  <BorderPane fx:id="stat" maxHeight="48.0" maxWidth="239.0" minHeight="48.0" minWidth="94.0" onMouseClicked="#goStat" prefHeight="48.0" prefWidth="239.0">
                      <left>
                         <Pane fx:id="pstat" prefHeight="48.0" prefWidth="0.0" style="-fx-background-color: #3e9bb0;" BorderPane.alignment="CENTER" />
                      </left>
@@ -49,37 +60,57 @@
                         <Insets bottom="10.0" top="10.0" />
                      </HBox.margin>
                      <center>
-                        <ImageView fx:id="m2" fitHeight="47.0" fitWidth="65.0" onMouseClicked="#goStat" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                        <ImageView fx:id="m2" fitHeight="47.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                            <image>
                               <Image url="@../images/home.png" />
                            </image>
+                           <effect>
+                              <DropShadow color="#064624" height="56.58" radius="26.307499999999997" spread="0.14" width="50.65" />
+                           </effect>
                         </ImageView>
                      </center>
+                     <right>
+                        <Label styleClass="menu-label" text="Statistics      " textFill="WHITE" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font>
+                        </Label>
+                     </right>
                   </BorderPane>
                </children>
             </HBox>
-            <HBox fx:id="home3" alignment="CENTER" prefHeight="45.0" prefWidth="94.0">
+            <HBox alignment="CENTER" prefHeight="45.0" prefWidth="94.0">
                <children>
-                  <BorderPane fx:id="model" maxHeight="48.0" maxWidth="94.0" minHeight="48.0" minWidth="94.0" prefHeight="48.0" prefWidth="94.0">
+                  <BorderPane fx:id="model" maxHeight="67.0" maxWidth="238.0" minHeight="48.0" minWidth="94.0" onMouseClicked="#goModel" prefHeight="48.0" prefWidth="238.0">
                      <left>
                         <Pane fx:id="pmodel" prefHeight="45.0" prefWidth="0.0" style="-fx-background-color: #3e9bb0;" BorderPane.alignment="CENTER" />
                      </left>
                      <center>
-                        <ImageView fx:id="m4" fitHeight="47.0" fitWidth="65.0" onMouseClicked="#goModel" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                        <ImageView fx:id="m4" fitHeight="47.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                            <image>
                               <Image url="@../images/code.png" />
                            </image>
+                           <effect>
+                              <DropShadow color="#064624" height="56.58" radius="26.307499999999997" spread="0.14" width="50.65" />
+                           </effect>
                         </ImageView>
                      </center>
                      <HBox.margin>
                         <Insets bottom="10.0" top="10.0" />
                      </HBox.margin>
+                     <right>
+                        <Label styleClass="menu-label" text="Models          " textFill="WHITE" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font>
+                        </Label>
+                     </right>
                   </BorderPane>
                </children>
             </HBox>
-            <HBox fx:id="home31" alignment="CENTER" prefHeight="47.0" prefWidth="94.0">
+            <HBox alignment="CENTER" prefHeight="47.0" prefWidth="94.0">
                <children>
-                  <BorderPane fx:id="metaModel" maxHeight="48.0" maxWidth="94.0" minHeight="48.0" minWidth="59.0" prefHeight="48.0" prefWidth="59.0">
+                  <BorderPane fx:id="metaModel" maxHeight="48.0" maxWidth="239.0" minHeight="48.0" minWidth="59.0" onMouseClicked="#goMetaModel" prefHeight="48.0" prefWidth="239.0">
                      <left>
                         <Pane fx:id="pmmodel" prefHeight="48.0" prefWidth="0.0" style="-fx-background-color: #3e9bb0;" BorderPane.alignment="CENTER" />
                      </left>
@@ -87,42 +118,72 @@
                         <Insets bottom="10.0" top="10.0" />
                      </HBox.margin>
                      <center>
-                        <ImageView fx:id="m5" fitHeight="47.0" fitWidth="65.0" onMouseClicked="#goMetaModel" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                        <ImageView fx:id="m5" fitHeight="47.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                            <image>
                               <Image url="@../images/connection.png" />
                            </image>
+                           <effect>
+                              <DropShadow color="#064624" height="53.61" radius="25.564999999999998" spread="0.63" width="50.65" />
+                           </effect>
                         </ImageView>
                      </center>
+                     <right>
+                        <Label styleClass="menu-label" text="Meta-Model   " textFill="WHITE" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font>
+                        </Label>
+                     </right>
                   </BorderPane>
                </children>
             </HBox>
             <HBox prefHeight="112.0" prefWidth="94.0" />
-            <HBox fx:id="home2" alignment="CENTER" prefHeight="63.0" prefWidth="94.0">
+            <HBox alignment="CENTER" prefHeight="63.0" prefWidth="94.0">
                <children>
-                  <BorderPane fx:id="conf" maxHeight="48.0" maxWidth="94.0" minHeight="48.0" minWidth="94.0" prefHeight="48.0" prefWidth="94.0">
+                  <BorderPane fx:id="conf" maxHeight="48.0" maxWidth="244.0" minHeight="48.0" minWidth="94.0" onMouseClicked="#goConf" prefHeight="48.0" prefWidth="244.0">
                      <left>
                         <Pane fx:id="pconf" prefHeight="48.0" prefWidth="0.0" style="-fx-background-color: #3e9bb0;" BorderPane.alignment="CENTER" />
                      </left>
                      <center>
-                        <ImageView fx:id="m3" fitHeight="47.0" fitWidth="65.0" onMouseClicked="#goConf" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                        <ImageView fx:id="m3" fitHeight="47.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                            <image>
                               <Image url="@../images/setting.png" />
                            </image>
+                           <effect>
+                              <DropShadow color="#064624" height="56.58" radius="26.307499999999997" spread="0.14" width="50.65" />
+                           </effect>
                         </ImageView>
                      </center>
+                     <right>
+                        <Label styleClass="menu-label" text="Configuration" textFill="WHITE" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font>
+                        </Label>
+                     </right>
                   </BorderPane>
                </children>
             </HBox>
-            <HBox fx:id="home311" alignment="CENTER" prefHeight="51.0" prefWidth="94.0">
+            <HBox alignment="CENTER" prefHeight="51.0" prefWidth="94.0">
                <children>
-                  <BorderPane fx:id="simulate" maxHeight="68.0" maxWidth="94.0" minHeight="48.0" minWidth="94.0" prefHeight="68.0" prefWidth="94.0" style="-fx-background-color: #005c4d;">
+                  <BorderPane fx:id="simulate" maxHeight="68.0" maxWidth="238.0" minHeight="43.0" minWidth="94.0" onMouseClicked="#goSimulate" prefHeight="43.0" prefWidth="238.0" style="-fx-background-color: #43cea2;">
                      <center>
-                        <ImageView fx:id="m6" fitHeight="47.0" fitWidth="65.0" onMouseClicked="#goSimulate" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                        <ImageView fx:id="m6" fitHeight="42.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                            <image>
                               <Image url="@../images/gloves.png" />
                            </image>
+                           <effect>
+                              <DropShadow color="#064624" height="56.58" radius="26.307499999999997" spread="0.14" width="50.65" />
+                           </effect>
                         </ImageView>
                      </center>
+                     <right>
+                        <Label styleClass="menu-label" text="Simulate        " textFill="WHITE" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font>
+                        </Label>
+                     </right>
                   </BorderPane>
                </children>
                <padding>
@@ -131,5 +192,7 @@
             </HBox>
          </children>
       </VBox>
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="500.0" layoutX="-282.0" layoutY="165.0" maxHeight="86.0" maxWidth="282.0" minHeight="48.0" minWidth="282.0" overLayVisible="false" prefHeight="48.0" prefWidth="282.0" style="-fx-background-radius: 50 50 50 50;" />
+      <JFXDrawer fx:id="drawer2" defaultDrawerSize="380.0" layoutX="-161.0" layoutY="481.0" maxHeight="86.0" maxWidth="282.0" minHeight="48.0" minWidth="161.0" overLayVisible="false" prefHeight="48.0" prefWidth="161.0" style="-fx-background-radius: 50 50 50 50;" />
    </children>
 </AnchorPane>

@@ -1,7 +1,8 @@
 package bmosim.ihm3.controller;
 
-import bmosim.ihm3.model.instance;
-import bmosim.ihm3.model.simulation;
+import bmosim.ihm3.Repository.FeedRepo.FeedRepo;
+import bmosim.ihm3.Repository.FeedRepo.InstanceRepo;
+import bmosim.ihm3.Repository.FeedRepo.SimulationRepo;
 import bmosim.ihm3.model.vals;
 import com.jfoenix.controls.JFXComboBox;
 import javafx.beans.value.ChangeListener;
@@ -22,7 +23,6 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -87,41 +87,37 @@ public class stat2 implements Initializable{
         try {
             fillCheckCombo();
 
-            ArrayList<String> sims = simulation.getSimulations("");
+            ArrayList<String> sims = new SimulationRepo().getSimulationsByName("");
             sim.getItems().addAll(sims);
 
             sim.valueProperty().addListener(new ChangeListener<String>() {
                 @Override public void changed(ObservableValue ov, String t, String t1) {
-                    ArrayList<String> ins = instance.getInstance(t1);
+                    chart.getData().clear();
+                    sim.show();
+                    ArrayList<Integer> ins = new InstanceRepo().getInstance(t1);
                     inst.setDisable(false);
                     inst.getItems().clear();
                     inst.getItems().addAll(ins);
-
                 }
             });
 
-            inst.getCheckModel().getCheckedItems().addListener(new ListChangeListener() {
-                @Override
-                public void onChanged(Change c) {
-                    chart.getData().clear();
-                    for (Object s:inst.getCheckModel().getCheckedItems()) {
-                        getVals(vals.getValues(String.valueOf(s)),String.valueOf(vars.getValue()), (String) s);
-                    }
+
+            inst.getCheckModel().getCheckedItems().addListener((ListChangeListener) observable -> {
+                chart.getData().clear();
+                for (Object s:inst.getCheckModel().getCheckedItems()) {
+                    getVals(new FeedRepo().getFeeds(String.valueOf(sim.getValue()),String.valueOf(s)),String.valueOf(vars.getValue()), String.valueOf(s));
                 }
             });
 
-            vars.valueProperty().addListener(new ChangeListener<String>() {
-                @Override public void changed(ObservableValue ov, String t, String t1) {
-                    vars.setDisable(false);
-                    chart.getData().clear();
-                    for (Object s:inst.getCheckModel().getCheckedItems()) {
-                        getVals(vals.getValues(String.valueOf(s)),t1,(String) s);
-                    }
+            vars.valueProperty().addListener(observable -> {
+                vars.show();
+                vars.setDisable(false);
+                chart.getData().clear();
+                for (Object s:inst.getCheckModel().getCheckedItems()) {
+                    getVals(new FeedRepo().getFeeds(String.valueOf(sim.getValue()),String.valueOf(s)),String.valueOf(vars.getValue()),String.valueOf(s));
                 }
             });
 
-        } catch (SQLException e) {
-            e.printStackTrace();
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
         } catch (SAXException e) {

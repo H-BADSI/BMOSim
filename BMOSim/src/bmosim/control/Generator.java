@@ -1,16 +1,12 @@
 package bmosim.control;
 import java.io.File;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.stream.IntStream;
 import javax.xml.parsers.ParserConfigurationException;
 
 import bmosim.ihm3.bdd;
 import madkit.kernel.Scheduler;
 import madkit.kernel.Scheduler.SimulationState;
+import madkit.simulation.SimulationException;
 import org.xml.sax.SAXException;
 import javafx.fxml.FXML;
 import madkit.kernel.Agent;
@@ -34,9 +30,14 @@ public class Generator extends Agent{
 	static int nbInst;
 	static int idInst;
 
+	//brahim
+	Scheduler scheduler;
 
-	public void main(){
+
+
+	public void main() {
 		executeThisAgent(1,false);
+
 	}
 
 	public static void main(Ent ent) {
@@ -46,15 +47,7 @@ public class Generator extends Agent{
 				);
 	}
 	
-//	@Override
-//	public void setupFrame(JFrame frame) {
-//	//Overriding default settings
-//	
-//	frame.setTitle("Overriding Default Frame Behavior");
-//	frame.setLocation(20, 20);
-//	frame.setSize(100, 100);
-//	}
-	
+
 	public void activate () {	
 		createGroupIfAbsent(AGR.COMMUNITY, AGR.GROUP);
 		createGroupIfAbsent(AGR.COMMUNITY, AGR.CONTROL_GROUP);
@@ -64,25 +57,26 @@ public class Generator extends Agent{
 		requestRole(AGR.COMMUNITY, AGR.CONTROL_GROUP, AGR.LAUNCHER_ROLE);
 
 
-
-		
 	}
+
 	@FXML
 	public void live(){
-		
-		launchAgent(new DB(false),true);
-		launchAgent(new Schedul(),true);
+		scheduler = new Schedul();
+		launchAgent(new DB(false),false);
+		launchAgent(scheduler,false);
 		try {
 			launchXmlAgents(Main.fileDirect);
 		} catch (SAXException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println(1);
 		} catch (ParserConfigurationException e) {
-			e.printStackTrace();
+			System.out.println(3);
+		}catch (SimulationException e){
+			System.out.println(4444444);
+		} catch (IOException e) {
+			System.out.println(555555);
 		}
 
-		launchAgent(new Observer(),true);
+		launchAgent(new Observer(),false);
 		while (alive) pause (500);
 
 

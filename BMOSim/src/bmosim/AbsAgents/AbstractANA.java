@@ -2,9 +2,13 @@ package bmosim.AbsAgents;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import bmosim.exchange.dialog.Conversation;
+import bmosim.exchange.filters.ConversationEnumFilter;
 import bmosim.exchange.param.ParamAnaAgent;
 import bmosim.model.AGR;
 import bmosim.model.Role;
+import madkit.message.EnumMessage;
 
 public abstract class AbstractANA extends AbsEtsAgent{
 	
@@ -53,5 +57,13 @@ public abstract class AbstractANA extends AbsEtsAgent{
 			}
 
 	}
+	/*brahim*/
+	public EnumMessage<Conversation> getConversationMessage(Conversation x){
+		filter = new ConversationEnumFilter(x);
+		EnumMessage<Conversation> y = null;
+		y = (EnumMessage<Conversation>) nextMessage(filter);
+		return y;
+	}
+	/*brahim*/
 	public abstract void profiling();
 }

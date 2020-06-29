@@ -61,11 +61,13 @@ public class Role {
 	    public final static String FB = "feedback";
 	    
 	    public class Lead{
+//			public final static String CHECK_DEL_STATE = "check_del_state";
 	    	
 	    }
 	    public class Prof{
-	    	
-	    }
+			public final static String PROF= "profiling";
+
+		}
 	    public class Fb{
 	    	
 	    }

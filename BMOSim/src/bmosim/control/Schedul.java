@@ -1,6 +1,5 @@
 package bmosim.control;
 
-import java.sql.SQLException;
 import java.util.logging.Level;
 
 import bmosim.ihm3.controller.simulate;
@@ -33,7 +32,6 @@ public class Schedul extends Scheduler{
 
 
 	public void activate () {
-//		simulate.tf2.setText("activate");
 		getLogger().setLevel(Level.FINE);
 		setSimulationDuration(simulationDuration);
 		setDelay(stepDelay);
@@ -70,34 +68,6 @@ public class Schedul extends Scheduler{
 		addActivator(activatorUpdateDB);
 //		setSimulationState(SimulationState.RUNNING);
 		setSimulationState(SimulationState.RUNNING);
-
-//		new Thread(new Runnable() {
-//			public void run() {
-//				for (int i=0; i <= 5; i++) {
-//					System.out.println("run() method of Runnable interface: "+ i);
-//				}
-//			}
-//		}).start();
-//		for (int j=0; j <= 5; j++) {
-//			System.out.println("main() method: "+ j);
-//		}
-
-//		Thread thread = new Thread(){
-//			public void run(){
-//				try {
-//					Main.insertValues();
-//				} catch (SQLException e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		};
-//
-//		thread.start();
-//		try {
-//			Thread.sleep(stepDelay);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
 
 	}
 	
@@ -145,21 +115,16 @@ public class Schedul extends Scheduler{
 		}
 
         setGVT(getGVT() + 1);
-	}
+		if(Main.simState=="PAUSED")setSimulationState(SimulationState.PAUSED);
+		if(Main.simState=="RUNNING")setSimulationState(SimulationState.RUNNING);
+		if(Main.simState=="SHUTDOWN")setSimulationState(SimulationState.SHUTDOWN);
 
-	public static void stop(){
-		activatorDoStep.killAgents();
 	}
 
 
     public void end(){
 		activatorDoStep.killAgents();
-
-        try {
-            Main.reexecute();
-        } catch (SQLException e) {
-			e.printStackTrace();
-		}
+        Main.reexecute();
 	}
 
 }

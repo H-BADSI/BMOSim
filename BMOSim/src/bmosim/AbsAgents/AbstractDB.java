@@ -28,6 +28,7 @@ import madkit.message.EnumMessage;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 
 public abstract class AbstractDB extends Agent{
 
@@ -153,7 +154,7 @@ public abstract class AbstractDB extends Agent{
 		public abstract boolean findCus(int x);
 		public abstract void updateCusNeed(DBcustomer y);
 		public abstract DBneed gettingNotTreatedNeed();
-		
+
 		public abstract void getCustomer(AgentAddress cusAddr);
 //		public abstract void getCustomers();//brahim
 		
@@ -175,17 +176,18 @@ public abstract class AbstractDB extends Agent{
 	    }
 	    /*brahim*/
 
-		private static <T> List<T> loadAllData(Class<T> type, Session session) {
+		private static List<DBcustomer> loadAllData(Session session) {
 			CriteriaBuilder builder = session.getCriteriaBuilder();
-			CriteriaQuery<T> criteria = builder.createQuery(type);
-			criteria.from(type);
-			List<T> data = session.createQuery(criteria).getResultList();
+			CriteriaQuery<DBcustomer> criteria = builder.createQuery(DBcustomer.class);
+			Root<DBcustomer> rootEntry = criteria.from(DBcustomer.class);
+			CriteriaQuery<DBcustomer> all = criteria.select(rootEntry);
+			List<DBcustomer> data = session.createQuery(all).getResultList();
 			return data;
 		}
 		public ArrayList<DBcustomer> gettingCustomers(){
 			Session session = sessionFactory.openSession();
 			ArrayList<DBcustomer> dbs = new ArrayList<>();
-			dbs.addAll(loadAllData(DBcustomer.class,session));
+			dbs.addAll(loadAllData(session));
 			session.close();
 			return dbs;
 		}
