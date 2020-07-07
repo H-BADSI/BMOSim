@@ -6,25 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ea86fad-eca8-4018-8e96-0db21803d458" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Hibernate/hibernateAccount/hiberAccount.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Hibernate/hibernateAccount/hiberAccount.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Hibernate/hibernateAgent/DBAttribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Hibernate/hibernateAgent/DBAttribute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Hibernate/hibernateAgent/hiberAgent.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Hibernate/hibernateAgent/hiberAgent.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Hibernate/hibernateFeed/hiberFeed.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Hibernate/hibernateFeed/hiberFeed.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/AccountRepo/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/AccountRepo/UserRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/AgentRepo/AgentRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/AgentRepo/AgentRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/AgentRepo/AttributeRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/AgentRepo/AttributeRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/AgentRepo/TypeRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/AgentRepo/TypeRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/FeedRepo/FeedRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/FeedRepo/FeedRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/FeedRepo/InstanceRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/FeedRepo/InstanceRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/FeedRepo/SimulationRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/FeedRepo/SimulationRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/createUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/createUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/simulate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/simulate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/stat1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/stat1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/stat2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/stat2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/stat3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/stat3.java" afterDir="false" />
-    </list>
+    <list default="true" id="4ea86fad-eca8-4018-8e96-0db21803d458" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -296,7 +278,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1594149533140" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1594149608380" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -510,7 +492,7 @@
       <workItem from="1593456635172" duration="667000" />
       <workItem from="1593457325683" duration="4744000" />
       <workItem from="1594113966388" duration="597000" />
-      <workItem from="1594142813883" duration="6300000" />
+      <workItem from="1594142813883" duration="6985000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1590865544903</created>
@@ -523,7 +505,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="511313000" />
+    <option name="totallyTimeSpent" value="511998000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -539,7 +521,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32569557" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32569557" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
