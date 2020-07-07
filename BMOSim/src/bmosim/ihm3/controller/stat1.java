@@ -51,6 +51,10 @@ public class stat1 implements Initializable{
 //    @FXML
 //    private NumberAxis y;
 
+    SimulationRepo simrepo= new SimulationRepo();
+    InstanceRepo instrepo = new InstanceRepo();
+    FeedRepo feedrepo = new FeedRepo();
+
     void getVals(ArrayList<vals> vs,String name){
         XYChart.Series series = new XYChart.Series();
         int i=0;
@@ -91,14 +95,14 @@ public class stat1 implements Initializable{
 
             fillCheckCombo();
 
-            ArrayList<String> sims = new SimulationRepo().getSimulationsByName("");
+            ArrayList<String> sims = simrepo.getSimulationsByName("");
             sim.getItems().addAll(sims);
 
             sim.valueProperty().addListener(new ChangeListener<String>() {
                 @Override public void changed(ObservableValue ov, String t, String t1) {
                     chart.getData().clear();
                     sim.show();
-                    ArrayList<Integer> ins = new InstanceRepo().getInstance(t1);
+                    ArrayList<Integer> ins = instrepo.getInstance(t1);
                     inst.setDisable(false);
                     inst.getItems().clear();
                     inst.getItems().addAll(ins);
@@ -111,7 +115,7 @@ public class stat1 implements Initializable{
                 vars.setDisable(false);
                 chart.getData().clear();
                 for (Object s:vars.getCheckModel().getCheckedItems()) {
-                    getVals(new FeedRepo().getFeeds(String.valueOf(sim.getValue()),String.valueOf(inst.getValue())),String.valueOf(s));
+                    getVals(feedrepo.getFeeds(String.valueOf(sim.getValue()),String.valueOf(inst.getValue())),String.valueOf(s));
                 }
             });
 
@@ -121,7 +125,7 @@ public class stat1 implements Initializable{
             public void onChanged(Change c) {
                 chart.getData().clear();
                 for (Object s:vars.getCheckModel().getCheckedItems()) {
-                    getVals(new FeedRepo().getFeeds(String.valueOf(sim.getValue()),String.valueOf(inst.getValue())), String.valueOf(s));
+                    getVals(feedrepo.getFeeds(String.valueOf(sim.getValue()),String.valueOf(inst.getValue())), String.valueOf(s));
                 }
             }
         });

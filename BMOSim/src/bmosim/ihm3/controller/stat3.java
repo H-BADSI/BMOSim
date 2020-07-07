@@ -1,6 +1,7 @@
 package bmosim.ihm3.controller;
 
 import bmosim.ihm3.Repository.FeedRepo.FeedRepo;
+import bmosim.ihm3.Repository.FeedRepo.InstanceRepo;
 import bmosim.ihm3.Repository.FeedRepo.SimulationRepo;
 import com.jfoenix.controls.JFXComboBox;
 import javafx.beans.value.ChangeListener;
@@ -39,6 +40,9 @@ public class stat3 implements Initializable{
     @FXML
     private BarChart chart;
 
+    SimulationRepo simrepo= new SimulationRepo();
+    FeedRepo feedrepo = new FeedRepo();
+
 
     void fillCheckCombo() throws ParserConfigurationException, IOException, SAXException {
         if(new File("src/bmosim/ihm3/conf/conf.xml").exists()) {
@@ -69,7 +73,7 @@ public class stat3 implements Initializable{
         String cmp = String.valueOf(comp.getValue());
         for (Object var:vars.getCheckModel().getCheckedItems()) {
             String is=String.valueOf(i);
-            Double d=new FeedRepo().getFeedsByVar( sim,cmp, String.valueOf(var));
+            Double d=feedrepo.getFeedsByVar( sim,cmp, String.valueOf(var));
             series.getData().add(new XYChart.Data(var,d));
             i+=10;
         }
@@ -84,7 +88,7 @@ public class stat3 implements Initializable{
         try {
             fillCheckCombo();
 
-            ArrayList<String> sims = new SimulationRepo().getSimulationsByName("");
+            ArrayList<String> sims = simrepo.getSimulationsByName("");
             sim.getItems().addAll(sims);
 
             sim.getCheckModel().getCheckedItems().addListener(new ListChangeListener() {

@@ -1,28 +1,19 @@
 package bmosim.ihm3.controller;
 
+import bmosim.ihm3.Main;
 import bmosim.ihm3.Repository.AccountRepo.UserRepo;
-import bmosim.ihm3.model.User;
 import com.jfoenix.controls.*;
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
-import javafx.scene.Node;
-import javafx.scene.control.ButtonBar;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.Dialog;
 import javafx.scene.control.Label;
-import javafx.scene.effect.BlurType;
-import javafx.scene.effect.BoxBlur;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
-import org.apache.commons.lang3.ObjectUtils;
 
-import java.awt.event.MouseEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -53,7 +44,7 @@ public class createUser implements Initializable {
         confirm.setStyle("-fx-background-color: linear-gradient(from 300px 70px to 280px 500px,#43cea2, #185a9d) ");
         cancel.setStyle("-fx-background-color: #dddddd");
         JFXDialogLayout dialogLayout = new JFXDialogLayout();
-        dialogLayout.setHeading(new Text("Autorisation check"));
+        dialogLayout.setHeading(new Text("enter an admin's credentials , please"));
 
         GridPane grid = new GridPane();
         grid.setHgap(10);
@@ -119,17 +110,20 @@ public class createUser implements Initializable {
         UserRepo u = new UserRepo(username.getText(),pass.getText(),admin.isSelected());
         if(username.getText().isEmpty()){
             username.setUnFocusColor(Color.RED);
+            Main.Alert(root,"put a valid username, please","","");
         }else if(pass.getText().isEmpty()){
             username.setUnFocusColor(Color.rgb(77,77,77));
             pass.setUnFocusColor(Color.RED);
+            Main.Alert(root,"put a valid password, please","","");
         }else if(!pass.getText().equals(passConf.getText()) || passConf.getText().isEmpty()){
             pass.setUnFocusColor(Color.rgb(77,77,77));
             passConf.setUnFocusColor(Color.RED);
+            Main.Alert(root,"Passwords don't match !","Check again","");
         }else if(u.userExist()){
             pass.setUnFocusColor(Color.rgb(77,77,77));
             passConf.setUnFocusColor(Color.rgb(77,77,77));
             username.setUnFocusColor(Color.RED);
-            username.setPromptText("Username exists !");
+            Main.Alert(root,"Username already exists !","try another one, please","");
         }else{
             alert(u,"",false);
         }

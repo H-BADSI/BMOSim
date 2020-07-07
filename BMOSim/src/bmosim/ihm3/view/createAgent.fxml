@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bmosim.ihm3.controller.createAgent">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1045.0" styleClass="anchorpane">
+         <children>
+            <Pane layoutX="240.0" prefHeight="37.0" prefWidth="806.0">
+               <fx:include source="topBar.fxml" />
+            </Pane>
+            <Label layoutX="738.0" layoutY="106.0" prefHeight="17.0" prefWidth="70.0" style="-fx-font-weight: bold;" text="Agent Class" />
+            <Label layoutX="431.0" layoutY="106.0" prefHeight="17.0" prefWidth="85.0" style="-fx-font-weight: bold;" text="Agent Type" />
+            <JFXComboBox fx:id="agenttype" editable="true" focusColor="#16d7d4" layoutX="431.0" layoutY="123.0" promptText="Select Agent Type" unFocusColor="#2ea1a1" />
+            <JFXComboBox fx:id="agClass" focusColor="#16d7d4" layoutX="737.0" layoutY="123.0" promptText="Select Agent Class" unFocusColor="#2ea1a1" />
+            <Label layoutX="388.0" layoutY="163.0" prefHeight="17.0" prefWidth="136.0" style="-fx-font-weight: bold;" text="Attribute name" />
+            <VBox fx:id="vbox1" alignment="TOP_CENTER" layoutX="387.0" layoutY="198.0" prefHeight="217.0" prefWidth="144.0">
+               <children>
+                  <JFXComboBox fx:id="attName1" editable="true" focusColor="#16d7d4" promptText="Attribute Name" unFocusColor="#2ea1a1" />
+               </children>
+            </VBox>
+            <Label layoutX="571.0" layoutY="163.0" prefHeight="17.0" prefWidth="115.0" style="-fx-font-weight: bold;" text="Attribute type" />
+            <VBox fx:id="vbox2" alignment="TOP_CENTER" layoutX="559.0" layoutY="198.0" prefHeight="217.0" prefWidth="144.0">
+               <children>
+                  <JFXComboBox fx:id="attType1" focusColor="#16d7d4" promptText="Type" unFocusColor="#2ea1a1" />
+               </children>
+            </VBox>
+            <Label layoutX="736.0" layoutY="163.0" prefHeight="17.0" prefWidth="94.0" style="-fx-font-weight: bold;" text="Attribute values" />
+            <VBox fx:id="vbox3" alignment="TOP_CENTER" layoutX="706.0" layoutY="198.0" prefHeight="217.0" prefWidth="144.0">
+               <children>
+                  <JFXTextField fx:id="attVal1" focusColor="#16d7d4" prefHeight="14.0" prefWidth="112.0" promptText="val1 val2 val3 ..." unFocusColor="#2ea1a1" visible="false" />
+               </children>
+            </VBox>
+            <VBox fx:id="vbox4" layoutX="872.0" layoutY="198.0" prefHeight="189.0" prefWidth="32.0">
+               <children>
+                  <JFXButton fx:id="delete1" style="-fx-background-color: #d43333;" text="x" textFill="#ebebeb" />
+               </children>
+            </VBox>
+            <Separator layoutX="359.0" layoutY="155.0" prefHeight="0.0" prefWidth="566.0" />
+            <Separator layoutX="545.0" layoutY="172.0" orientation="VERTICAL" prefHeight="301.0" prefWidth="0.0" />
+            <Separator layoutX="703.0" layoutY="172.0" orientation="VERTICAL" prefHeight="301.0" prefWidth="6.0" />
+            <Separator layoutX="863.0" layoutY="172.0" orientation="VERTICAL" prefHeight="301.0" prefWidth="6.0" />
+            <JFXButton fx:id="addAttribute" layoutX="913.0" layoutY="301.0" onAction="#addAttribute" style="-fx-background-color: #2ea1a1;" text="+" textFill="#ebebeb" />
+            <JFXButton layoutX="925.0" layoutY="552.0" onAction="#addAgent" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #2ea1a1;" text="Create" textFill="#ebebeb" />
+            <Label alignment="CENTER" layoutX="240.0" layoutY="37.0" prefHeight="44.0" prefWidth="227.0" styleClass="title" text="Meta-model">
+               <font>
+                  <Font name="Calibri Bold" size="29.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="600.0" prefWidth="94.0">
+               <fx:include source="sideBar.fxml" />
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

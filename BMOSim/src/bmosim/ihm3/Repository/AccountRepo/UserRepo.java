@@ -1,4 +1,4 @@
-package bmosim.ihm3.Hibernate.hibernateAccount;
+package bmosim.ihm3.Repository.AccountRepo;
 
 import bmosim.ihm3.Hibernate.hibernateAccount.DBUser;
 import bmosim.ihm3.controller.funct;
@@ -15,11 +15,12 @@ public class UserRepo {
     SessionFactory sessionFactory;
 
     public UserRepo() {
-        Configuration c = new Configuration().addResource("bmosim/ihm3/Hibernate/hibernateAccount/hiberAccount.cfg.xml");
-        c.setProperty("connection.url","jdbc:mysql://localhost:3306/acc");
-        c.setProperty("connection.username","root");
-        c.setProperty("connection.password","emplacement44");
-        sessionFactory=c.configure().buildSessionFactory();
+        Configuration c = new Configuration();
+        Object o=c.configure("bmosim/ihm3/Hibernate/hibernateAccount/hiberAccount.cfg.xml");
+        c.setProperty("hibernate.connection.url","jdbc:mysql://localhost:3306/acc");
+        c.setProperty("hibernate.connection.username","root");
+        c.setProperty("hibernate.connection.password","emplacement44");
+        sessionFactory= ((Configuration) o).buildSessionFactory();
     }
 
     private String username;
@@ -27,33 +28,33 @@ public class UserRepo {
     private Boolean admin;
 
     public UserRepo(String username) {
-        Configuration c = new Configuration().addResource("bmosim/ihm3/Hibernate/hibernateAccount/hiberAccount.cfg.xml");
-        c.setProperty("connection.url","jdbc:mysql://localhost:3306/acc");
-        c.setProperty("connection.username","root");
-        c.setProperty("connection.password","emplacement44");
-        System.out.println(c.getProperties());
-        sessionFactory=c.configure("bmosim/ihm3/Hibernate/hibernateAccount/hiberAccount.cfg.xml").buildSessionFactory();
+        Configuration c = new Configuration();
+        Object o=c.configure("bmosim/ihm3/Hibernate/hibernateAccount/hiberAccount.cfg.xml");
+        c.setProperty("hibernate.connection.url","jdbc:mysql://localhost:3306/acc");
+        c.setProperty("hibernate.connection.username","root");
+        c.setProperty("hibernate.connection.password","emplacement44");
+        sessionFactory= ((Configuration) o).buildSessionFactory();
         this.username = username;
     }
 
     public UserRepo(String username, String password) {
-        Configuration c = new Configuration().addResource("bmosim/ihm3/Hibernate/hibernateAccount/hiberAccount.cfg.xml");
-        c.setProperty("connection.url","jdbc:mysql://localhost:3306/acc");
-        c.setProperty("connection.username","root");
-        c.setProperty("connection.password","emplacement44");
-        System.out.println("+++"+c.getProperties());
-
-        sessionFactory=c.configure("bmosim/ihm3/Hibernate/hibernateAccount/hiberAccount.cfg.xml").buildSessionFactory();
+        Configuration c = new Configuration();
+        Object o=c.configure("bmosim/ihm3/Hibernate/hibernateAccount/hiberAccount.cfg.xml");
+        c.setProperty("hibernate.connection.url","jdbc:mysql://localhost:3306/acc");
+        c.setProperty("hibernate.connection.username","root");
+        c.setProperty("hibernate.connection.password","emplacement44");
+        sessionFactory= ((Configuration) o).buildSessionFactory();
         this.username = username;
         this.password = password;
     }
 
     public UserRepo(String username, String password, Boolean admin) {
-        Configuration c = new Configuration().addResource("bmosim/ihm3/Hibernate/hibernateAccount/hiberAccount.cfg.xml");
-        c.setProperty("connection.url","jdbc:mysql://localhost:3306/acc");
-        c.setProperty("connection.username","root");
-        c.setProperty("connection.password","emplacement44");
-        sessionFactory=c.configure("bmosim/ihm3/Hibernate/hibernateAccount/hiberAccount.cfg.xml").buildSessionFactory();
+        Configuration c = new Configuration();
+        Object o=c.configure("bmosim/ihm3/Hibernate/hibernateAccount/hiberAccount.cfg.xml");
+        c.setProperty("hibernate.connection.url","jdbc:mysql://localhost:3306/acc");
+        c.setProperty("hibernate.connection.username","root");
+        c.setProperty("hibernate.connection.password","emplacement44");
+        sessionFactory= ((Configuration) o).buildSessionFactory();
         this.username = username;
         this.password = password;
         this.admin = admin;

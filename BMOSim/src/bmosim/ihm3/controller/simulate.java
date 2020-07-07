@@ -248,32 +248,6 @@ public class simulate implements Initializable{
             }
         });
 
-//         th = new Thread() {
-//
-//            public synchronized void run() {
-//                while (true){
-//                    try {
-//                        System.out.println("++"+Generator.alert);
-//                        if(Generator.alert.equals("alert")){
-//                            Alert alert = new Alert(Alert.AlertType.WARNING);
-//                            alert.setTitle("aa");
-//                            alert.setHeaderText("aaa");
-//                            alert.setContentText("aa");
-//
-//                            alert.showAndWait();
-//                        }
-//                        Thread.sleep(500);
-//
-//                    } catch (Exception e) {
-//                        e.printStackTrace();
-//                    }
-//                }
-//
-//            }
-//
-//        };
-
-
     }
 
 

@@ -2,7 +2,6 @@ package bmosim.ihm3.controller;
 
 import bmosim.ihm3.Main;
 import bmosim.ihm3.Repository.AccountRepo.UserRepo;
-import bmosim.ihm3.model.User;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDrawer;
 import com.jfoenix.controls.JFXPasswordField;
@@ -18,7 +17,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;

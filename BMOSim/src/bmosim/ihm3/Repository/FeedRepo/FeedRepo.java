@@ -2,6 +2,7 @@ package bmosim.ihm3.Repository.FeedRepo;
 
 import bmosim.ihm3.Hibernate.hibernateFeed.DBFeed;
 import bmosim.ihm3.Hibernate.hibernateFeed.DBInstance;
+import bmosim.ihm3.controller.funct;
 import bmosim.ihm3.model.vals;
 import bmosim.ihm3.model.vars;
 import org.hibernate.Session;
@@ -14,7 +15,17 @@ import java.util.ArrayList;
 public class FeedRepo {
 
 
-    SessionFactory sessionFactory = new Configuration().configure("bmosim/ihm3/Hibernate/hibernateFeed/hiberFeed.cfg.xml").buildSessionFactory();
+    SessionFactory sessionFactory;
+
+    public FeedRepo(){
+        ArrayList<String> dbconf = funct.getDBSet();
+        Configuration c = new Configuration();
+        Object o=c.configure("bmosim/ihm3/Hibernate/hibernateFeed/hiberFeed.cfg.xml");
+        c.setProperty("hibernate.connection.url","jdbc:mysql://localhost:3306/stat");
+        c.setProperty("hibernate.connection.username","root");
+        c.setProperty("hibernate.connection.password","emplacement44");
+        sessionFactory= ((Configuration) o).buildSessionFactory();
+    }
 
     public Double getFeedsByVar(String sim,String comp,String var){
         ArrayList<Integer> insts = new InstanceRepo().getIdInstBySim(sim);
@@ -74,7 +85,6 @@ public class FeedRepo {
         Session session = sessionFactory.openSession();
         Query query = session.createQuery("FROM DBFeed where idInstance="+idIn);
         ArrayList<DBFeed> feeds = (ArrayList<DBFeed>) query.getResultList();
-        session.clear();
         session.close();
 
 
@@ -91,9 +101,6 @@ public class FeedRepo {
             v.addVar(new vars("refundProbe",fd.getRefundProbe()));
             vals.add(v);
         }
-
-        StackTraceElement[] st = Thread.currentThread().getStackTrace();
-        System.out.println(  "******* create connection called from " + st[2] );
 
         return vals;
     }

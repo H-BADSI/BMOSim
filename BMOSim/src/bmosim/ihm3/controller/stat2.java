@@ -47,6 +47,10 @@ public class stat2 implements Initializable{
 //    @FXML
 //    private NumberAxis y;
 
+    SimulationRepo simrepo= new SimulationRepo();
+    InstanceRepo instrepo = new InstanceRepo();
+    FeedRepo feedrepo = new FeedRepo();
+
     void fillCheckCombo() throws ParserConfigurationException, IOException, SAXException {
         if(new File("src/bmosim/ihm3/conf/conf.xml").exists()) {
             File file = new File("src/bmosim/ihm3/conf/conf.xml");
@@ -87,14 +91,14 @@ public class stat2 implements Initializable{
         try {
             fillCheckCombo();
 
-            ArrayList<String> sims = new SimulationRepo().getSimulationsByName("");
+            ArrayList<String> sims = simrepo.getSimulationsByName("");
             sim.getItems().addAll(sims);
 
             sim.valueProperty().addListener(new ChangeListener<String>() {
                 @Override public void changed(ObservableValue ov, String t, String t1) {
                     chart.getData().clear();
                     sim.show();
-                    ArrayList<Integer> ins = new InstanceRepo().getInstance(t1);
+                    ArrayList<Integer> ins = instrepo.getInstance(t1);
                     inst.setDisable(false);
                     inst.getItems().clear();
                     inst.getItems().addAll(ins);
@@ -105,7 +109,7 @@ public class stat2 implements Initializable{
             inst.getCheckModel().getCheckedItems().addListener((ListChangeListener) observable -> {
                 chart.getData().clear();
                 for (Object s:inst.getCheckModel().getCheckedItems()) {
-                    getVals(new FeedRepo().getFeeds(String.valueOf(sim.getValue()),String.valueOf(s)),String.valueOf(vars.getValue()), String.valueOf(s));
+                    getVals(feedrepo.getFeeds(String.valueOf(sim.getValue()),String.valueOf(s)),String.valueOf(vars.getValue()), String.valueOf(s));
                 }
             });
 
@@ -114,7 +118,7 @@ public class stat2 implements Initializable{
                 vars.setDisable(false);
                 chart.getData().clear();
                 for (Object s:inst.getCheckModel().getCheckedItems()) {
-                    getVals(new FeedRepo().getFeeds(String.valueOf(sim.getValue()),String.valueOf(s)),String.valueOf(vars.getValue()),String.valueOf(s));
+                    getVals(feedrepo.getFeeds(String.valueOf(sim.getValue()),String.valueOf(s)),String.valueOf(vars.getValue()),String.valueOf(s));
                 }
             });
 

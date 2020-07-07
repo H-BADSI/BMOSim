@@ -1,14 +1,17 @@
 package bmosim.ihm3.Hibernate.hibernateAgent;
 
 
+import com.sun.xml.bind.v2.schemagen.xmlschema.AttributeType;
+
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table( name = "attribute",uniqueConstraints = {
         @UniqueConstraint(name = "name",
                 columnNames = {"name"})
 })
-public class DBAttribute {
+public class DBAttribute implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,11 +21,19 @@ public class DBAttribute {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "values")
-    private String values;
+    @Column(name = "vals")
+    private String vals;
 
     @Column(name="idAttType")
     private int idAttType;
+
+    public int getIdAttType() {
+        return idAttType;
+    }
+
+    public void setIdAttType(int idAttType) {
+        this.idAttType = idAttType;
+    }
 
     public int getIdAttribute() {
         return idAttribute;
@@ -40,21 +51,14 @@ public class DBAttribute {
         this.name = name;
     }
 
-    public String getValues() {
-        return values;
+    public String getVals() {
+        return vals;
     }
 
-    public void setValues(String values) {
-        this.values = values;
+    public void setVals(String values) {
+        this.vals = values;
     }
 
-    public int getIdAttType() {
-        return idAttType;
-    }
-
-    public void setIdAttType(int idAttType) {
-        this.idAttType = idAttType;
-    }
 //    public DBAtttype getIdAttType() {
 //        return idAttType;
 //    }
