@@ -10,21 +10,23 @@ import javax.persistence.NoResultException;
 import javax.persistence.Query;
 import java.util.ArrayList;
 
-public class AgentRepo {
+public abstract class AgentRepo extends AgRepo {
 
-    SessionFactory sessionFactory;
+//    SessionFactory sessionFactory;
 
     public AgentRepo() {
-        ArrayList<String> dbconf = funct.getDBSet();
-        Configuration c = new Configuration();
-        Object o=c.configure("bmosim/ihm3/Hibernate/hibernateAgent/hiberAgent.cfg.xml");
-        c.setProperty("hibernate.connection.url","jdbc:mysql://localhost:3306/agentdb");
-        c.setProperty("hibernate.connection.username","root");
-        c.setProperty("hibernate.connection.password","emplacement44");
-        sessionFactory= ((Configuration) o).buildSessionFactory();
+        super();
+//        ArrayList<String> dbconf = funct.getDBSet();
+//        Configuration c = new Configuration();
+//        Object o=c.configure("bmosim/ihm3/Hibernate/hibernateAgent/hiberAgent.cfg.xml");
+//        c.setProperty("hibernate.connection.url","jdbc:mysql://localhost:3306/agentdb");
+//        c.setProperty("hibernate.connection.username","root");
+//        c.setProperty("hibernate.connection.password","emplacement44");
+//        sessionFactory= ((Configuration) o).buildSessionFactory();
     }
 
 
+    @Override
     public String getAgClass(String type) {
 
         Session session = sessionFactory.openSession();
@@ -35,6 +37,7 @@ public class AgentRepo {
 
     }
 
+    @Override
     public ArrayList<String> getAgentTypes(String ag) {
 
         Session session = sessionFactory.openSession();
@@ -45,6 +48,7 @@ public class AgentRepo {
 
     }
 
+    @Override
     public Integer getIdAgent(String type) {
 
         Session session = sessionFactory.openSession();
@@ -55,6 +59,7 @@ public class AgentRepo {
 
     }
 
+    @Override
     public void insertAgent(String type,String agClass){
 
         try {

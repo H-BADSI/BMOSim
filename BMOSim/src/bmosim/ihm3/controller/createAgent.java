@@ -1,11 +1,7 @@
 package bmosim.ihm3.controller;
 
 import bmosim.ihm3.Main;
-import bmosim.ihm3.Repository.AgentRepo.AgentRepo;
-import bmosim.ihm3.Repository.AgentRepo.AttributeRepo;
-import bmosim.ihm3.Repository.AgentRepo.TypeRepo;
-import bmosim.ihm3.model.Agent;
-import bmosim.ihm3.model.Attribute;
+import bmosim.ihm3.Repository.AgentRepo.AgRepo;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
@@ -18,15 +14,12 @@ import javafx.scene.control.*;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
-import org.xml.sax.SAXException;
 
-import javax.xml.parsers.ParserConfigurationException;
-import java.io.IOException;
 import java.net.URL;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import bmosim.ihm3.model.type;
+import org.apache.jena.base.Sys;
 
 public class createAgent implements Initializable{
 
@@ -36,11 +29,11 @@ public class createAgent implements Initializable{
     @FXML
     private ComboBox agenttype;
     @FXML
-    private JFXComboBox<?> attName1;
+    private JFXComboBox attName1;
     @FXML
-    private ComboBox attType1;
+    private ComboBox<String> attType1;
     @FXML
-    private ComboBox agClass;
+    private ComboBox<String> agClass;
     @FXML
     private VBox vbox1;
     @FXML
@@ -55,13 +48,15 @@ public class createAgent implements Initializable{
     @FXML
     private JFXButton delete1;
 
-    AttributeRepo attrepo = new AttributeRepo();
+    AgRepo agrepo = Main.agRepo;
 
     int attLine;
 
-    void fillCombobox() throws SQLException {
-        agenttype.getItems().addAll(new AgentRepo().getAgentTypes(""));
-        attType1.getItems().addAll(new TypeRepo().getAttributeTypes());
+    void fillCombobox() {
+        agenttype.getItems().addAll(agrepo.getAgentTypes(""));
+        attType1.getItems().addAll(agrepo.getAttributeTypes());
+        agClass.getItems().addAll(getAgentClasses(""));
+        attName1.getItems().addAll(agrepo.getAttributesNames());
     }
 
     ArrayList<String> getAgentClasses(String s){
@@ -70,24 +65,36 @@ public class createAgent implements Initializable{
     }
 
     @FXML
-    void addOneAttribute(String name,String type,String val) throws SQLException {
+    void addOneAttribute(String name,String type,String val){
         attLine++;
         int range = attLine;
-        JFXComboBox cb1 = new JFXComboBox();
+        JFXComboBox<String> cb1 = new JFXComboBox<String>();
+        cb1.getItems().addAll(agrepo.getAttributesNames());
         cb1.setFocusColor(Color.rgb(22,215,212));
         cb1.setUnFocusColor(Color.rgb(46,161,161));
-        cb1.setId("attName"+range);
-        cb1.setValue(name);
-        cb1.setEditable(true);
         cb1.setPromptText("Attribute Name");
+        cb1.setEditable(true);
+        cb1.setId("attName"+range);
+        cb1.getSelectionModel().select(name);
+        System.out.println("name "+name);
+        cb1.valueProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                Scene scene = vbox1.getScene();
+                JFXComboBox atttype = (JFXComboBox) scene.lookup("#attType"+range);
+                JFXTextField attvals = (JFXTextField) scene.lookup("#attVal"+range);
+                atttype.getSelectionModel().select(agrepo.getTypeByAtt((String)newValue));
+                attvals.setText(agrepo.getValsByAtt((String)newValue));
+            }
+        });
         vbox1.getChildren().add(cb1);
 
-        JFXComboBox cb2 = new JFXComboBox();
+        JFXComboBox<String> cb2 = new JFXComboBox<String>();
         cb2.setFocusColor(Color.rgb(22,215,212));
         cb2.setUnFocusColor(Color.rgb(46,161,161));
         cb2.setId("attType"+range);
         cb2.setValue(type);
-        cb2.getItems().addAll(new TypeRepo().getAttributeTypes());
+        cb2.getItems().addAll(agrepo.getAttributeTypes());
         cb2.setEditable(false);
         cb2.setPromptText("Type");
         cb2.valueProperty().addListener(new ChangeListener() {
@@ -125,7 +132,7 @@ public class createAgent implements Initializable{
             JFXTextField attval = (JFXTextField) scene.lookup("#attVal"+range);
             JFXButton attbt = (JFXButton) scene.lookup("#"+range);
             String att = (String) attname.getValue();
-            attrepo.disJoinAttAgent(att,String.valueOf(agenttype.getValue()));
+            agrepo.disJoinAttAgent(att,String.valueOf(agenttype.getValue()));
             vbox1.getChildren().remove(attname);
             vbox2.getChildren().remove(atttype);
             vbox3.getChildren().remove(attval);
@@ -135,7 +142,7 @@ public class createAgent implements Initializable{
     }
 
     @FXML
-    void addAttribute() throws SQLException {
+    void addAttribute(){
         addOneAttribute("","","");
     }
 
@@ -145,22 +152,22 @@ public class createAgent implements Initializable{
             String type=String.valueOf(((ComboBox)vbox2.getChildren().get(i)).getValue());
             if(vbox3.getChildren().get(i).isVisible()){
                 String v = ((JFXTextField)vbox3.getChildren().get(i)).getText();
-                attrepo.insertAttributeWithOptions(name,type,v);
+                agrepo.insertAttributeWithOptions(name,type,v);
             }else {
-                attrepo.insertAttribute(name,type);
+                agrepo.insertAttribute(name,type);
             }
-            attrepo.linkAttAgent(agent,name);
+            agrepo.linkAttAgent(agent,name);
         }
     }
 
     @FXML
-    void addAgent() throws SQLException {
+    void addAgent() {
         if(agenttype.getValue()==null || agClass.getValue()==null){
             Main.Alert(root,"Warning","fill All the fields !","");
         }else {
             String agent = String.valueOf(agenttype.getValue());
             String agClass = String.valueOf(this.agClass.getValue());
-            new AgentRepo().insertAgent(agent,agClass);
+            agrepo.insertAgent(agent,agClass);
             addAttribute(agent);
         }
 
@@ -168,81 +175,54 @@ public class createAgent implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        try {
-            agClass.getItems().addAll(getAgentClasses(""));
-            fillCombobox();
-            attLine=1;
-            vbox1.setSpacing(30);
-            vbox2.setSpacing(32);
-            vbox3.setSpacing(30);
-            vbox4.setSpacing(30);
+        fillCombobox();
+        attLine=1;
+        vbox1.setSpacing(30);vbox3.setSpacing(30);
+        vbox2.setSpacing(32);vbox4.setSpacing(30);
 
-            attName1.valueProperty().addListener(new ChangeListener() {
-                @Override
-                public void  changed(ObservableValue observable, Object oldValue, Object newValue) {
-                    attName1.show();
-                }
-            });
+        attName1.valueProperty().addListener(new ChangeListener() {
+            @Override
+            public void  changed(ObservableValue observable, Object oldValue, Object newValue) {
+                attName1.show();
+                attType1.getSelectionModel().select(agrepo.getTypeByAtt((String)newValue));
+                attVal1.setText(agrepo.getValsByAtt((String)newValue));
+            }
+        });
 
-            attType1.valueProperty().addListener(new ChangeListener() {
-                @Override
-                public void changed(ObservableValue observable, Object oldValue, Object newValue) {
-                    if(newValue.equals("table")){
-                        vbox3.getChildren().get(0).setVisible(true);
-                    }else{
-                        vbox3.getChildren().get(0).setVisible(false);
-                    }
+        attType1.valueProperty().addListener(new ChangeListener() {
+            @Override
+            public void changed(ObservableValue observable, Object oldValue, Object newValue) {
+                if(newValue.equals("table")){
+                    vbox3.getChildren().get(0).setVisible(true);
+                }else{
+                    vbox3.getChildren().get(0).setVisible(false);
                 }
-            });
-            agClass.valueProperty().addListener(new ChangeListener() {
-                @Override
-                public void changed(ObservableValue observable, Object oldValue, Object newValue) {
-                    agClass.show();
-                    agClass.getItems().clear();
-                    agClass.getItems().addAll(getAgentClasses((String) newValue));
-                }
-            });
-            agenttype.valueProperty().addListener(new ChangeListener() {
-                @Override
-                public void changed(ObservableValue observable, Object oldValue, Object newValue) {
-                    try {
-                        agenttype.show();
-                        agenttype.getItems().clear();
-                        agenttype.getItems().addAll(new AgentRepo().getAgentTypes((String) newValue));
-                        agClass.setValue(new AgentRepo().getAgClass((String) newValue).toLowerCase());
-                        ArrayList<type> atts = attrepo.getAttributesByAgent((String) newValue);
-                        vbox1.getChildren().clear();
-                        vbox2.getChildren().clear();
-                        vbox3.getChildren().clear();
-                        vbox4.getChildren().clear();
-                        for (type t:atts) {
-                            addOneAttribute(t.name,t.type,t.val);
-                        }
-                    } catch (SQLException e) {
-                        e.printStackTrace();
-                    }
+            }
+        });
 
-                }
-            });
 
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        agenttype.setOnAction(event -> {
+
+            agClass.getSelectionModel().select(agrepo.getAgClass((String) agenttype.getValue()));
+            ArrayList<type> atts = agrepo.getAttributesByAgent((String) agenttype.getValue());
+
+            vbox1.getChildren().clear();vbox3.getChildren().clear();
+            vbox2.getChildren().clear();vbox4.getChildren().clear();
+            if(atts!=null){
+                for (type t:atts) {
+                    addOneAttribute(t.name,t.type,t.val);
+                }
+            }
+
+        });
 
         delete1.setOnAction(event -> {
             String att = (String) ((JFXComboBox)vbox1.getChildren().get(0)).getValue();
-            attrepo.disJoinAttAgent(att,String.valueOf(agenttype.getValue()));
+            agrepo.disJoinAttAgent(att,String.valueOf(agenttype.getValue()));
             vbox1.getChildren().remove(0);
             vbox2.getChildren().remove(0);
             vbox3.getChildren().remove(0);
             vbox4.getChildren().remove(0);
         });
-
-
-
-
     }
-
-
-
 }

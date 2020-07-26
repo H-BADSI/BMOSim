@@ -1,8 +1,5 @@
 package bmosim.ihm3.Hibernate.hibernateAgent;
 
-
-import com.sun.xml.bind.v2.schemagen.xmlschema.AttributeType;
-
 import javax.persistence.*;
 import java.io.Serializable;
 

@@ -16,8 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="bmosim.ihm3.controller.simulate">
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bmosim.ihm3.controller.simulate">
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600" prefWidth="1045.0" styleClass="anchorpane">
          <children>
@@ -34,7 +33,7 @@
                   <Font size="11.0" />
                </font>
             </JFXTextField>
-            <JFXComboBox fx:id="simFile" editable="true" focusColor="#16d7d4" layoutX="768.0" layoutY="142.0" promptText="Simulation file" unFocusColor="#2ea1a1" />
+            <JFXComboBox fx:id="simFile" focusColor="#16d7d4" layoutX="768.0" layoutY="142.0" promptText="Simulation file" unFocusColor="#2ea1a1" />
             <HBox layoutX="378.0" layoutY="301.0" prefHeight="65.0" prefWidth="530.0">
                <children>
                   <ImageView fx:id="ph1" fitHeight="63.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">

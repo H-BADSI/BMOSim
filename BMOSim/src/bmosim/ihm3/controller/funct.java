@@ -1,13 +1,11 @@
 package bmosim.ihm3.controller;
 
 import bmosim.ihm3.Main;
-import com.sun.xml.xsom.impl.scd.Iterators;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 
-import javax.imageio.ImageIO;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -17,7 +15,6 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -176,7 +173,7 @@ public class funct {
         im.setImage(new Image(file.toURI().toString()));
     }
 
-    public static void deleteAgentCategory(String path, String agCat) {
+    public static void deleteAgentByCategory(String path, String agCat) {
         String newPath = getXmlDirectory().replace("\\","/")+"/"+path+".xml";
         File file = new File(newPath);
 
@@ -188,7 +185,7 @@ public class funct {
             NodeList list = doc.getElementsByTagName("Agent");
             for (int i = 0; i < list.getLength(); i++) {
                 Node ag = doc.getElementsByTagName("Agent").item(i);
-                if(ag.getAttributes().item(1).getTextContent().equals(agCat)){
+                if(ag.getAttributes().getNamedItem("name").getTextContent().equals(agCat)){
                    ag.getParentNode().removeChild(ag);
                 }
             }
@@ -219,7 +216,7 @@ public class funct {
             NodeList list = doc.getElementsByTagName("Agent");
             for (int i = 0; i < list.getLength(); i++) {
                 Node ag = doc.getElementsByTagName("Agent").item(i);
-                agCats.add(ag.getAttributes().item(1).getTextContent());
+                agCats.add(ag.getAttributes().getNamedItem("name").getTextContent());
             }
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
@@ -230,6 +227,32 @@ public class funct {
         }
         return agCats;
 
+    }
+
+    public static boolean categoryExists(String cat,String path){
+        boolean b = false;
+        try {
+            String newPath = getXmlDirectory().replace("\\","/")+"/"+path+".xml";
+            File file = new File(newPath);
+
+            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+            DocumentBuilder db = null;
+
+            db = dbf.newDocumentBuilder();
+            Document doc = db.parse(file);
+            NodeList list = doc.getElementsByTagName("Agent");
+            for (int i = 0; i < list.getLength(); i++) {
+                Node ag = doc.getElementsByTagName("Agent").item(i);
+                if(ag.getAttributes().getNamedItem("name").getTextContent().equalsIgnoreCase(cat)) b=true;
+            }
+        } catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        } catch (SAXException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return b;
     }
 
     public static void setDBSet(String n1,String p1,String n2,String p2,String a1,String a2,
@@ -340,7 +363,11 @@ public class funct {
         Node n= doc.getElementsByTagName("name").item(0);
         as.add(n==null?"":n.getTextContent());
         n= doc.getElementsByTagName("pass").item(0);
-        as.add(n==null?"":n.getTextContent());
+        try {
+            as.add(n==null?"":new Enceyption().decrypt(n.getTextContent()));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         n= doc.getElementsByTagName("address").item(0);
         as.add(n==null?"":n.getTextContent());
         n= doc.getElementsByTagName("port").item(0);
@@ -351,7 +378,11 @@ public class funct {
         n= doc.getElementsByTagName("name").item(1);
         as.add(n==null?"":n.getTextContent());
         n= doc.getElementsByTagName("pass").item(1);
-        as.add(n==null?"":n.getTextContent());
+        try {
+            as.add(n==null?"":new Enceyption().decrypt(n.getTextContent()));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         n= doc.getElementsByTagName("address").item(1);
         as.add(n==null?"":n.getTextContent());
         n= doc.getElementsByTagName("port").item(1);
@@ -362,5 +393,47 @@ public class funct {
         return as;
 
     }
+
+    public static agXmlStruct getAgentByCategory(String path,String cat){
+        agXmlStruct agXmlStruct = new agXmlStruct();
+
+        if(!containsIgnoreCase(path,".xml")) path+=".xml";
+
+        try {
+            String newPath = getXmlDirectory().replace("\\","/")+"/"+path;
+            File file = new File(newPath);
+
+            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+            DocumentBuilder db = null;
+
+            db = dbf.newDocumentBuilder();
+            Document doc = db.parse(file);
+            NodeList list = doc.getElementsByTagName("Agent");
+            for (int i = 0; i < list.getLength(); i++) {
+                Node ag = doc.getElementsByTagName("Agent").item(i);
+                if(ag.getAttributes().getNamedItem("name").getTextContent().equals(cat)){
+                    agXmlStruct.classe=ag.getAttributes().getNamedItem("class").getTextContent();
+                    agXmlStruct.name=ag.getAttributes().getNamedItem("name").getTextContent();
+                    agXmlStruct.gui=ag.getAttributes().getNamedItem("GUI").getTextContent();
+                    agXmlStruct.nbInst=ag.getAttributes().getNamedItem("nbOfInstances").getTextContent();
+                    agXmlStruct.logLevel=ag.getAttributes().getNamedItem("logLevel").getTextContent();
+                    Node atts =ag.getLastChild();
+                    for (Node node : NamedNodeMapIterable.of(atts.getAttributes())) {
+                        agXmlStruct.getAttributes().add(new atXmlStruct(node.getNodeName(),node.getNodeValue()));
+                    }
+                    return agXmlStruct;
+                }
+            }
+        } catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        } catch (SAXException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return agXmlStruct;
+
+    }
+
 
 }

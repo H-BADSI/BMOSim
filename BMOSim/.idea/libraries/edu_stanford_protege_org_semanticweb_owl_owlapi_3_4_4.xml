@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="edu.stanford.protege:org.semanticweb.owl.owlapi:3.4.4" type="repository">
+    <properties maven-id="edu.stanford.protege:org.semanticweb.owl.owlapi:3.4.4" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/edu/stanford/protege/org.semanticweb.owl.owlapi/3.4.4/org.semanticweb.owl.owlapi-3.4.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/sourceforge/owlapi/owlapi-distribution/3.4.4/owlapi-distribution-3.4.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/sourceforge/owlapi/owlapi-contract/3.4.4/owlapi-contract-3.4.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/sourceforge/owlapi/owlapi-apibinding/3.4.4/owlapi-apibinding-3.4.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/sourceforge/owlapi/owlapi-api/3.4.4/owlapi-api-3.4.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/sourceforge/owlapi/owlapi-impl/3.4.4/owlapi-impl-3.4.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/sourceforge/owlapi/owlapi-parsers/3.4.4/owlapi-parsers-3.4.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/sourceforge/owlapi/owlapi-tools/3.4.4/owlapi-tools-3.4.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/felix/org.osgi.core/1.0.0/org.osgi.core-1.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

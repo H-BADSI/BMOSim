@@ -2,6 +2,7 @@ package bmosim.control;
 
 import bmosim.ihm3.Repository.FeedRepo.InstanceRepo;
 import bmosim.ihm3.Repository.FeedRepo.SimulationRepo;
+import bmosim.ihm3.Repository.FeedRepo.StatRepo;
 
 import java.util.ArrayList;
 
@@ -10,17 +11,20 @@ public class Main {
 	public static String fileDirect;
 	public static Generator g;
 	public static String simState="RUNNING";
+//	public static InstanceRepo instanceRepo = new InstanceRepo();
+//	public static SimulationRepo simulationRepo =new SimulationRepo();
+    public static StatRepo statRepo = new StatRepo();
 
     public static void executeInst(){
-        new InstanceRepo().insertInst(Generator.idSim,Generator.ord);
-        Generator.idInst=new InstanceRepo().getIdInstByIdSimAndOrd(Generator.idSim,Generator.ord);
+        statRepo.insertInst(Generator.idSim,Generator.ord);
+        Generator.idInst=statRepo.getIdInstByIdSimAndOrd(Generator.idSim,Generator.ord);
         g = new Generator();
         g.main();
     }
 
     public static void execute(Integer i, String name, String fileDir, ArrayList<Integer> simSet){
-        new SimulationRepo().insertSim(name);
-        Generator.idSim= new SimulationRepo().getLastId();
+        statRepo.insertSim(name);
+        Generator.idSim= statRepo.getLastId();
 
         Generator.nbInst=i;
         fileDirect=fileDir;

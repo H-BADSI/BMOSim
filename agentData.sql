@@ -29,20 +29,16 @@ CREATE TABLE `agent` (
   `type` varchar(45) NOT NULL,
   `agClass` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idAgent`)
-) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=62 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `agent`
 --
 
-ALTER TABLE agentdb.agent AUTO_INCREMENT = 1;
-
-
-
 LOCK TABLES `agent` WRITE;
 /*!40000 ALTER TABLE `agent` DISABLE KEYS */;
-INSERT INTO `agent` VALUES (1,'COM','COM'),(2,'CUS','CUS'),(3,'SUP','SUP'),(4,'MAN','MAN'),(5,'ANA','ANA'),(60,'agent007','ANA');
+INSERT INTO `agent` VALUES (1,'COM','COM'),(2,'CUS','CUS'),(3,'SUP','SUP'),(4,'MAN','MAN'),(5,'ANA','ANA'),(60,'agent007','ANA'),(61,'brahim','ANA');
 /*!40000 ALTER TABLE `agent` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -68,10 +64,12 @@ CREATE TABLE `agentattribute` (
 -- Dumping data for table `agentattribute`
 --
 
+SET GLOBAL time_zone = '+1:00';
+
 
 LOCK TABLES `agentattribute` WRITE;
 /*!40000 ALTER TABLE `agentattribute` DISABLE KEYS */;
-INSERT INTO `agentattribute` VALUES (2,1),(2,2),(2,3),(2,4),(2,5),(1,6),(2,6),(3,6),(1,7),(3,7),(4,7),(5,7),(1,8),(3,8),(1,9),(3,9),(1,10),(3,10),(1,11),(3,11),(3,12),(3,13),(3,19),(3,20),(3,21),(5,22),(60,37),(60,38);
+INSERT INTO `agentattribute` VALUES (2,1),(61,1),(2,2),(2,3),(2,4),(2,5),(1,6),(2,6),(3,6),(1,7),(3,7),(4,7),(5,7),(1,8),(3,8),(4,8),(1,9),(3,9),(1,10),(3,10),(4,10),(1,11),(3,11),(4,11),(3,12),(3,13),(3,19),(3,20),(3,21),(5,22),(60,37),(60,38),(4,39),(4,40),(4,41);
 /*!40000 ALTER TABLE `agentattribute` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -90,17 +88,16 @@ CREATE TABLE `attribute` (
   PRIMARY KEY (`idAttribute`,`idAttType`),
   KEY `fk_Attribute_AttType1_idx` (`idAttType`),
   CONSTRAINT `fk_Attribute_AttType1` FOREIGN KEY (`idAttType`) REFERENCES `atttype` (`idAttType`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `attribute`
 --
-ALTER TABLE agentdb.attribute AUTO_INCREMENT = 1;
 
 LOCK TABLES `attribute` WRITE;
 /*!40000 ALTER TABLE `attribute` DISABLE KEYS */;
-INSERT INTO `attribute` VALUES (1,'budgetAllowed',NULL,3),(2,'customerAge',NULL,3),(3,'qualityNeeded',NULL,4),(4,'timeToDelivery',NULL,3),(5,'objectTypes','\"food machine other\"',1),(6,'channelsUsed','\"net journal tv\"',1),(7,'ontologyUse',NULL,5),(8,'aSpeed',NULL,4),(9,'versatility',NULL,3),(10,'errorRate',NULL,4),(11,'roles','\"a b c\"',1),(12,'analysisTypes','\"a b c\"',1),(13,'requestTypes','\"a b c\"',1),(19,'aaa',NULL,1),(20,'bbb',NULL,2),(21,'ccc',NULL,3),(22,'speed',NULL,4),(23,'versality',NULL,4),(24,'nom',NULL,5),(25,'erzr',NULL,2),(27,'br1','val1 val2 val3',1),(28,'br2','',2),(29,'br3','',4),(37,'007',NULL,2),(38,'008',NULL,4);
+INSERT INTO `attribute` VALUES (1,'budgetAllowed',NULL,3),(2,'customerAge',NULL,3),(3,'qualityNeeded',NULL,4),(4,'timeToDelivery',NULL,3),(5,'stObjectTypes','\"food machine other\"',1),(6,'stChannelsUsed','\"net journal tv\"',1),(7,'ontologyUse',NULL,5),(8,'aSpeed',NULL,4),(9,'versatility',NULL,3),(10,'errorRate',NULL,4),(11,'stMyRoles','\"a b c\"',1),(12,'analysisTypes','\"a b c\"',1),(13,'requestTypes','\"a b c\"',1),(19,'aaa',NULL,1),(20,'bbb',NULL,2),(21,'ccc',NULL,3),(22,'speed',NULL,4),(23,'versality',NULL,4),(24,'nom',NULL,5),(25,'erzr',NULL,2),(27,'br1','val1 val2 val3',1),(28,'br2','',2),(29,'br3','',4),(37,'007',NULL,2),(38,'008',NULL,4),(39,'leadership',NULL,4),(40,'stEvaluationTypes','a b c',1),(41,'stStrategytypes','a b c ',1);
 /*!40000 ALTER TABLE `attribute` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -121,8 +118,6 @@ CREATE TABLE `atttype` (
 --
 -- Dumping data for table `atttype`
 --
-ALTER TABLE agentdb.atttype AUTO_INCREMENT = 1;
-
 
 LOCK TABLES `atttype` WRITE;
 /*!40000 ALTER TABLE `atttype` DISABLE KEYS */;
@@ -139,4 +134,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-07-07 19:44:20
+-- Dump completed on 2020-07-26 20:30:19

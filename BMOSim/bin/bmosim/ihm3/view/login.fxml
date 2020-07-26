@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="408.0" prefWidth="297.0" style="-fx-background-color: linear-gradient(from 300px 70px to 280px 500px,#43cea2, #185a9d);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bmosim.ihm3.controller.login">
+<AnchorPane fx:id="anchor" prefHeight="408.0" prefWidth="297.0" style="-fx-background-color: linear-gradient(from 300px 70px to 280px 500px,#43cea2, #185a9d);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bmosim.ihm3.controller.login">
    <children>
       <ImageView fitHeight="80.0" fitWidth="297.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
          <image>

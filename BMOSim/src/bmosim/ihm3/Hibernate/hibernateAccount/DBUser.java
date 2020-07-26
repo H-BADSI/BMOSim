@@ -1,5 +1,7 @@
 package bmosim.ihm3.Hibernate.hibernateAccount;
 
+//import bmosim.ihm3.Repository.AccountRepo.appUser;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -11,7 +13,7 @@ import java.io.Serializable;
 public class DBUser implements Serializable {
     @Id
     @Column(name = "iduser")
-    private int idAgent;
+    private int iduser;
 
     @Column(name = "username")
     private String username;
@@ -20,7 +22,31 @@ public class DBUser implements Serializable {
     private String password;
 
     @Column(name = "adm")
-    private boolean admin;
+    private String admin;
+
+    @Column(name = "lastLogin")
+    private String lastLogin;
+
+    @Column(name = "lastLogout")
+    private String lastLogout;
+
+    public DBUser() {
+    }
+
+    public DBUser(String username) {
+        this.username = username;
+    }
+
+    public DBUser(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    public DBUser(String username, String password, String admin) {
+        this.username = username;
+        this.password = password;
+        this.admin = admin;
+    }
 
 
     public String getUsername() {
@@ -39,20 +65,36 @@ public class DBUser implements Serializable {
         this.password = password;
     }
 
-    public int getIdAgent() {
-        return idAgent;
+    public int getIduser() {
+        return iduser;
     }
 
-    public void setIdAgent(int idAgent) {
-        this.idAgent = idAgent;
+    public void setIduser(int iduser) {
+        this.iduser = iduser;
     }
 
-    public boolean isAdmin() {
+    public String getAdmin() {
         return admin;
     }
 
-    public void setAdmin(boolean admin) {
+    public void setAdmin(String admin) {
         this.admin = admin;
+    }
+
+    public String getLastLogin() {
+        return lastLogin;
+    }
+
+    public void setLastLogin(String lastLogin) {
+        this.lastLogin = lastLogin;
+    }
+
+    public String getLastLogout() {
+        return lastLogout;
+    }
+
+    public void setLastLogout(String lastLogout) {
+        this.lastLogout = lastLogout;
     }
 }
 

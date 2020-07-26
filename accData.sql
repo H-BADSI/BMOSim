@@ -28,27 +28,27 @@ CREATE TABLE `appuser` (
   `iduser` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
-  `adm` tinyint(1) NOT NULL,
+  `adm` enum('ordinary','admin','superAdmin') NOT NULL,
+  `lastLogin` varchar(45) DEFAULT NULL,
+  `lastLogout` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`iduser`),
   UNIQUE KEY `username_UNIQUE` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `appuser`
 --
 
-ALTER TABLE acc.appuser AUTO_INCREMENT = 1;
+SET GLOBAL time_zone = '+1:00';
+
 
 LOCK TABLES `appuser` WRITE;
 /*!40000 ALTER TABLE `appuser` DISABLE KEYS */;
-INSERT INTO `appuser` VALUES (1,'admin','admin',1),(3,'aaa','aaa',0),(4,'brahim','brahim',0),(5,'KHALED','KHALED',0),(6,'xxx','xxx',0);
+INSERT INTO `appuser` VALUES (1,'admin','07WfylTarjY=','superAdmin','2020/07/26 20:04:55','2020/07/26 20:04:21'),(13,'b','whzPrgihT4I=','admin','2020/07/26 20:04:27','2020/07/26 20:04:51');
 /*!40000 ALTER TABLE `appuser` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
-
-
-
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
@@ -58,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-07-07 19:43:23
+-- Dump completed on 2020-07-26 20:29:53

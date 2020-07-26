@@ -7,6 +7,7 @@ import java.util.Collection;
 import org.protege.owl.codegeneration.WrappedIndividual;
 import org.protege.owl.codegeneration.impl.WrappedIndividualImpl;
 
+import org.protege.owl.codegeneration.inference.CodeGenerationInference;
 import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLOntology;
 
@@ -19,7 +20,7 @@ import org.semanticweb.owlapi.model.OWLOntology;
 public class DefaultDistributionChannel extends WrappedIndividualImpl implements DistributionChannel {
 
     public DefaultDistributionChannel(OWLOntology ontology, IRI iri) {
-        super(ontology, iri);
+        super((CodeGenerationInference) ontology, iri);
     }
 
 
@@ -31,10 +32,9 @@ public class DefaultDistributionChannel extends WrappedIndividualImpl implements
      */
      
     public Collection<? extends ValueProposition> getDelivers() {
-//        return getDelegate().getPropertyValues(getOwlIndividual(),
-//                                               Vocabulary.OBJECT_PROPERTY_DELIVERS,
-//                                               DefaultValueProposition.class);
-        return null;
+        return getDelegate().getPropertyValues(getOwlIndividual(),
+                                               Vocabulary.OBJECT_PROPERTY_DELIVERS,
+                                               DefaultValueProposition.class);
     }
 
     public boolean hasDelivers() {
@@ -42,15 +42,15 @@ public class DefaultDistributionChannel extends WrappedIndividualImpl implements
     }
 
     public void addDelivers(ValueProposition newDelivers) {
-//        getDelegate().addPropertyValue(getOwlIndividual(),
-//                                       Vocabulary.OBJECT_PROPERTY_DELIVERS,
-//                                       newDelivers);
+        getDelegate().addPropertyValue(getOwlIndividual(),
+                                       Vocabulary.OBJECT_PROPERTY_DELIVERS,
+                                       newDelivers);
     }
 
     public void removeDelivers(ValueProposition oldDelivers) {
-//        getDelegate().removePropertyValue(getOwlIndividual(),
-//                                          Vocabulary.OBJECT_PROPERTY_DELIVERS,
-//                                          oldDelivers);
+        getDelegate().removePropertyValue(getOwlIndividual(),
+                                          Vocabulary.OBJECT_PROPERTY_DELIVERS,
+                                          oldDelivers);
     }
 
 
@@ -59,10 +59,9 @@ public class DefaultDistributionChannel extends WrappedIndividualImpl implements
      */
      
     public Collection<? extends CustomerSegment> getServes() {
-//        return getDelegate().getPropertyValues(getOwlIndividual(),
-//                                               Vocabulary.OBJECT_PROPERTY_SERVES,
-//                                               DefaultCustomerSegment.class);
-        return null;
+        return getDelegate().getPropertyValues(getOwlIndividual(),
+                                               Vocabulary.OBJECT_PROPERTY_SERVES,
+                                               DefaultCustomerSegment.class);
     }
 
     public boolean hasServes() {
@@ -70,15 +69,15 @@ public class DefaultDistributionChannel extends WrappedIndividualImpl implements
     }
 
     public void addServes(CustomerSegment newServes) {
-//        getDelegate().addPropertyValue(getOwlIndividual(),
-//                                       Vocabulary.OBJECT_PROPERTY_SERVES,
-//                                       newServes);
+        getDelegate().addPropertyValue(getOwlIndividual(),
+                                       Vocabulary.OBJECT_PROPERTY_SERVES,
+                                       newServes);
     }
 
     public void removeServes(CustomerSegment oldServes) {
-//        getDelegate().removePropertyValue(getOwlIndividual(),
-//                                          Vocabulary.OBJECT_PROPERTY_SERVES,
-//                                          oldServes);
+        getDelegate().removePropertyValue(getOwlIndividual(),
+                                          Vocabulary.OBJECT_PROPERTY_SERVES,
+                                          oldServes);
     }
 
 
@@ -87,8 +86,7 @@ public class DefaultDistributionChannel extends WrappedIndividualImpl implements
      */
      
     public Collection<? extends String> getChannelCategory() {
-//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_CHANNELCATEGORY, String.class);
-        return null;
+		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_CHANNELCATEGORY, String.class);
     }
 
     public boolean hasChannelCategory() {
@@ -96,11 +94,11 @@ public class DefaultDistributionChannel extends WrappedIndividualImpl implements
     }
 
     public void addChannelCategory(String newChannelCategory) {
-//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_CHANNELCATEGORY, newChannelCategory);
+	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_CHANNELCATEGORY, newChannelCategory);
     }
 
     public void removeChannelCategory(String oldChannelCategory) {
-//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_CHANNELCATEGORY, oldChannelCategory);
+		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_CHANNELCATEGORY, oldChannelCategory);
     }
 
 
@@ -109,8 +107,7 @@ public class DefaultDistributionChannel extends WrappedIndividualImpl implements
      */
      
     public Collection<? extends Object> getCustomerBuyingCycle() {
-//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_CUSTOMERBUYINGCYCLE, Object.class);
-        return null;
+		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_CUSTOMERBUYINGCYCLE, Object.class);
     }
 
     public boolean hasCustomerBuyingCycle() {
@@ -118,11 +115,11 @@ public class DefaultDistributionChannel extends WrappedIndividualImpl implements
     }
 
     public void addCustomerBuyingCycle(Object newCustomerBuyingCycle) {
-//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_CUSTOMERBUYINGCYCLE, newCustomerBuyingCycle);
+	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_CUSTOMERBUYINGCYCLE, newCustomerBuyingCycle);
     }
 
     public void removeCustomerBuyingCycle(Object oldCustomerBuyingCycle) {
-//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_CUSTOMERBUYINGCYCLE, oldCustomerBuyingCycle);
+		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_CUSTOMERBUYINGCYCLE, oldCustomerBuyingCycle);
     }
 
 
@@ -131,8 +128,7 @@ public class DefaultDistributionChannel extends WrappedIndividualImpl implements
      */
      
     public Collection<? extends String> getReasoning() {
-//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, String.class);
-        return null;
+		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, String.class);
     }
 
     public boolean hasReasoning() {
@@ -140,11 +136,11 @@ public class DefaultDistributionChannel extends WrappedIndividualImpl implements
     }
 
     public void addReasoning(String newReasoning) {
-//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, newReasoning);
+	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, newReasoning);
     }
 
     public void removeReasoning(String oldReasoning) {
-//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, oldReasoning);
+		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, oldReasoning);
     }
 
 
@@ -153,8 +149,7 @@ public class DefaultDistributionChannel extends WrappedIndividualImpl implements
      */
      
     public Collection<? extends String> getSynonyms() {
-//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, String.class);
-        return null;
+		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, String.class);
     }
 
     public boolean hasSynonyms() {
@@ -162,11 +157,11 @@ public class DefaultDistributionChannel extends WrappedIndividualImpl implements
     }
 
     public void addSynonyms(String newSynonyms) {
-//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, newSynonyms);
+	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, newSynonyms);
     }
 
     public void removeSynonyms(String oldSynonyms) {
-//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, oldSynonyms);
+		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, oldSynonyms);
     }
 
 

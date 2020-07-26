@@ -12,23 +12,24 @@ import org.hibernate.cfg.Configuration;
 import javax.persistence.Query;
 import java.util.ArrayList;
 
-public class FeedRepo {
+public class FeedRepo extends StatRepo{
 
 
-    SessionFactory sessionFactory;
+//    SessionFactory sessionFactory;
 
     public FeedRepo(){
-        ArrayList<String> dbconf = funct.getDBSet();
-        Configuration c = new Configuration();
-        Object o=c.configure("bmosim/ihm3/Hibernate/hibernateFeed/hiberFeed.cfg.xml");
-        c.setProperty("hibernate.connection.url","jdbc:mysql://localhost:3306/stat");
-        c.setProperty("hibernate.connection.username","root");
-        c.setProperty("hibernate.connection.password","emplacement44");
-        sessionFactory= ((Configuration) o).buildSessionFactory();
+        super();
+//        ArrayList<String> dbconf = funct.getDBSet();
+//        Configuration c = new Configuration();
+//        Object o=c.configure("bmosim/ihm3/Hibernate/hibernateFeed/hiberFeed.cfg.xml");
+//        c.setProperty("hibernate.connection.url","jdbc:mysql://localhost:3306/stat");
+//        c.setProperty("hibernate.connection.username","root");
+//        c.setProperty("hibernate.connection.password","emplacement44");
+//        sessionFactory= ((Configuration) o).buildSessionFactory();
     }
 
-    public Double getFeedsByVar(String sim,String comp,String var){
-        ArrayList<Integer> insts = new InstanceRepo().getIdInstBySim(sim);
+    public Double getFeedsByVar(String sim,String comp,String var,InstanceRepo instanceRepo){
+        ArrayList<Integer> insts = instanceRepo.getIdInstBySim(sim);
         Double d=0.0;
 
         ArrayList<Double> v = new ArrayList<>();
@@ -78,9 +79,9 @@ public class FeedRepo {
 //        session.close();
 //        return sims;
 //    }
-    public ArrayList<vals> getFeeds(String sim,String o){
+    public ArrayList<vals> getFeeds(String sim,String o,InstanceRepo instanceRepo){
         int ord=Integer.parseInt(o);
-        int idIn=new InstanceRepo().getIdInstBySimAndOrd(sim,ord);
+        int idIn=instanceRepo.getIdInstBySimAndOrd(sim,ord);
         ArrayList<vals> vals = new ArrayList<>();
         Session session = sessionFactory.openSession();
         Query query = session.createQuery("FROM DBFeed where idInstance="+idIn);
@@ -125,8 +126,7 @@ public class FeedRepo {
         feed.setIdInstance(instance);
         session.save(feed);
         session.getTransaction().commit();
-
-
+        session.close();
     }
 
 }

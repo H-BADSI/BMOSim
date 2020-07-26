@@ -32,4 +32,14 @@ public class DBAgAtt implements Serializable {
     public void setIdAttribute(int idAttribute) {
         this.idAttribute = idAttribute;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
 }

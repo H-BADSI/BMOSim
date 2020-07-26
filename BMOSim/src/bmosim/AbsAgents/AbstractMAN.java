@@ -12,6 +12,7 @@ import bmosim.hibernateDB.DBtype;
 import bmosim.model.AGR;
 import bmosim.model.Role;
 import madkit.message.EnumMessage;
+import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 
 public abstract class AbstractMAN extends AbsEtsAgent{
 	
@@ -28,7 +29,7 @@ public abstract class AbstractMAN extends AbsEtsAgent{
 		super(conf);
 		// TODO Auto-generated constructor stub
 	}
-	public abstract void initOffersInDB();
+	public abstract void initOffersInDB() throws OWLOntologyCreationException;
 	public abstract void highlight();
 	public void activate () {
 //		setLogLevel(Level.FINEST);
@@ -36,7 +37,11 @@ public abstract class AbstractMAN extends AbsEtsAgent{
 		requestRole(AGR.COMMUNITY, AGR.IN_GROUP, AGR.MAN_IN_ROLE);
 		requestRoles();
 		setParameters();
-		initOffersInDB();
+		try {
+			initOffersInDB();
+		} catch (OWLOntologyCreationException e) {
+			e.printStackTrace();
+		}
 		highlight();
 	}
 	public void setLocalSettings(){

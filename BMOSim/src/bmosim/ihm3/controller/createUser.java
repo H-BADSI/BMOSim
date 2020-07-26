@@ -1,7 +1,9 @@
 package bmosim.ihm3.controller;
 
+import bmosim.ihm3.Hibernate.hibernateAccount.DBUser;
 import bmosim.ihm3.Main;
 import bmosim.ihm3.Repository.AccountRepo.UserRepo;
+//import bmosim.ihm3.Repository.AccountRepo.appUser;
 import com.jfoenix.controls.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,6 +17,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.ResourceBundle;
 
 public class createUser implements Initializable {
@@ -35,10 +39,12 @@ public class createUser implements Initializable {
     private JFXPasswordField passConf;
 
     @FXML
-    private JFXCheckBox admin;
+    private JFXComboBox admin;
+
+    UserRepo userRepo=Main.userRepo;
 
     @FXML
-    private void alert(UserRepo u,String label,boolean showLabel){
+    private void alert(DBUser u, String label, boolean showLabel){
         JFXButton confirm = new JFXButton("confirm");
         JFXButton cancel = new JFXButton("cancel");
         confirm.setStyle("-fx-background-color: linear-gradient(from 300px 70px to 280px 500px,#43cea2, #185a9d) ");
@@ -80,10 +86,11 @@ public class createUser implements Initializable {
         dialog.setStyle("-fx-background-color:  linear-gradient(from 300px 70px to 280px 500px,#43cea2, #185a9d)");
 
         confirm.setOnAction(event -> {
-            UserRepo us = new UserRepo(username.getText(),password.getText(),admin.isSelected());
-            if(us.userExistPass()){
-                if(us.isAdmin()){
-                    u.insertUser();
+            DBUser us = new DBUser(username.getText(),password.getText());
+            String adm = userRepo.isAdmin(us);
+            if(adm!=null){
+                if(adm.equals("admin") || adm.equals("superAdmin")){
+                    userRepo.insertUser(u);
                     an.setEffect(null);
                     dialog.close();
                 }else{
@@ -95,7 +102,8 @@ public class createUser implements Initializable {
                 dialog.close();
                 alert(u,"Wrong credentials !",true);
             }
-        });
+        }
+        );
         cancel.setOnAction(event -> {
             an.setEffect(null);
             dialog.close();
@@ -107,19 +115,19 @@ public class createUser implements Initializable {
 
     @FXML
     void createUser(ActionEvent event) {
-        UserRepo u = new UserRepo(username.getText(),pass.getText(),admin.isSelected());
-        if(username.getText().isEmpty()){
+        DBUser u = new DBUser(username.getText(),pass.getText(),admin.getValue().toString());
+        if(username.getText().length()<6){
             username.setUnFocusColor(Color.RED);
-            Main.Alert(root,"put a valid username, please","","");
-        }else if(pass.getText().isEmpty()){
+            Main.Alert(root,"A username should be 6 characters at least","","");
+        }else if(pass.getText().length()<8){
             username.setUnFocusColor(Color.rgb(77,77,77));
             pass.setUnFocusColor(Color.RED);
-            Main.Alert(root,"put a valid password, please","","");
+            Main.Alert(root,"A password should be 8 characters at least.","","");
         }else if(!pass.getText().equals(passConf.getText()) || passConf.getText().isEmpty()){
             pass.setUnFocusColor(Color.rgb(77,77,77));
             passConf.setUnFocusColor(Color.RED);
             Main.Alert(root,"Passwords don't match !","Check again","");
-        }else if(u.userExist()){
+        }else if(userRepo.userExist(u)){
             pass.setUnFocusColor(Color.rgb(77,77,77));
             passConf.setUnFocusColor(Color.rgb(77,77,77));
             username.setUnFocusColor(Color.RED);
@@ -131,6 +139,8 @@ public class createUser implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        admin.getItems().addAll(new ArrayList(Arrays.asList("ordinary","admin","superAdmin")));
+        admin.getSelectionModel().select(0);
 
     }
 

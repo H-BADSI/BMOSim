@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="com.sun.xsom:xsom:20140925" type="repository">
+    <properties maven-id="com.sun.xsom:xsom:20140925" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/xsom/xsom/20140925/xsom-20140925.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/relaxngDatatype/relaxngDatatype/20020414/relaxngDatatype-20020414.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

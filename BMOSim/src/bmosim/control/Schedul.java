@@ -2,7 +2,6 @@ package bmosim.control;
 
 import java.util.logging.Level;
 
-import bmosim.ihm3.controller.simulate;
 import bmosim.model.AGR;
 import madkit.kernel.AbstractAgent;
 import madkit.kernel.Scheduler;
@@ -28,7 +27,6 @@ public class Schedul extends Scheduler{
 	private static GenericBehaviorActivator<AbstractAgent> activatorTurnover;
 	private static GenericBehaviorActivator<AbstractAgent> activatorRefund;
 	private static GenericBehaviorActivator<AbstractAgent> activatorUpdateDB;
-
 
 
 	public void activate () {
@@ -66,7 +64,7 @@ public class Schedul extends Scheduler{
 
 		activatorUpdateDB= new GenericBehaviorActivator<AbstractAgent>(AGR.COMMUNITY, AGR.CONTROL_GROUP, AGR.WATCHER_ROLE,"updateDB");
 		addActivator(activatorUpdateDB);
-//		setSimulationState(SimulationState.RUNNING);
+
 		setSimulationState(SimulationState.RUNNING);
 
 	}
@@ -113,8 +111,8 @@ public class Schedul extends Scheduler{
 		if (getGVT() % 10 ==0){
 			activatorUpdateDB.execute();
 		}
-
         setGVT(getGVT() + 1);
+
 		if(Main.simState=="PAUSED")setSimulationState(SimulationState.PAUSED);
 		if(Main.simState=="RUNNING")setSimulationState(SimulationState.RUNNING);
 		if(Main.simState=="SHUTDOWN")setSimulationState(SimulationState.SHUTDOWN);

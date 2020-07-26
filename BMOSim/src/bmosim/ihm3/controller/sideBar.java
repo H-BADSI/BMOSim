@@ -2,7 +2,6 @@ package bmosim.ihm3.controller;
 
 import bmosim.ihm3.Main;
 import com.jfoenix.controls.JFXDrawer;
-import com.jfoenix.controls.JFXHamburger;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 
@@ -12,17 +11,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.effect.BlurType;
 import javafx.scene.effect.BoxBlur;
-import javafx.scene.effect.DropShadow;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;

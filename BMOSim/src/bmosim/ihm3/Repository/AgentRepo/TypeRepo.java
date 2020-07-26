@@ -8,20 +8,22 @@ import org.hibernate.cfg.Configuration;
 import javax.persistence.Query;
 import java.util.ArrayList;
 
-public class TypeRepo {
+public abstract class TypeRepo extends AgRepo{
 
-    SessionFactory sessionFactory;
+//    SessionFactory sessionFactory;
 
     public TypeRepo() {
-        ArrayList<String> dbconf = funct.getDBSet();
-        Configuration c = new Configuration();
-        Object o=c.configure("bmosim/ihm3/Hibernate/hibernateAgent/hiberAgent.cfg.xml");
-        c.setProperty("hibernate.connection.url","jdbc:mysql://localhost:3306/agentdb");
-        c.setProperty("hibernate.connection.username","root");
-        c.setProperty("hibernate.connection.password","emplacement44");
-        sessionFactory= ((Configuration) o).buildSessionFactory();
+        super();
+//        ArrayList<String> dbconf = funct.getDBSet();
+//        Configuration c = new Configuration();
+//        Object o=c.configure("bmosim/ihm3/Hibernate/hibernateAgent/hiberAgent.cfg.xml");
+//        c.setProperty("hibernate.connection.url","jdbc:mysql://localhost:3306/agentdb");
+//        c.setProperty("hibernate.connection.username","root");
+//        c.setProperty("hibernate.connection.password","emplacement44");
+//        sessionFactory= ((Configuration) o).buildSessionFactory();
     }
 
+    @Override
     public int getIdAttType(String type){
         Session session = sessionFactory.openSession();
         Query query = session.createQuery("select idAttType from DBAtttype where type='"+type+"'");
@@ -30,6 +32,7 @@ public class TypeRepo {
         return id;
     }
 
+    @Override
     public ArrayList<String> getAttributeTypes(){
         Session session = sessionFactory.openSession();
         Query query = session.createQuery("select type from DBAtttype ");

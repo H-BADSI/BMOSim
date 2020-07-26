@@ -30,7 +30,7 @@ public class MAN extends AbstractMAN{
 		highlightAnOffer(1);
 	}
 	
-	public void initOffersInDB(){
+	public void initOffersInDB() throws OWLOntologyCreationException {
 //        simulate.tf1.setText("activate");
 		//objType,
 		//buyPrice, sellPrice, quality, prodQuantity, lifeTime,
@@ -50,7 +50,7 @@ public class MAN extends AbstractMAN{
 		DBproduct p10 = createProduct(t3,"p10",88,111,3,100000,1600);
 		DBproduct p11 = createProduct(t3,"p11",111,139,5,100000,1200);
 		DBproduct p12 = createProduct(t3,"p12",73,92,4,100000,1400);
-		
+
 		addOfferInDB(p1,-1,148,3);
 		addOfferInDB(p2,-1,180,3);
 		addOfferInDB(p3,-1,250,3);
@@ -63,14 +63,14 @@ public class MAN extends AbstractMAN{
 		addOfferInDB(p10,-1,111,3);
 		addOfferInDB(p11,-1,139,3);
 		addOfferInDB(p12,-1,92,3);
-		
-		
-		//OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
-//		OWLOntologyIRIMapper mapper = new AutoIRIMapper(new File ("C:\\Users\\BRAHIM\\Downloads\\3juil2019\\demo\\BMOSim\\BMOSim\\src\\bmosim\\onto"), false);
-		//manager.addIRIMapper(mapper);
-		File f = new File("C:\\Users\\BRAHIM\\Downloads\\3juil2019\\demo\\BMOSim\\BMOSim\\src\\bmosim\\onto\\BusModelOWL.owl");
 
-		//OWLOntology bmoTest = manager.loadOntologyFromOntologyDocument(f);
+
+//		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
+//		OWLOntologyIRIMapper mapper = new AutoIRIMapper(new File ("src/bmosim/onto"), false);
+//		manager.addIRIMapper(mapper);
+//		File f = new File("src/bmosim/onto/BusModelOWL.owl");
+
+//		OWLOntology bmoTest = manager.loadOntologyFromOntologyDocument(f);
 //			MyFactory factory = new MyFactory(bmoTest);
 //			ValueProposition vp1 = factory.createValueProposition("p1");
 //			ValueProposition vp2 = factory.createValueProposition("p2");
@@ -136,10 +136,10 @@ public class MAN extends AbstractMAN{
 //			cs4.addIsTargetedBy(vp11);
 //			cs4.addIsTargetedBy(vp12);
 
-////			OWLReasoner reasoner = new Reasoner.ReasonerFactory().createReasoner(bmoTest);
-////			reasoner.precomputeInferences(InferenceType.OBJECT_PROPERTY_ASSERTIONS);
-////			List<InferredAxiomGenerator<? extends OWLAxiom>> isTargeted = new ArrayList<InferredAxiomGenerator<? extends OWLAxiom>>();
-////			isTargeted.add
+//			OWLReasoner reasoner = new Reasoner.ReasonerFactory().createReasoner(bmoTest);
+//			reasoner.precomputeInferences(InferenceType.OBJECT_PROPERTY_ASSERTIONS);
+//			List<InferredAxiomGenerator<? extends OWLAxiom>> isTargeted = new ArrayList<InferredAxiomGenerator<? extends OWLAxiom>>();
+//			isTargeted.add
 
 //			try {
 //				manager.saveOntology(bmoTest);
@@ -151,25 +151,25 @@ public class MAN extends AbstractMAN{
 
 	}
 
-	/*private void loadReports ()
+	private void loadReports ()
 	{
 		// load reports from analysis and support
 	}
 	private void assessing ()
 	{
-		// 
+		//
 	}
 	private void selectStrategy ()
 	{
-		// 
+		//
 	}
 	private void planUpdate ()
 	{
-		// 
+		//
 	}
 	private void scheduleMeetings ()
 	{
-		// 
+		//
 	}
 	private void sendUpdate ()
 	{
@@ -177,7 +177,7 @@ public class MAN extends AbstractMAN{
 	}
 	private void updateDiffusion ()
 	{
-		// 
+		//
 	}
-	*/
+
 }

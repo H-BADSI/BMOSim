@@ -7,13 +7,14 @@ import java.util.logging.Level;
 import bmosim.agents.COM;
 import bmosim.agents.CUS;
 import bmosim.exchange.objects.Seller;
-import bmosim.ihm3.Repository.FeedRepo.FeedRepo;
+import bmosim.ihm3.Main;
 import bmosim.model.AGR;
 import bmosim.model.Role;
 import madkit.kernel.Watcher;
 import madkit.simulation.probe.PropertyProbe;
 
 public class Observer extends Watcher{
+
 
 	PropertyProbe<CUS,ArrayList<Seller>> customerSatisfactionProbe =
 			new PropertyProbe<CUS,ArrayList<Seller>>
@@ -106,7 +107,6 @@ public class Observer extends Watcher{
 		satOffersNb = 0.0;
 		for (int i=0; i<customers.size();i++){
 			satOffersNb += nbSatisfyingOffersProbe.getPropertyValue(customers.get(i));
-//			System.out.println("**************"+nbSatisfyingOffersProbe.getPropertyValue(customers.get(i)));
 			if(satOffersNb.isNaN()) satOffersNb=0.0;//BRAHIM
 		}
 		if (getLogger() != null) getLogger().info("nbsat= "+satOffersNb.toString());
@@ -191,9 +191,12 @@ public class Observer extends Watcher{
 	}
 
 	public void updateDB()  {
-			new FeedRepo().insertFeeds(Generator.idInst,Observer.globalScore,Observer.satOffersNb,Observer.accOffersNb,
+		Main.statRepo.insertFeeds(Generator.idInst,Observer.globalScore,Observer.satOffersNb,Observer.accOffersNb,
 					Observer.unAccOffersNb,Observer.avgT,Observer.ordersTotalNb.intValue(),Observer.purchasesTotalNb.intValue()
                     ,Observer.turnover,Observer.refund);
+//			System.out.println("FEEDS: "+Generator.idInst+" "+Observer.globalScore+" "+Observer.satOffersNb+" "+Observer.accOffersNb+" "+
+//                    Observer.unAccOffersNb+" "+Observer.avgT+" "+Observer.ordersTotalNb.intValue()+" "+Observer.purchasesTotalNb.intValue()
+//                    +" "+Observer.turnover+" "+Observer.refund);
 	}
 
 }

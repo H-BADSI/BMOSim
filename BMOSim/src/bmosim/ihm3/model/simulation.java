@@ -1,9 +1,7 @@
 package bmosim.ihm3.model;
 
 import bmosim.ihm3.Main;
-import bmosim.ihm3.bdd;
 import javafx.scene.control.Alert;
-import org.semanticweb.owlapi.rdf.rdfxml.parser.State;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

@@ -1,5 +1,10 @@
 package bmosim.ihm3;
 
+import bmosim.ihm3.Hibernate.hibernateAccount.DBUser;
+import bmosim.ihm3.Repository.AccountRepo.UserRepo;
+//import bmosim.ihm3.Repository.AccountRepo.appUser;
+import bmosim.ihm3.Repository.AgentRepo.AgRepo;
+import bmosim.ihm3.Repository.FeedRepo.StatRepo;
 import bmosim.ihm3.controller.Enceyption;
 import bmosim.ihm3.controller.funct;
 import com.jfoenix.controls.*;
@@ -19,7 +24,6 @@ import java.util.ArrayList;
 public class Main extends Application {
 
     public static boolean dark_light;
-    public static String username;
 
     public Scene scene;
 
@@ -33,7 +37,13 @@ public class Main extends Application {
     public static double x=170;
     public static double y=70;
 
-    public static Controller controller ;
+    public static StatRepo statRepo = new StatRepo();
+    public static AgRepo agRepo =  new AgRepo();
+    public static UserRepo userRepo = new UserRepo();
+
+    public static DBUser loginUser=new DBUser("admin","admin","admin");
+
+//    public static Controller controller ;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -42,11 +52,6 @@ public class Main extends Application {
         dark_light= funct.getDarkLight();
 
         ArrayList<String> dbconf = funct.getDBSet();
-        Enceyption e = new Enceyption();
-        String p1=e.decrypt(dbconf.get(1));
-        String p2=e.decrypt(dbconf.get(6));
-        System.out.println(p1);
-        System.out.println(p2);
 //        conAgent=bdd.connect(dbconf.get(2),dbconf.get(3),dbconf.get(0),dbconf.get(4),p1);
 //        conStat=bdd.connect(dbconf.get(7),dbconf.get(8),dbconf.get(5),dbconf.get(9),p2);
 //        conAccount=bdd.connect(dbconf.get(7),dbconf.get(8),"acc",dbconf.get(9),p2);
@@ -113,7 +118,9 @@ public class Main extends Application {
         dialogLayout.setActions(confirm);
         dialog.show();
     }
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+//        Enceyption e = new Enceyption();
+//        System.out.println(e.encrypt("admin"));
         launch(args);
 //        UserRepo user = new UserRepo("KHALED","KHALED");
 //        System.out.println(user.isAdmin());

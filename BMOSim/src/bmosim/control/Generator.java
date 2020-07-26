@@ -1,11 +1,8 @@
 package bmosim.control;
-import java.io.File;
 import java.io.IOException;
 import javax.xml.parsers.ParserConfigurationException;
 
-import bmosim.ihm3.bdd;
 import madkit.kernel.Scheduler;
-import madkit.kernel.Scheduler.SimulationState;
 import madkit.simulation.SimulationException;
 import org.xml.sax.SAXException;
 import javafx.fxml.FXML;
@@ -63,7 +60,7 @@ public class Generator extends Agent{
 	public void live(){
 		scheduler = new Schedul();
 		launchAgent(new DB(false),false);
-		launchAgent(scheduler,false);
+		launchAgent(scheduler,true);
 		try {
 			launchXmlAgents(Main.fileDirect);
 		} catch (SAXException e) {

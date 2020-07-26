@@ -7,6 +7,7 @@ import java.util.Collection;
 import org.protege.owl.codegeneration.WrappedIndividual;
 import org.protege.owl.codegeneration.impl.WrappedIndividualImpl;
 
+import org.protege.owl.codegeneration.inference.CodeGenerationInference;
 import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLOntology;
 
@@ -19,7 +20,7 @@ import org.semanticweb.owlapi.model.OWLOntology;
 public class DefaultRelationshipMechanism extends WrappedIndividualImpl implements RelationshipMechanism {
 
     public DefaultRelationshipMechanism(OWLOntology ontology, IRI iri) {
-        super(ontology, iri);
+        super((CodeGenerationInference) ontology, iri);
     }
 
 
@@ -31,8 +32,7 @@ public class DefaultRelationshipMechanism extends WrappedIndividualImpl implemen
      */
      
     public Collection<? extends Object> getCustomerEquity() {
-//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_CUSTOMEREQUITY, Object.class);
-        return null;
+		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_CUSTOMEREQUITY, Object.class);
     }
 
     public boolean hasCustomerEquity() {
@@ -40,11 +40,11 @@ public class DefaultRelationshipMechanism extends WrappedIndividualImpl implemen
     }
 
     public void addCustomerEquity(Object newCustomerEquity) {
-//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_CUSTOMEREQUITY, newCustomerEquity);
+	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_CUSTOMEREQUITY, newCustomerEquity);
     }
 
     public void removeCustomerEquity(Object oldCustomerEquity) {
-//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_CUSTOMEREQUITY, oldCustomerEquity);
+		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_CUSTOMEREQUITY, oldCustomerEquity);
     }
 
 
@@ -53,8 +53,7 @@ public class DefaultRelationshipMechanism extends WrappedIndividualImpl implemen
      */
      
     public Collection<? extends String> getReasoning() {
-//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, String.class);
-        return null;
+		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, String.class);
     }
 
     public boolean hasReasoning() {
@@ -62,11 +61,11 @@ public class DefaultRelationshipMechanism extends WrappedIndividualImpl implemen
     }
 
     public void addReasoning(String newReasoning) {
-//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, newReasoning);
+	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, newReasoning);
     }
 
     public void removeReasoning(String oldReasoning) {
-//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, oldReasoning);
+		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, oldReasoning);
     }
 
 
@@ -75,8 +74,7 @@ public class DefaultRelationshipMechanism extends WrappedIndividualImpl implemen
      */
      
     public Collection<? extends String> getSynonyms() {
-//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, String.class);
-        return null;
+		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, String.class);
     }
 
     public boolean hasSynonyms() {
@@ -84,11 +82,11 @@ public class DefaultRelationshipMechanism extends WrappedIndividualImpl implemen
     }
 
     public void addSynonyms(String newSynonyms) {
-//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, newSynonyms);
+	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, newSynonyms);
     }
 
     public void removeSynonyms(String oldSynonyms) {
-//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, oldSynonyms);
+		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, oldSynonyms);
     }
 
 

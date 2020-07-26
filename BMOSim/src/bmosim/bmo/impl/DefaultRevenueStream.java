@@ -7,6 +7,7 @@ import java.util.Collection;
 import org.protege.owl.codegeneration.WrappedIndividual;
 import org.protege.owl.codegeneration.impl.WrappedIndividualImpl;
 
+import org.protege.owl.codegeneration.inference.CodeGenerationInference;
 import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLOntology;
 
@@ -19,7 +20,7 @@ import org.semanticweb.owlapi.model.OWLOntology;
 public abstract class DefaultRevenueStream extends WrappedIndividualImpl implements RevenueStream {
 
     public DefaultRevenueStream(OWLOntology ontology, IRI iri) {
-        super(ontology, iri);
+        super((CodeGenerationInference) ontology, iri);
     }
 
 
@@ -30,84 +31,84 @@ public abstract class DefaultRevenueStream extends WrappedIndividualImpl impleme
      * Data Property http://www.owl-ontologies.com/unnamed.owl#pricingMethod
      */
      
-//    public Collection<? extends Object> getPricingMethod() {
-//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_PRICINGMETHOD, Object.class);
-//    }
-//
-//    public boolean hasPricingMethod() {
-//		return !getPricingMethod().isEmpty();
-//    }
-//
-//    public void addPricingMethod(Object newPricingMethod) {
-//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_PRICINGMETHOD, newPricingMethod);
-//    }
-//
-//    public void removePricingMethod(Object oldPricingMethod) {
-//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_PRICINGMETHOD, oldPricingMethod);
-//    }
-//
-//
-//    /* ***************************************************
-//     * Data Property http://www.owl-ontologies.com/unnamed.owl#reasoning
-//     */
-//
-//    public Collection<? extends String> getReasoning() {
-//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, String.class);
-//    }
-//
-//    public boolean hasReasoning() {
-//		return !getReasoning().isEmpty();
-//    }
-//
-//    public void addReasoning(String newReasoning) {
-//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, newReasoning);
-//    }
-//
-//    public void removeReasoning(String oldReasoning) {
-//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, oldReasoning);
-//    }
-//
-//
-//    /* ***************************************************
-//     * Data Property http://www.owl-ontologies.com/unnamed.owl#revenueCategory
-//     */
-//
-//    public Collection<? extends Object> getRevenueCategory() {
-//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REVENUECATEGORY, Object.class);
-//    }
-//
-//    public boolean hasRevenueCategory() {
-//		return !getRevenueCategory().isEmpty();
-//    }
-//
-//    public void addRevenueCategory(Object newRevenueCategory) {
-//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REVENUECATEGORY, newRevenueCategory);
-//    }
-//
-//    public void removeRevenueCategory(Object oldRevenueCategory) {
-//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REVENUECATEGORY, oldRevenueCategory);
-//    }
-//
-//
-//    /* ***************************************************
-//     * Data Property http://www.owl-ontologies.com/unnamed.owl#synonyms
-//     */
-//
-//    public Collection<? extends String> getSynonyms() {
-//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, String.class);
-//    }
-//
-//    public boolean hasSynonyms() {
-//		return !getSynonyms().isEmpty();
-//    }
-//
-//    public void addSynonyms(String newSynonyms) {
-//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, newSynonyms);
-//    }
-//
-//    public void removeSynonyms(String oldSynonyms) {
-//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, oldSynonyms);
-//    }
+    public Collection<? extends Object> getPricingMethod() {
+		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_PRICINGMETHOD, Object.class);
+    }
+
+    public boolean hasPricingMethod() {
+		return !getPricingMethod().isEmpty();
+    }
+
+    public void addPricingMethod(Object newPricingMethod) {
+	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_PRICINGMETHOD, newPricingMethod);
+    }
+
+    public void removePricingMethod(Object oldPricingMethod) {
+		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_PRICINGMETHOD, oldPricingMethod);
+    }
+
+
+    /* ***************************************************
+     * Data Property http://www.owl-ontologies.com/unnamed.owl#reasoning
+     */
+
+    public Collection<? extends String> getReasoning() {
+		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, String.class);
+    }
+
+    public boolean hasReasoning() {
+		return !getReasoning().isEmpty();
+    }
+
+    public void addReasoning(String newReasoning) {
+	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, newReasoning);
+    }
+
+    public void removeReasoning(String oldReasoning) {
+		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, oldReasoning);
+    }
+
+
+    /* ***************************************************
+     * Data Property http://www.owl-ontologies.com/unnamed.owl#revenueCategory
+     */
+
+    public Collection<? extends Object> getRevenueCategory() {
+		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REVENUECATEGORY, Object.class);
+    }
+
+    public boolean hasRevenueCategory() {
+		return !getRevenueCategory().isEmpty();
+    }
+
+    public void addRevenueCategory(Object newRevenueCategory) {
+	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REVENUECATEGORY, newRevenueCategory);
+    }
+
+    public void removeRevenueCategory(Object oldRevenueCategory) {
+		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REVENUECATEGORY, oldRevenueCategory);
+    }
+
+
+    /* ***************************************************
+     * Data Property http://www.owl-ontologies.com/unnamed.owl#synonyms
+     */
+
+    public Collection<? extends String> getSynonyms() {
+		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, String.class);
+    }
+
+    public boolean hasSynonyms() {
+		return !getSynonyms().isEmpty();
+    }
+
+    public void addSynonyms(String newSynonyms) {
+	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, newSynonyms);
+    }
+
+    public void removeSynonyms(String oldSynonyms) {
+		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, oldSynonyms);
+    }
 
 
 }

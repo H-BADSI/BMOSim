@@ -1,8 +1,7 @@
 package bmosim.ihm3.controller;
 
-import bmosim.ihm3.Repository.FeedRepo.FeedRepo;
-import bmosim.ihm3.Repository.FeedRepo.InstanceRepo;
-import bmosim.ihm3.Repository.FeedRepo.SimulationRepo;
+import bmosim.ihm3.Main;
+import bmosim.ihm3.Repository.FeedRepo.StatRepo;
 import bmosim.ihm3.model.vals;
 import com.jfoenix.controls.JFXComboBox;
 import javafx.beans.value.ChangeListener;
@@ -51,9 +50,7 @@ public class stat1 implements Initializable{
 //    @FXML
 //    private NumberAxis y;
 
-    SimulationRepo simrepo= new SimulationRepo();
-    InstanceRepo instrepo = new InstanceRepo();
-    FeedRepo feedrepo = new FeedRepo();
+    StatRepo statRepo = Main.statRepo;
 
     void getVals(ArrayList<vals> vs,String name){
         XYChart.Series series = new XYChart.Series();
@@ -95,14 +92,14 @@ public class stat1 implements Initializable{
 
             fillCheckCombo();
 
-            ArrayList<String> sims = simrepo.getSimulationsByName("");
+            ArrayList<String> sims = statRepo.getSimulationsByName("");
             sim.getItems().addAll(sims);
 
             sim.valueProperty().addListener(new ChangeListener<String>() {
                 @Override public void changed(ObservableValue ov, String t, String t1) {
                     chart.getData().clear();
                     sim.show();
-                    ArrayList<Integer> ins = instrepo.getInstance(t1);
+                    ArrayList<Integer> ins = statRepo.getInstance(t1);
                     inst.setDisable(false);
                     inst.getItems().clear();
                     inst.getItems().addAll(ins);
@@ -115,7 +112,7 @@ public class stat1 implements Initializable{
                 vars.setDisable(false);
                 chart.getData().clear();
                 for (Object s:vars.getCheckModel().getCheckedItems()) {
-                    getVals(feedrepo.getFeeds(String.valueOf(sim.getValue()),String.valueOf(inst.getValue())),String.valueOf(s));
+                    getVals(statRepo.getFeeds(String.valueOf(sim.getValue()),String.valueOf(inst.getValue())),String.valueOf(s));
                 }
             });
 
@@ -125,7 +122,7 @@ public class stat1 implements Initializable{
             public void onChanged(Change c) {
                 chart.getData().clear();
                 for (Object s:vars.getCheckModel().getCheckedItems()) {
-                    getVals(feedrepo.getFeeds(String.valueOf(sim.getValue()),String.valueOf(inst.getValue())), String.valueOf(s));
+                    getVals(statRepo.getFeeds(String.valueOf(sim.getValue()),String.valueOf(inst.getValue())), String.valueOf(s));
                 }
             }
         });

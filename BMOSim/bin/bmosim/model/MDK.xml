@@ -1,139 +1,47 @@
-<MDK name="bmosim" description="Business Model Ontology Simulator">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><MDK description="Business Model Ontology Simulator" name="bmosim">
 
 <Agents>
 
 <!-- child -->
-<Agent class="bmosim.agents.CUS" nbOfInstances="3" GUI="false" logLevel="FINEST">
-<Attributes
-budgetAllowed="100"
-customerAge="15"
-qualityNeeded="10"
-timeToDelivery = "5"
-stObjectTypes = "1 2"
-stChannelsUsed = "1 2"
-/></Agent>
+<Agent GUI="false" class="src.bmosim.agents.CUS" logLevel="FINEST" name="child" nbOfInstances="3">
+<Attributes budgetAllowed="100" customerAge="15" qualityNeeded="10" stChannelsUsed="1 2" stObjectTypes="1 2" timeToDelivery="5"/></Agent>
 
 <!-- young -->
-<Agent class="bmosim.agents.CUS" nbOfInstances="3" GUI="false" logLevel="FINEST">
-<Attributes
-budgetAllowed="200"
-customerAge="20"
-qualityNeeded="4"
-timeToDelivery = "7"
-stObjectTypes = "1 2 3"
-stChannelsUsed = "1 2"
-/></Agent>
+<Agent GUI="true" class="src.bmosim.agents.CUS" logLevel="FINEST" name="young" nbOfInstances="3">
+<Attributes budgetAllowed="200" customerAge="20" qualityNeeded="4" stChannelsUsed="1 2" stObjectTypes="1 2 3" timeToDelivery="7"/></Agent>
 
 <!-- adult -->
-<Agent class="bmosim.agents.CUS" nbOfInstances="3" GUI="false" logLevel="FINEST">
-<Attributes
-budgetAllowed="800"
-customerAge="35"
-qualityNeeded="2"
-timeToDelivery = "3"
-stObjectTypes = "1 2 3"
-stChannelsUsed = "1 2"
-/></Agent>
+<Agent GUI="false" class="bmosim.agents.CUS" logLevel="FINEST" name="adult" nbOfInstances="3">
+<Attributes budgetAllowed="800" customerAge="35" qualityNeeded="2" stChannelsUsed="1 2" stObjectTypes="1 2 3" timeToDelivery="3"/></Agent>
 
 <!-- old -->
-<Agent class="bmosim.agents.CUS" nbOfInstances="3" GUI="false" logLevel="FINEST">
-<Attributes
-budgetAllowed="150"
-customerAge="65"
-qualityNeeded="7"
-timeToDelivery = "10"
-stObjectTypes = "1 3"
-stChannelsUsed = "1 2"
-/></Agent>
+<Agent GUI="false" class="bmosim.agents.CUS" logLevel="FINEST" name="old" nbOfInstances="3">
+<Attributes budgetAllowed="150" customerAge="65" qualityNeeded="7" stChannelsUsed="1 2" stObjectTypes="1 3" timeToDelivery="10"/></Agent>
 
 <!-- commercial -->
-<Agent class="bmosim.agents.COM" nbOfInstances="1" GUI="false" logLevel="FINEST">
-<Attributes
-ontologyUse = "false"
-aSpeed = "500"
-versatility = "4"
-errorRate = "6"
+<Agent GUI="false" class="bmosim.agents.COM" logLevel="FINEST" name="commercial" nbOfInstances="1">
+<Attributes aSpeed="500" errorRate="6" ontologyUse="false" stChannelsUsed="1 2 3" stMyRoles="advertising" versatility="4"/></Agent>
 
-stMyRoles = "advertising"
-stChannelsUsed = "1 2 3"
-/></Agent>
+<Agent GUI="false" class="bmosim.agents.COM" logLevel="FINEST" name="commercial2" nbOfInstances="1">
+<Attributes aSpeed="500" errorRate="6" ontologyUse="false" stChannelsUsed="1 2 3" stMyRoles="receiving" versatility="4"/></Agent>
 
-<Agent class="bmosim.agents.COM" nbOfInstances="1" GUI="false" logLevel="FINEST">
-<Attributes
-ontologyUse = "false"
-aSpeed = "500"
-versatility = "4"
-errorRate = "6"
+<Agent GUI="false" class="bmosim.agents.COM" logLevel="FINEST" name="commercial3" nbOfInstances="1">
+<Attributes aSpeed="500" errorRate="6" ontologyUse="false" stChannelsUsed="1 2 3" stMyRoles="preparing" versatility="4"/></Agent>
 
-stMyRoles = "receiving"
-stChannelsUsed = "1 2 3"
-/></Agent>
+<Agent GUI="false" class="bmosim.agents.COM" logLevel="FINEST" name="commercial4" nbOfInstances="1">
+<Attributes aSpeed="500" errorRate="6" ontologyUse="false" stChannelsUsed="1 2 3" stMyRoles="treating" versatility="4"/></Agent>
 
-<Agent class="bmosim.agents.COM" nbOfInstances="1" GUI="false" logLevel="FINEST">
-<Attributes
-ontologyUse = "false"
-aSpeed = "500"
-versatility = "4"
-errorRate = "6"
+<Agent GUI="false" class="bmosim.agents.COM" logLevel="FINEST" name="commercial5" nbOfInstances="1">
+<Attributes aSpeed="500" errorRate="6" ontologyUse="false" stChannelsUsed="1 2 3" stMyRoles="billing" versatility="4"/></Agent>
 
-stMyRoles = "preparing"
-stChannelsUsed = "1 2 3"
-/></Agent>
+<Agent GUI="false" class="bmosim.agents.COM" logLevel="FINEST" name="commercial6" nbOfInstances="1">
+<Attributes aSpeed="500" errorRate="6" ontologyUse="false" stChannelsUsed="1 2 3" stMyRoles="delivering" versatility="4"/></Agent>
 
-<Agent class="bmosim.agents.COM" nbOfInstances="1" GUI="false" logLevel="FINEST">
-<Attributes
-ontologyUse = "false"
-aSpeed = "500"
-versatility = "4"
-errorRate = "6"
+<Agent GUI="false" class="bmosim.agents.COM" logLevel="FINEST" name="commercial7" nbOfInstances="1">
+<Attributes aSpeed="500" errorRate="6" ontologyUse="false" stChannelsUsed="1 2 3" stMyRoles="managing_cs" versatility="4"/></Agent>
 
-stMyRoles = "treating"
-stChannelsUsed = "1 2 3"
-/></Agent>
-
-<Agent class="bmosim.agents.COM" nbOfInstances="1" GUI="false" logLevel="FINEST">
-<Attributes
-ontologyUse = "false"
-aSpeed = "500"
-versatility = "4"
-errorRate = "6"
-
-stMyRoles = "billing"
-stChannelsUsed = "1 2 3"
-/></Agent>
-
-<Agent class="bmosim.agents.COM" nbOfInstances="1" GUI="false" logLevel="FINEST">
-<Attributes
-ontologyUse = "false"
-aSpeed = "500"
-versatility = "4"
-errorRate = "6"
-
-stMyRoles = "delivering"
-stChannelsUsed = "1 2 3"
-/></Agent>
-
-<Agent class="bmosim.agents.COM" nbOfInstances="1" GUI="false" logLevel="FINEST">
-<Attributes
-ontologyUse = "false"
-aSpeed = "500"
-versatility = "4"
-errorRate = "6"
-
-stMyRoles = "managing_cs"
-stChannelsUsed = "1 2 3"
-/></Agent>
-
-<Agent class="bmosim.agents.COM" nbOfInstances="1" GUI="false" logLevel="FINEST">
-<Attributes
-ontologyUse = "false"
-aSpeed = "500"
-versatility = "4"
-errorRate = "6"
-
-stMyRoles = "refunding"
-stChannelsUsed = "1 2 3"
-/></Agent>
+<Agent GUI="false" class="bmosim.agents.COM" logLevel="FINEST" name="commercial8" nbOfInstances="1">
+<Attributes aSpeed="500" errorRate="6" ontologyUse="false" stChannelsUsed="1 2 3" stMyRoles="refunding" versatility="4"/></Agent>
 
 <!-- <Agent class="bmosim.agents.SUP" nbOfInstances="1" GUI="true" logLevel="FINEST"> -->
 <!-- <Attributes  -->
@@ -147,29 +55,12 @@ stChannelsUsed = "1 2 3"
 <!-- stRequestType = "1 2" -->
 <!-- /></Agent> -->
 
- <Agent class="bmosim.agents.ANA" nbOfInstances="1" GUI="true" logLevel="FINEST">
- <Attributes
- ontologyUse = "false"
- aSpeed = "500"
- versatility = "4"
- errorRate = "6"
- stMyRoles = "lead profiling feedback"
- stAnalysisType = "1 2 3"
- /></Agent>
+ <Agent GUI="true" class="bmosim.agents.ANA" logLevel="FINEST" name="commercial9" nbOfInstances="1">
+ <Attributes aSpeed="500" errorRate="6" ontologyUse="false" stAnalysisType="1 2 3" stMyRoles="lead profiling feedback" versatility="4"/></Agent>
 
 <!-- manager -->
-<Agent class="bmosim.agents.MAN" nbOfInstances="1" GUI="false" logLevel="FINEST">
-<Attributes
-ontologyUse = "true"
-aSpeed = "500"
-versatility = "4"
-errorRate = "6"
+<Agent GUI="false" class="bmosim.agents.MAN" logLevel="FINEST" name="commercial10" nbOfInstances="1">
+<Attributes aSpeed="500" errorRate="6" leadership="3" ontologyUse="true" stEvaluationTypes="1 2 3" stMyRoles="answering" stStrategytypes="1 2 3" versatility="4"/></Agent>
 
-stMyRoles = "answering"
-stEvaluationTypes = "1 2 3"
-stStrategytypes = "1 2 3"
-leadership = "3"
-/></Agent>
-
-</Agents>
+<Agent class="src.bmosim.agents.CUS" name="mchichild" nbOfInstances="3"><Attributes budgetAllowed="200" customerAge="20" qualityNeeded="4" stChannelsUsed="1 2" stObjectTypes="1 2 3" timeToDelivery="10"/></Agent><Agent GUI="false" class="src.bmosim.agents.CUS" logLevel="OFF" name="agentCat3" nbOfInstances="2"><Attributes budgetAllowed="455" customerAge="20" qualityNeeded="15.238095238095228" stChannelsUsed=" net tv" stObjectTypes=" food machine other" timeToDelivery="44"/></Agent><Agent GUI="false" class="src.bmosim.agents.SUP" logLevel="OFF" name="agentCat4" nbOfInstances="2"><Attributes aSpeed="85.71428571428571" analysisTypes=" a b" budgetAllowed="455" customerAge="20" errorRate="36.507936507936506" ontologyUse="true" qualityNeeded="15.238095238095228" requestTypes=" a b" stChannelsUsed=" journal tv" stMyRoles=" a b" stObjectTypes=" food machine other" timeToDelivery="44" versatility="5"/></Agent><Agent GUI="false" class="src.bmosim.agents.CUS" logLevel="OFF" name="agentCat5" nbOfInstances="2"><Attributes aSpeed="85.71428571428571" analysisTypes=" a b" budgetAllowed="500" customerAge="456" errorRate="36.507936507936506" ontologyUse="true" qualityNeeded="70.0" requestTypes=" a b" stChannelsUsed=" journal tv" stMyRoles=" a b" stObjectTypes=" food machine other" timeToDelivery="44" versatility="5"/></Agent><Agent GUI="false" class="src.bmosim.agents.CUS" logLevel="OFF" name="agentCat6" nbOfInstances="2"><Attributes aSpeed="85.71428571428571" analysisTypes=" a b" budgetAllowed="500" customerAge="133" errorRate="36.507936507936506" ontologyUse="true" qualityNeeded="70.0" requestTypes=" a b" stChannelsUsed=" journal tv" stMyRoles=" a b" stObjectTypes=" food machine other" timeToDelivery="44" versatility="5"/></Agent></Agents>
 </MDK>

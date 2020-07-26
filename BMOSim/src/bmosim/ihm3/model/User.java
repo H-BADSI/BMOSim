@@ -1,6 +1,5 @@
 package bmosim.ihm3.model;
 
-import bmosim.ihm3.bdd;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

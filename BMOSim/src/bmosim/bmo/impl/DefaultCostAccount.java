@@ -7,6 +7,7 @@ import java.util.Collection;
 import org.protege.owl.codegeneration.WrappedIndividual;
 import org.protege.owl.codegeneration.impl.WrappedIndividualImpl;
 
+import org.protege.owl.codegeneration.inference.CodeGenerationInference;
 import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLOntology;
 
@@ -19,7 +20,7 @@ import org.semanticweb.owlapi.model.OWLOntology;
 public abstract class DefaultCostAccount extends WrappedIndividualImpl implements CostAccount {
 
     public DefaultCostAccount(OWLOntology ontology, IRI iri) {
-        super(ontology, iri);
+        super((CodeGenerationInference) ontology, iri);
     }
 
 
@@ -30,63 +31,63 @@ public abstract class DefaultCostAccount extends WrappedIndividualImpl implement
      * Data Property http://www.owl-ontologies.com/unnamed.owl#CostAccountCategory
      */
      
-//    public Collection<? extends String> getCostAccountCategory() {
-//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_COSTACCOUNTCATEGORY, String.class);
-//    }
-//
-//    public boolean hasCostAccountCategory() {
-//		return !getCostAccountCategory().isEmpty();
-//    }
-//
-//    public void addCostAccountCategory(String newCostAccountCategory) {
-//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_COSTACCOUNTCATEGORY, newCostAccountCategory);
-//    }
-//
-//    public void removeCostAccountCategory(String oldCostAccountCategory) {
-//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_COSTACCOUNTCATEGORY, oldCostAccountCategory);
-//    }
-//
-//
-//    /* ***************************************************
-//     * Data Property http://www.owl-ontologies.com/unnamed.owl#reasoning
-//     */
-//
-//    public Collection<? extends String> getReasoning() {
-//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, String.class);
-//    }
-//
-//    public boolean hasReasoning() {
-//		return !getReasoning().isEmpty();
-//    }
-//
-//    public void addReasoning(String newReasoning) {
-//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, newReasoning);
-//    }
-//
-//    public void removeReasoning(String oldReasoning) {
-//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, oldReasoning);
-//    }
-//
-//
-//    /* ***************************************************
-//     * Data Property http://www.owl-ontologies.com/unnamed.owl#synonyms
-//     */
-//
-//    public Collection<? extends String> getSynonyms() {
-//		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, String.class);
-//    }
-//
-//    public boolean hasSynonyms() {
-//		return !getSynonyms().isEmpty();
-//    }
-//
-//    public void addSynonyms(String newSynonyms) {
-//	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, newSynonyms);
-//    }
-//
-//    public void removeSynonyms(String oldSynonyms) {
-//		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, oldSynonyms);
-//    }
+    public Collection<? extends String> getCostAccountCategory() {
+		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_COSTACCOUNTCATEGORY, String.class);
+    }
+
+    public boolean hasCostAccountCategory() {
+		return !getCostAccountCategory().isEmpty();
+    }
+
+    public void addCostAccountCategory(String newCostAccountCategory) {
+	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_COSTACCOUNTCATEGORY, newCostAccountCategory);
+    }
+
+    public void removeCostAccountCategory(String oldCostAccountCategory) {
+		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_COSTACCOUNTCATEGORY, oldCostAccountCategory);
+    }
+
+
+    /* ***************************************************
+     * Data Property http://www.owl-ontologies.com/unnamed.owl#reasoning
+     */
+
+    public Collection<? extends String> getReasoning() {
+		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, String.class);
+    }
+
+    public boolean hasReasoning() {
+		return !getReasoning().isEmpty();
+    }
+
+    public void addReasoning(String newReasoning) {
+	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, newReasoning);
+    }
+
+    public void removeReasoning(String oldReasoning) {
+		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_REASONING, oldReasoning);
+    }
+
+
+    /* ***************************************************
+     * Data Property http://www.owl-ontologies.com/unnamed.owl#synonyms
+     */
+
+    public Collection<? extends String> getSynonyms() {
+		return getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, String.class);
+    }
+
+    public boolean hasSynonyms() {
+		return !getSynonyms().isEmpty();
+    }
+
+    public void addSynonyms(String newSynonyms) {
+	    getDelegate().addPropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, newSynonyms);
+    }
+
+    public void removeSynonyms(String oldSynonyms) {
+		getDelegate().removePropertyValue(getOwlIndividual(), Vocabulary.DATA_PROPERTY_SYNONYMS, oldSynonyms);
+    }
 
 
 }

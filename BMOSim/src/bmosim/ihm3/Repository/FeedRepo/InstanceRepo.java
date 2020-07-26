@@ -9,20 +9,22 @@ import org.hibernate.cfg.Configuration;
 
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
+import java.beans.Statement;
 import java.util.ArrayList;
 
-public class InstanceRepo {
+public class InstanceRepo extends StatRepo {
 
-    SessionFactory sessionFactory;
+//    SessionFactory sessionFactory;
 
     public InstanceRepo(){
-        ArrayList<String> dbconf = funct.getDBSet();
-        Configuration c = new Configuration();
-        Object o=c.configure("bmosim/ihm3/Hibernate/hibernateFeed/hiberFeed.cfg.xml");
-        c.setProperty("hibernate.connection.url","jdbc:mysql://localhost:3306/stat");
-        c.setProperty("hibernate.connection.username","root");
-        c.setProperty("hibernate.connection.password","emplacement44");
-        sessionFactory= ((Configuration) o).buildSessionFactory();
+        super();
+//        ArrayList<String> dbconf = funct.getDBSet();
+//        Configuration c = new Configuration();
+//        Object o=c.configure("bmosim/ihm3/Hibernate/hibernateFeed/hiberFeed.cfg.xml");
+//        c.setProperty("hibernate.connection.url","jdbc:mysql://localhost:3306/stat");
+//        c.setProperty("hibernate.connection.username","root");
+//        c.setProperty("hibernate.connection.password","emplacement44");
+//        sessionFactory= ((Configuration) o).buildSessionFactory();
     }
     public ArrayList<Integer> getIdInstBySim(String name){
 

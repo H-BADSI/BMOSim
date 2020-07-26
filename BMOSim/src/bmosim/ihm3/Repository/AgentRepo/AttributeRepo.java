@@ -15,19 +15,22 @@ import javax.persistence.Query;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class AttributeRepo {
+public abstract class AttributeRepo extends AgRepo {
 
-    SessionFactory sessionFactory;
+//    SessionFactory sessionFactory;
 
     public AttributeRepo() {
-        ArrayList<String> dbconf = funct.getDBSet();
-        Configuration c = new Configuration();
-        Object o=c.configure("bmosim/ihm3/Hibernate/hibernateAgent/hiberAgent.cfg.xml");
-        c.setProperty("hibernate.connection.url","jdbc:mysql://localhost:3306/agentdb");
-        c.setProperty("hibernate.connection.username","root");
-        c.setProperty("hibernate.connection.password","emplacement44");
-        sessionFactory= ((Configuration) o).buildSessionFactory();
+        super();
+//        ArrayList<String> dbconf = funct.getDBSet();
+//        Configuration c = new Configuration();
+//        Object o=c.configure("bmosim/ihm3/Hibernate/hibernateAgent/hiberAgent.cfg.xml");
+//        c.setProperty("hibernate.connection.url","jdbc:mysql://localhost:3306/agentdb");
+//        c.setProperty("hibernate.connection.username","root");
+//        c.setProperty("hibernate.connection.password","emplacement44");
+//        sessionFactory= ((Configuration) o).buildSessionFactory();
     }
+
+    @Override
     public Integer getIdAttribute(String name) {
         Session session = sessionFactory.openSession();
         DBAttribute attribute=null;
@@ -42,6 +45,7 @@ public class AttributeRepo {
         return attribute.getIdAttribute();
     }
 
+    @Override
     public ArrayList<String> getAttributeValues(String att){
         ArrayList<String> vals = new ArrayList<>();
         Session session = sessionFactory.openSession();
@@ -53,11 +57,12 @@ public class AttributeRepo {
         return vals;
     }
 
+    @Override
     public ArrayList<type> getAttributesByAgent(String agent){
 
         ArrayList<type> attributes = new ArrayList<>();
 
-        int idAgent = new AgentRepo().getIdAgent(agent);
+        int idAgent = getIdAgent(agent);
 
         Session session = sessionFactory.openSession();
         Query query = session.createQuery("select idAttribute from DBAgAtt where idAgent='"+idAgent+"'");
@@ -80,6 +85,23 @@ public class AttributeRepo {
         return attributes;
     }
 
+
+    @Override
+    public String getTypeByAtt(String att){
+        String type;
+        Session session = sessionFactory.openSession();
+        Query query = session.createQuery("select idAttType from DBAttribute where name='"+att+"'");
+        Integer idtype= (Integer) query.getSingleResult();
+        session.close();
+        Session session2 = sessionFactory.openSession();
+        Query query2 = session2.createQuery("select type from DBAtttype where idAttType='"+idtype+"'");
+        type = (String) query2.getSingleResult();
+        session2.close();
+        return type;
+
+    }
+
+    @Override
     public int getLastId(){
         Session session = sessionFactory.openSession();
         Query query = session.createQuery("from DBAttribute order by idAttribute DESC");
@@ -89,9 +111,10 @@ public class AttributeRepo {
         return last.getIdAttribute();
     }
 
+    @Override
     public void linkAttAgent(String agent,String att)  {
-        int idAg=new AgentRepo().getIdAgent(agent);
-        int idAtt=new AttributeRepo().getIdAttribute(att);
+        int idAg=getIdAgent(agent);
+        int idAtt=getIdAttribute(att);
         Session session2 = sessionFactory.openSession();
 
         System.out.println(idAg+" + "+idAtt);
@@ -108,16 +131,13 @@ public class AttributeRepo {
             session.save(attribute);
             session.getTransaction().commit();
         }
-
-//        if(attribute1==null){
-
-//        }
     }
 
+    @Override
     public void disJoinAttAgent(String att, String ag)  {
 
-        int idAtt=new AttributeRepo().getIdAttribute(att);
-        int idAg=new AgentRepo().getIdAgent(ag);
+        int idAtt=getIdAttribute(att);
+        int idAg=getIdAgent(ag);
 
         Session session = sessionFactory.openSession();
         session.beginTransaction();
@@ -129,8 +149,9 @@ public class AttributeRepo {
         session.getTransaction().commit();
     }
 
+    @Override
     public void insertAttribute(String name,String idtype){
-        int idty=new TypeRepo().getIdAttType(idtype);
+        int idty=getIdAttType(idtype);
         Session session2 = sessionFactory.openSession();
         DBAttribute attribute1=null;
         try {
@@ -148,16 +169,11 @@ public class AttributeRepo {
             session.getTransaction().commit();
         }
 
-//        if(attribute1==null){
-//
-//
-//
-//
-//        }
     }
 
+    @Override
     public void insertAttributeWithOptions(String name,String idtype,String value){
-        int idty=new TypeRepo().getIdAttType(idtype);
+        int idty=getIdAttType(idtype);
         Session session2 = sessionFactory.openSession();
         DBAttribute attribute1=null;
         try {
@@ -176,11 +192,6 @@ public class AttributeRepo {
             session.save(attribute);
             session.getTransaction().commit();
         }
-
-//        if(attribute1==null){
-//
-//        }
     }
-
 
 }

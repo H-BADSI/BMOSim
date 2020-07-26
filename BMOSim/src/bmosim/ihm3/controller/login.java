@@ -1,7 +1,9 @@
 package bmosim.ihm3.controller;
 
+import bmosim.ihm3.Hibernate.hibernateAccount.DBUser;
 import bmosim.ihm3.Main;
 import bmosim.ihm3.Repository.AccountRepo.UserRepo;
+//import bmosim.ihm3.Repository.AccountRepo.appUser;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDrawer;
 import com.jfoenix.controls.JFXPasswordField;
@@ -9,6 +11,7 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,17 +19,25 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 
 public class login implements Initializable {
 
+
+    @FXML
+    private AnchorPane anchor;
 
     @FXML
     private JFXTextField username;
@@ -42,14 +53,22 @@ public class login implements Initializable {
 
     @FXML
     private JFXDrawer drawer;
+
     double xOffset = 0;
     double yOffset = 0;
 
-    void go(String path, ActionEvent event) throws IOException {
+    UserRepo userRepo = Main.userRepo;
 
-        Parent p =FXMLLoader.load(getClass().getResource(path));
+    void go(String path, Event event) {
+
+        Parent p = null;
+        try {
+            p = FXMLLoader.load(getClass().getResource(path));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         Scene scene = new Scene (p);
-        Stage appStage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+        Stage appStage = (Stage) anchor.getScene().getWindow();
 //        appStage.hide();
         String dark = getClass().getResource("../css/dark.css").toExternalForm();
         String light = getClass().getResource("../css/light.css").toExternalForm();
@@ -88,17 +107,24 @@ public class login implements Initializable {
         System.exit(0);
     }
 
-    public void login(ActionEvent actionEvent) throws IOException {
-        UserRepo u = new UserRepo(username.getText(),pass.getText());
-        if(u.userExistPass()){
-            Main.username=username.getText();
-            go("../view/home.fxml",actionEvent);
+    public void login(Event Event){
+        DBUser u = new DBUser(username.getText(),pass.getText());
+        if(userRepo.userExistPass(u)){
+            DBUser dbu=userRepo.getUserByName(username.getText());
+            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+            LocalDateTime now = LocalDateTime.now();
+            dbu.setLastLogin(dtf.format(now));
+            Main.loginUser=dbu;
+            userRepo.updateLoginUser(Main.loginUser);
+
+            go("../view/home.fxml",Event);
         }else{
             username.setUnFocusColor(Color.RED);
             pass.setUnFocusColor(Color.RED);
             err.setVisible(true);
         }
     }
+
 
     public void createUser(ActionEvent actionEvent) {
         if(drawer.isShown()){
@@ -117,6 +143,7 @@ public class login implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        username.setFocusTraversable(true);
         drawer.toBack();
         try {
             StackPane an = FXMLLoader.load(getClass().getResource("../view/createUser.fxml"));
@@ -138,7 +165,23 @@ public class login implements Initializable {
             }
         });
 
+//        Scene s = anchor.getScene();
+//        System.out.println("ss"+s.getWidth());
+
+        anchor.setOnKeyPressed(e -> {
+            if (e.getCode() == KeyCode.ENTER) {
+                login(e);
+            }
+        });
+
+//        s.setOnKeyPressed(new EventHandler<KeyEvent>() {
+//            @Override
+//            public void handle(KeyEvent event) {
+//                if (event.getCode() == KeyCode.ENTER) {
+//                    login(event);
+//                }
+//            }
+//
+//        });
     }
-
-
 }
