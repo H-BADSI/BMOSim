@@ -6,359 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ea86fad-eca8-4018-8e96-0db21803d458" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/DBconfStruct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bmosim/ihm3/images/corner-logo-dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bmosim/ihm3/images/corner-logo-light.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bmosim/ihm3/images/logo-dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bmosim/ihm3/images/logo-light.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bmosim/ihm3/images/logo444.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bmosim/ihm3/images/logo555.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/BMOSim_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BMOSim.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BMOSim.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/META-INF/BMOSim.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/AbsAgents/AbsBMOAgent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/AbsAgents/AbsEtsAgent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/AbsAgents/AbstractANA.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/AbsAgents/AbstractCOM.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/AbsAgents/AbstractDB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/AbsAgents/AbstractMAN.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/AbsAgents/AbstractSUP.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/agents/ANA.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/agents/COM$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/agents/COM.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/agents/CUS$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/agents/CUS.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/agents/DB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/agents/MAN.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/agents/SUP.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/Activity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/Actor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/BMElement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/CoreCapability.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/CostAccount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/CustomerSegment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/DistributionChannel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/DistributionLink.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/MyFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/PartnershipAgreement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/RelationshipMechanism.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/Resource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/RevenueStream.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/ValueChain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/ValueChainActivity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/ValueConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/ValueNetwork.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/ValueNetworkActivity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/ValueProposition.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/ValueShop.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/ValueShopActivity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/Vocabulary.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultActivity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultActor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultBMElement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultCoreCapability.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultCostAccount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultCustomerSegment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultDistributionChannel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultDistributionLink.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultPartnershipAgreement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultRelationshipMechanism.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultResource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultRevenueStream.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueChain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueChainActivity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueNetwork.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueNetworkActivity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueProposition.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueShop.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueShopActivity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/control/Generator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/control/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/control/Observer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/control/Schedul.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/anaManMess.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/dialog/Collaboration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/dialog/Conversation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/dialog/Queries.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/filters/CollaborationEnumFilter$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/filters/CollaborationEnumFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/filters/ConversationEnumFilter$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/filters/ConversationEnumFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/filters/QueriesEnumFilter$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/filters/QueriesEnumFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/filters/ReceiverFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/filters/TypeFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/objects/ConvAct.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/objects/ObjectOfValue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/objects/Offer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/objects/Order.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/objects/Query.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/objects/Seller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/param/ParamAnaAgent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/param/ParamComAgent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/param/ParamCusAgent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/param/ParamEntAgent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/param/ParamManAgent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/param/ParamSupAgent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/hibernateDB/DBchannel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/hibernateDB/DBcustomer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/hibernateDB/DBneed.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/hibernateDB/DBoffer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/hibernateDB/DBorder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/hibernateDB/DBproduct.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/hibernateDB/DBtype.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/hibernateDB/hibernate.cfg.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm/Controller$Ent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm/NewEnt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm/SimulationSchema.xsd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm/newEnt.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm2/AnnalysteController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm2/ClientController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm2/CommercialController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm2/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm2/ManagerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm2/Menu.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm2/MenuController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm2/SupportController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateAccount/DBUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateAccount/hiberAccount.cfg.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateAgent/DBAgAtt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateAgent/DBAgent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateAgent/DBAttribute.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateAgent/DBAtttype.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateAgent/hiberAgent.cfg.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateFeed/DBFeed.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateFeed/DBInstance.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateFeed/DBSimulation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateFeed/hiberFeed.cfg.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Main$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Main$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/AccountRepo/UserRepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/AgentRepo/AgRepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/AgentRepo/AgentRepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/AgentRepo/AttributeRepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/AgentRepo/TypeRepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/FeedRepo/FeedRepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/FeedRepo/InstanceRepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/FeedRepo/SimulationRepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/FeedRepo/StatRepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/Repo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/conf/conf.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/DBconf.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/Enceyption.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/NamedNodeMapIterable$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/NamedNodeMapIterable$NamedNodeMapIterator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/NamedNodeMapIterable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/XmlUtil$NodeListWrapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/XmlUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/accounts.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/agXmlStruct.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/atXmlStruct.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/conf$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/conf$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/conf$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/conf$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/conf.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/configuration$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/configuration$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/configuration$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/configuration$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/configuration$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/configuration$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/configuration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createAgent$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createAgent$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createAgent$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createAgent$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createAgent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$8.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/funct.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/home.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/login$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/login$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/login$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/login$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/login.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$8.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/simulate$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/simulate$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/simulate$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/simulate$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/simulate$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/simulate$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/simulate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat1$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat2$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat3$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat3$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat3$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/topBar$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/topBar$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/topBar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/css/dark.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/css/light.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/Thumbs.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/bulb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/code.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/connection.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/cross.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/database.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/fan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/gloves.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/group(1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/group.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/home.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/home1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/idea.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/key.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/light-bulb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/line-chart (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/line-chart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/login.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/logo10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/logo11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/logo4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/logo5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/logo6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/logout.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/minus-blue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/minus-white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/minus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/password (2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/power-red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/power-white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/power.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/setting.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/settings.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/statistics.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/stats (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/stats.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/stopwatch.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/success.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/user (2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/user.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/model/Agent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/model/Attribute.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/model/instance.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/model/simulation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/model/type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/model/vals.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/model/vars.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/DBconf.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/accounts.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/conf.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/configuration.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/createAgent.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/createFile.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/createUser.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/home.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/login.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/sideBar.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/simulate.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/stat.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/stat1.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/stat2.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/stat3.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/topBar.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/AGR.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/MCS.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/MDK.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/MDK2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/OrderState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Ana$Fb.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Ana$Lead.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Ana$Prof.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Ana.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Com$Adv.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Com$Bil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Com$Del.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Com$Mcs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Com$Pre.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Com$Rec.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Com$Ref.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Com$Tre.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Com.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Man$Enab.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Man$Perf.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Man$Strat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Man.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Sup$Anarep.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Sup$Loyman.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Sup$Surv.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Sup.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/dummm.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/onto/BusModelOWL.owl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/onto/protege.rdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/BMOSim_jar/BMOSim.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/agents/MAN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/agents/MAN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/AgentRepo/AgRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/AgentRepo/AgRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/FeedRepo/StatRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/FeedRepo/StatRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/conf/conf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/conf/conf.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/DBconf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/DBconf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/accounts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/accounts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/conf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/conf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/createAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/createAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/createUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/createUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/funct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/funct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/home.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/sideBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/sideBar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/simulate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/simulate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/stat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/stat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/stat1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/stat1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/stat2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/stat2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/topBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/topBar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/css/dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/css/dark.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/css/light.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/css/light.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/images/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/images/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/view/DBconf.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/view/DBconf.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/view/accounts.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/view/accounts.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/view/configuration.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/view/configuration.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/view/createAgent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/view/createAgent.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/view/createFile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/view/createFile.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/view/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/view/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/view/sideBar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/view/sideBar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/view/simulate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/view/simulate.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/view/stat1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/view/stat1.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/view/stat2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/view/stat2.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/view/stat3.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/view/stat3.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="4ea86fad-eca8-4018-8e96-0db21803d458" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -429,12 +77,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/css/dark.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
               <caret line="90" column="58" selection-start-line="90" selection-start-column="58" selection-end-line="90" selection-end-column="58" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BMOSim.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-561" />
           </provider>
         </entry>
       </file>
@@ -627,16 +282,16 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1596401600698" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1596532254659" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/bmosim/ihm3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../simuJars/madkit-5.1.1.1a.jar!/" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.291954" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -886,7 +541,7 @@
       <workItem from="1596306635870" duration="275000" />
       <workItem from="1596306936362" duration="2391000" />
       <workItem from="1596395459446" duration="5575000" />
-      <workItem from="1596401074967" duration="831000" />
+      <workItem from="1596401074967" duration="1189000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1590865544903</created>
@@ -913,7 +568,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="643396000" />
+    <option name="totallyTimeSpent" value="643754000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -961,7 +616,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/bmosim/model/new.xml" />
     <entry file="file://$PROJECT_DIR$/src/bmosim/model/brahim.xml" />
     <entry file="file://$PROJECT_DIR$/src/bmosim/model/rahim.xml" />
     <entry file="file://$PROJECT_DIR$/src/bmosim/model/MDK.xml">
@@ -1327,6 +981,11 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BMOSim.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-561" />
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
@@ -1338,7 +997,6 @@
             <option name="proportions">
               <list>
                 <option value="0.291954" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
