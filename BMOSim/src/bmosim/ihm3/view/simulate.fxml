@@ -126,11 +126,6 @@
                   <Image url="@../images/cross.png" />
                </image>
             </ImageView>
-            <Label alignment="CENTER" layoutX="240.0" layoutY="36.0" prefHeight="44.0" prefWidth="227.0" styleClass="title" text="Sumulation">
-               <font>
-                  <Font name="Calibri Bold" size="29.0" />
-               </font>
-            </Label>
             <VBox prefHeight="600.0" prefWidth="94.0">
                <fx:include source="sideBar.fxml" />
             </VBox>

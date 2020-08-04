@@ -24,13 +24,7 @@ public class DBconf implements Initializable{
     private JFXPasswordField pass1;
 
     @FXML
-    private JFXTextField name2;
-
-    @FXML
-    private JFXPasswordField pass2;
-
-    @FXML
-    private JFXButton update;
+    private JFXTextField name1;
 
     @FXML
     private JFXTextField add1;
@@ -39,7 +33,10 @@ public class DBconf implements Initializable{
     private JFXTextField port1;
 
     @FXML
-    private JFXTextField name1;
+    private JFXTextField name2;
+
+    @FXML
+    private JFXPasswordField pass2;
 
     @FXML
     private JFXTextField user2;
@@ -51,12 +48,47 @@ public class DBconf implements Initializable{
     private JFXTextField port2;
 
     @FXML
+    private JFXTextField name3;
+
+    @FXML
+    private JFXPasswordField pass3;
+
+    @FXML
+    private JFXTextField user3;
+
+    @FXML
+    private JFXTextField add3;
+
+    @FXML
+    private JFXTextField port3;
+
+    @FXML
+    private JFXTextField name4;
+
+    @FXML
+    private JFXPasswordField pass4;
+
+    @FXML
+    private JFXTextField user4;
+
+    @FXML
+    private JFXTextField add4;
+
+    @FXML
+    private JFXTextField port4;
+
+    @FXML
+    private JFXButton update;
+
+    @FXML
     void update(ActionEvent event) throws Exception {
+        ArrayList<DBconfStruct> dbconf = new ArrayList<>();
         Enceyption e = new Enceyption();
-        String p1 = e.encrypt(pass1.getText());
-        String p2 = e.encrypt(pass2.getText());
-        funct.setDBSet(name1.getText(),p1,name2.getText(),p2,
-                add1.getText(),add2.getText(),port1.getText(),port2.getText(),user1.getText(),user2.getText());
+        dbconf.add(new DBconfStruct(add1.getText(),port1.getText(),name1.getText(),user1.getText(),e.encrypt(pass1.getText())));
+        dbconf.add(new DBconfStruct(add2.getText(),port2.getText(),name2.getText(),user2.getText(),e.encrypt(pass2.getText())));
+        dbconf.add(new DBconfStruct(add3.getText(),port3.getText(),name3.getText(),user3.getText(),e.encrypt(pass3.getText())));
+        dbconf.add(new DBconfStruct(add4.getText(),port4.getText(),name4.getText(),user4.getText(),e.encrypt(pass4.getText())));
+        funct.setDBSet(dbconf);
     }
 
     @Override
@@ -74,19 +106,31 @@ public class DBconf implements Initializable{
         user2.setFocusTraversable(false);
         update.setFocusTraversable(false);
 
-        ArrayList<String> dbconf=funct.getDBSet();
+        ArrayList<DBconfStruct> dbconf=funct.getDBSet();
 
-        name1.setText(dbconf.get(0));
-        pass1.setText(dbconf.get(1));
-        add1.setText(dbconf.get(2));
-        port1.setText(dbconf.get(3));
-        user1.setText(dbconf.get(4));
+        name1.setText(dbconf.get(0).name);
+        pass1.setText(dbconf.get(0).pass);
+        add1.setText(dbconf.get(0).add);
+        port1.setText(dbconf.get(0).port);
+        user1.setText(dbconf.get(0).user);
 
-        name2.setText(dbconf.get(5));
-        pass2.setText(dbconf.get(6));
-        add2.setText(dbconf.get(7));
-        port2.setText(dbconf.get(8));
-        user2.setText(dbconf.get(9));
+        name2.setText(dbconf.get(1).name);
+        pass2.setText(dbconf.get(1).pass);
+        add2.setText(dbconf.get(1).add);
+        port2.setText(dbconf.get(1).port);
+        user2.setText(dbconf.get(1).user);
+
+        name3.setText(dbconf.get(2).name);
+        pass3.setText(dbconf.get(2).pass);
+        add3.setText(dbconf.get(2).add);
+        port3.setText(dbconf.get(2).port);
+        user3.setText(dbconf.get(2).user);
+
+        name4.setText(dbconf.get(3).name);
+        pass4.setText(dbconf.get(3).pass);
+        add4.setText(dbconf.get(3).add);
+        port4.setText(dbconf.get(3).port);
+        user4.setText(dbconf.get(3).user);
 
     }
 

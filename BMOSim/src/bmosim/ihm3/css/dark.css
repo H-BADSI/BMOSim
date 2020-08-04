@@ -1,7 +1,13 @@
 .anchorpane{
-    -fx-background-color: #021a11;
+    -fx-background-color: black;
+}
+AnchorPane{
+    -fx-background-color: black;
 }
 
+/*ScrollPane{*/
+    /*-fx-background-color: black;*/
+/*}*/
 Label{
     -fx-text-fill: white;
 }
@@ -13,10 +19,10 @@ Label{
     /*-fx-background-color:  linear-gradient(from 0px 0px to 0px 44px,black, white,black);*/
 /*}*/
 .logo{
-    -fx-image: url("../images/logo10.png");
+    -fx-image: url("../images/corner-logo-dark.png");
 }
 .top-top{
-    -fx-background-color: #021a11;
+    -fx-background-color: black;
 }
 .light{
     -fx-image: url("../images/light-bulb.png");
@@ -50,7 +56,7 @@ Label{
 }
 
 .homeIm{
-    -fx-image: url("../../ihm3/images/logo5.png");
+    -fx-image: url("../../ihm3/images/logo-dark.png");
 }
 
 .chart .chart-legend .label{
@@ -75,14 +81,14 @@ Label{
 .default-color5.chart-line-symbol { -fx-background-color: #860061, white; }
 .default-color6.chart-line-symbol { -fx-background-color: #c62b00, white; }
 .default-color7.chart-line-symbol { -fx-background-color: #ff5700, white; }
-.default-color0.chart-bar { -fx-bar-fill: #a9e200; }
-.default-color1.chart-bar { -fx-bar-fill: #22bad9; }
-.default-color2.chart-bar { -fx-bar-fill: #860061; }
-.default-color3.chart-bar { -fx-bar-fill: #ff5700; }
-.default-color4.chart-bar { -fx-bar-fill: #f9d900; }
-.default-color5.chart-bar { -fx-bar-fill: #2f357f; }
-.default-color6.chart-bar { -fx-bar-fill: #c62b00; }
-.default-color7.chart-bar { -fx-bar-fill: #0181e2; }
+.default-color0.chart-series-line { -fx-stroke: #f9d900; }
+.default-color1.chart-series-line { -fx-stroke: #a9e200; }
+.default-color2.chart-series-line { -fx-stroke: #22bad9; }
+.default-color3.chart-series-line { -fx-stroke: #0181e2; }
+.default-color4.chart-series-line { -fx-stroke: #2f357f; }
+.default-color5.chart-series-line { -fx-stroke: #860061; }
+.default-color6.chart-series-line { -fx-stroke: #c62b00; }
+.default-color7.chart-series-line { -fx-stroke: #ff5700; }
 
 /* ====== BAR CHART =========================================================== */
 /* TODO flip gradient vertical for negative bars */

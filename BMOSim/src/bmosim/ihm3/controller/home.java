@@ -29,11 +29,11 @@ public class home implements Initializable{
 
         ttimage.setDuration(Duration.millis(1000));
         ttimage.setNode(image);
-        ttimage.setByX(-600);
+        ttimage.setByX(-650);
 
         ttpane.setDuration(Duration.millis(1000));
         ttpane.setNode(pane);
-        ttpane.setByY(-150);
+        ttpane.setByY(-200);
 
         ttpane.play();
         ttimage.play();

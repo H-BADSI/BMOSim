@@ -116,7 +116,7 @@ public class login implements Initializable {
             dbu.setLastLogin(dtf.format(now));
             Main.loginUser=dbu;
             userRepo.updateLoginUser(Main.loginUser);
-
+            Main.path="home";
             go("../view/home.fxml",Event);
         }else{
             username.setUnFocusColor(Color.RED);

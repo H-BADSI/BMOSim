@@ -139,7 +139,7 @@ public class createUser implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        admin.getItems().addAll(new ArrayList(Arrays.asList("ordinary","admin","superAdmin")));
+        admin.getItems().addAll(new ArrayList(Arrays.asList("ordinary","admin")));
         admin.getSelectionModel().select(0);
 
     }

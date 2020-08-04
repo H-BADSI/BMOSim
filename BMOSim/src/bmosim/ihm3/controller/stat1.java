@@ -98,7 +98,7 @@ public class stat1 implements Initializable{
             sim.valueProperty().addListener(new ChangeListener<String>() {
                 @Override public void changed(ObservableValue ov, String t, String t1) {
                     chart.getData().clear();
-                    sim.show();
+//                    sim.show();
                     ArrayList<Integer> ins = statRepo.getInstance(t1);
                     inst.setDisable(false);
                     inst.getItems().clear();
@@ -108,7 +108,7 @@ public class stat1 implements Initializable{
             });
 
             inst.valueProperty().addListener(observable -> {
-                inst.show();
+//                inst.show();
                 vars.setDisable(false);
                 chart.getData().clear();
                 for (Object s:vars.getCheckModel().getCheckedItems()) {

@@ -10,7 +10,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
 <StackPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bmosim.ihm3.controller.createAgent">
    <children>
@@ -25,7 +24,7 @@
             <JFXComboBox fx:id="agClass" focusColor="#16d7d4" layoutX="737.0" layoutY="123.0" promptText="Select Agent Class" unFocusColor="#2ea1a1" />
             <ScrollPane layoutX="352.0" layoutY="159.0" prefHeight="330.0" prefWidth="551.0">
                <content>
-                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+                  <AnchorPane prefHeight="328.0" prefWidth="548.0">
                      <children>
                         <Label layoutX="34.0" layoutY="15.0" prefHeight="17.0" prefWidth="136.0" style="-fx-font-weight: bold;" text="Attribute name" />
                         <VBox fx:id="vbox1" alignment="TOP_CENTER" layoutX="30.0" layoutY="54.0" prefHeight="217.0" prefWidth="144.0">
@@ -50,21 +49,16 @@
                               <JFXButton fx:id="delete1" style="-fx-background-color: #d43333;" text="x" textFill="#ebebeb" />
                            </children>
                         </VBox>
-                        <Separator layoutX="335.0" layoutY="24.0" orientation="VERTICAL" prefHeight="441.0" prefWidth="3.0" />
-                        <Separator layoutX="487.0" layoutY="24.0" orientation="VERTICAL" prefHeight="413.0" prefWidth="6.0" />
-                        <Separator layoutX="182.0" layoutY="24.0" orientation="VERTICAL" prefHeight="422.0" prefWidth="1.0" />
+                        <Separator fx:id="sep2" layoutX="335.0" layoutY="24.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" orientation="VERTICAL" prefHeight="72.0" prefWidth="0.0" />
+                        <Separator fx:id="sep3" layoutX="487.0" layoutY="24.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" orientation="VERTICAL" prefHeight="69.0" prefWidth="5.0" />
+                        <Separator fx:id="sep1" layoutX="182.0" layoutY="24.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" orientation="VERTICAL" prefHeight="75.0" prefWidth="0.0" />
                      </children>
-                  </Pane>
+                  </AnchorPane>
                </content>
             </ScrollPane>
             <Separator layoutX="345.0" layoutY="158.0" prefHeight="0.0" prefWidth="566.0" />
             <JFXButton fx:id="addAttribute" layoutX="913.0" layoutY="301.0" onAction="#addAttribute" style="-fx-background-color: #2ea1a1;" text="+" textFill="#ebebeb" />
             <JFXButton layoutX="925.0" layoutY="552.0" onAction="#addAgent" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #2ea1a1;" text="Create" textFill="#ebebeb" />
-            <Label alignment="CENTER" layoutX="240.0" layoutY="37.0" prefHeight="44.0" prefWidth="227.0" styleClass="title" text="Meta-model">
-               <font>
-                  <Font name="Calibri Bold" size="29.0" />
-               </font>
-            </Label>
             <VBox prefHeight="600.0" prefWidth="94.0">
                <fx:include source="sideBar.fxml" />
             </VBox>

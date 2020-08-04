@@ -1,6 +1,7 @@
 .anchorpane{
     -fx-background-color: white;
 }
+
 /*.login-text{*/
     /*-fx-cursor-color: white;*/
     /*-fx-text-fill: white;*/
@@ -21,10 +22,10 @@ Label{
     -fx-text-fill: white;
 }
 .logo{
-    -fx-image: url("../images/logo11.png");
+    -fx-image: url("../images/corner-logo-light.png");
 }
 .top-top{
-    -fx-background-color: #dddddd;
+    -fx-background-color: linear-gradient(to bottom,#e6e6e6, white);
 }
 .light{
     -fx-image: url("../images/idea.png");
@@ -59,7 +60,7 @@ Label{
     -fx-image: url("../images/power-red.png");
 }
 .homeIm{
-    -fx-image: url("../../ihm3/images/logo6.png");
+    -fx-image: url("../../ihm3/images/logo-light.png");
 }
 
 .chart-line-symbol {

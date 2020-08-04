@@ -9,6 +9,7 @@ import com.jfoenix.controls.*;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -61,11 +62,16 @@ public class topBar implements Initializable{
 
 
 
-    void go(String path, MouseEvent event) throws IOException {
+    void go(String path, Event event)  {
 
-        Parent p = FXMLLoader.load(getClass().getResource(path));
+        Parent p = null;
+        try {
+            p = FXMLLoader.load(getClass().getResource(path));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         Scene scene = new Scene (p);
-        Stage appStage = (Stage) ((Pane) event.getSource()).getScene().getWindow();
+        Stage appStage = (Stage) root.getScene().getWindow();
 //        appStage.hide();
         String dark = getClass().getResource("../css/dark.css").toExternalForm();
         String light = getClass().getResource("../css/light.css").toExternalForm();
@@ -133,15 +139,15 @@ public class topBar implements Initializable{
 
     @FXML
     void logout(MouseEvent event) throws IOException {
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-        LocalDateTime now = LocalDateTime.now();
-        Main.loginUser.setLastLogout(dtf.format(now));
-        userRepo.updateLogoutUser(Main.loginUser);
-        go("../view/login.fxml",event);
+        Scene s = (Scene) anchor.getScene();
+        StackPane root = (StackPane) s.getRoot();
+        alertLogout(root);
+
     }
 
     @FXML
     void appusers(MouseEvent event) throws IOException {
+        Main.path="accounts";
         go("../view/accounts.fxml",event);
     }
 
@@ -202,11 +208,10 @@ public class topBar implements Initializable{
         dialog.setStyle("-fx-background-color:  linear-gradient(from 300px 70px to 280px 500px,#43cea2, #185a9d)");
 
         confirm.setOnAction(event -> {
-            System.out.println(oldPass);
-            System.out.println(Main.loginUser.getPassword());
             if(oldPass.getText().equals(Main.loginUser.getPassword())){
                 Main.loginUser.setPassword(newPass.getText());
                 userRepo.updatePassUser(Main.loginUser);
+                Main.loginUser=userRepo.getUserByName(Main.loginUser.getUsername());
                 dialog.close();
             }else{
                 dialog.close();
@@ -218,6 +223,39 @@ public class topBar implements Initializable{
             dialog.close();
         });
         confirm.setDisable(true);
+        dialogLayout.setActions(confirm,new Text("   "),cancel);
+        dialog.show();
+    }
+
+    private void alertLogout(StackPane root){
+        JFXButton confirm = new JFXButton("Logout");
+        JFXButton cancel = new JFXButton("Stay");
+        confirm.setStyle("-fx-background-color: linear-gradient(from 300px 70px to 280px 500px,#43cea2, #185a9d) ");
+        cancel.setStyle("-fx-background-color: #dddddd");
+        JFXDialogLayout dialogLayout = new JFXDialogLayout();
+        dialogLayout.setHeading(new Text("Ae you sure that you want to logout ?"));
+
+        GridPane grid = new GridPane();
+        grid.setHgap(10);
+        grid.setVgap(10);
+        grid.setPadding(new Insets(20, 0, 10, 10));
+
+        JFXDialog dialog = new JFXDialog(root,dialogLayout,JFXDialog.DialogTransition.TOP);
+
+
+        dialog.setStyle("-fx-background-color:  linear-gradient(from 300px 70px to 280px 500px,#43cea2, #185a9d)");
+
+        confirm.setOnAction(event -> {
+            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+            LocalDateTime now = LocalDateTime.now();
+            Main.loginUser.setLastLogout(dtf.format(now));
+            userRepo.updateLogoutUser(Main.loginUser);
+            Main.path="login";
+            go("../view/login.fxml",event);
+        });
+        cancel.setOnAction(event -> {
+            dialog.close();
+        });
         dialogLayout.setActions(confirm,new Text("   "),cancel);
         dialog.show();
     }

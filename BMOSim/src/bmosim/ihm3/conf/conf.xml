@@ -8,8 +8,10 @@
     
 
     <db>
-        <db1><address>localhost</address><port>3306</port><name>agentdb</name><username>root</username><pass>qAh3n08EWYDQ7umvT2cO/Q==</pass></db1>
-        <db2><address>localhost</address><port>3306</port><name>stat</name><username>root</username><pass>qAh3n08EWYDQ7umvT2cO/Q==</pass></db2></db>
+    <db1><address>localhost</address><port>3306</port><name>agentdb</name><username>root</username><pass>qAh3n08EWYDQ7umvT2cO/Q==</pass></db1>
+        <db2><address>localhost</address><port>3306</port><name>stat</name><username>root</username><pass>qAh3n08EWYDQ7umvT2cO/Q==</pass></db2>
+        <db3><address>localhost</address><port>3306</port><name>stat</name><username>root</username><pass>qAh3n08EWYDQ7umvT2cO/Q==</pass></db3>
+        <db4><address>localhost</address><port>3306</port><name>stat</name><username>root</username><pass>qAh3n08EWYDQ7umvT2cO/Q==</pass></db4></db>
     
     <sroot><agDest>src\bmosim\agents</agDest><xmlDest>src\bmosim\model</xmlDest></sroot>
 <variables>

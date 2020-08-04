@@ -50,22 +50,17 @@
                </content>
             </ScrollPane>
             <JFXButton fx:id="add" buttonType="RAISED" layoutX="964.0" layoutY="530.0" onAction="#Add" prefHeight="25.0" prefWidth="58.0" ripplerFill="#043e90" style="-fx-background-color: #16d7d4;" text="add" />
-            <Label alignment="CENTER" layoutX="240.0" layoutY="32.0" prefHeight="44.0" prefWidth="227.0" styleClass="title" text="Simulaion models">
-               <font>
-                  <Font name="Calibri Bold" size="29.0" />
-               </font>
-            </Label>
             <ScrollPane layoutX="279.0" layoutY="520.0" prefHeight="66.0" prefWidth="648.0">
                <content>
-                  <Pane fx:id="catPane">
+                  <AnchorPane prefHeight="66.0" prefWidth="648.0">
                      <children>
-                        <HBox fx:id="hbox1" />
+                        <HBox fx:id="hbox1" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="3.0" />
                      </children>
-                  </Pane>
+                     <padding>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                     </padding>
+                  </AnchorPane>
                </content>
-               <padding>
-                  <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
-               </padding>
             </ScrollPane>
             <VBox prefHeight="600.0" prefWidth="94.0">
                <fx:include source="sideBar.fxml" />

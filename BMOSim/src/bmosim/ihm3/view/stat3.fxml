@@ -9,9 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 <?import org.controlsfx.control.CheckComboBox?>
-
 
 <StackPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bmosim.ihm3.controller.stat3">
    <children>
@@ -33,11 +31,6 @@
             <Label layoutX="577.0" layoutY="133.0" text="variables" />
             <CheckComboBox fx:id="vars" layoutX="577.0" layoutY="152.0" prefHeight="25.0" prefWidth="107.0" />
             <JFXComboBox fx:id="comp" editable="true" focusColor="#16d7d4" layoutX="796.0" layoutY="152.0" prefHeight="25.0" prefWidth="132.0" promptText="comparison" unFocusColor="#2ea1a1" />
-            <Label alignment="CENTER" layoutX="240.0" layoutY="35.0" prefHeight="44.0" prefWidth="227.0" styleClass="title" text="Statistics">
-               <font>
-                  <Font name="Calibri Bold" size="29.0" />
-               </font>
-            </Label>
              <VBox prefHeight="600" prefWidth="94">
                  <fx:include source="sideBar.fxml" />
              </VBox>

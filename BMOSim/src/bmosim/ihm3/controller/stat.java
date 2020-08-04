@@ -10,8 +10,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.effect.Bloom;
 import javafx.scene.effect.BlurType;
 import javafx.scene.effect.DropShadow;
+import javafx.scene.effect.Effect;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
@@ -87,23 +89,35 @@ public class stat implements Initializable{
 
     @FXML
     void goStat1(MouseEvent event) throws IOException {
+        Main.path="stat1";
         go("../view/stat1.fxml",event);
 
     }
 
     @FXML
     void gostat2(MouseEvent event) throws IOException {
+        Main.path="stat2";
         go("../view/stat2.fxml",event);
 
     }
 
     @FXML
     void gostat3(MouseEvent event) throws IOException {
+        Main.path="stat3";
         go("../view/stat3.fxml",event);
 
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        Effect ef = new Bloom(0.2);
+
+        switch (Main.path){
+            case "stat1": stat1.setEffect(ef);break;
+            case "stat2": stat2.setEffect(ef);break;
+            case "stat3": stat3.setEffect(ef);break;
+            default: break;
+        }
+
         stat1.hoverProperty().addListener(new ChangeListener<Boolean>() {
 
             @Override

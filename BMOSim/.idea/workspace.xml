@@ -7,236 +7,357 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ea86fad-eca8-4018-8e96-0db21803d458" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Simple_Logging_Facade_for_Java_1_7_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/com_innoventsolutions_birt_runtime_org_apache_commons_codec_1_9_0_v20170208_1614_4_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/com_jfoenix_jfoenix_8_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/com_sun_xsom_xsom_20140925.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/de_jensd_fontawesomefx_8_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/edu_stanford_protege_org_semanticweb_owl_owlapi_3_4_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_controlsfx_controlsfx_8_40_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_hibernate_hibernate_core_5_2_10_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bmosim/exchange/anaManMess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/AccountRepo/appUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/AgentRepo/AgRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/FeedRepo/StatRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/Repo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/NamedNodeMapIterable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/accounts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/agXmlStruct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/atXmlStruct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bmosim/ihm3/images/group.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bmosim/ihm3/images/key.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bmosim/ihm3/images/logout.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bmosim/ihm3/images/user.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bmosim/ihm3/view/accounts.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bmosim/model/MDK2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/DBconfStruct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bmosim/ihm3/images/corner-logo-dark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bmosim/ihm3/images/corner-logo-light.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bmosim/ihm3/images/logo-dark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bmosim/ihm3/images/logo-light.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bmosim/ihm3/images/logo444.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bmosim/ihm3/images/logo555.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/BMOSim_jar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BMOSim.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BMOSim.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accData.sql" beforeDir="false" afterPath="$PROJECT_DIR$/accData.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agentData.sql" beforeDir="false" afterPath="$PROJECT_DIR$/agentData.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/AbsAgents/AbstractMAN.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/AbsAgents/AbstractMAN.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/agents/ANA.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/agents/ANA.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/agents/MAN.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/agents/MAN.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/MyFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/bmo/MyFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/Vocabulary.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/bmo/Vocabulary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultActor.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultActor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultBMElement.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultBMElement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultCoreCapability.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultCoreCapability.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultCostAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultCostAccount.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultCustomerSegment.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultCustomerSegment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultDistributionChannel.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultDistributionChannel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultDistributionLink.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultDistributionLink.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultPartnershipAgreement.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultPartnershipAgreement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultRelationshipMechanism.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultRelationshipMechanism.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultRevenueStream.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultRevenueStream.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueChain.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueChain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueChainActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueChainActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueNetwork.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueNetwork.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueNetworkActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueNetworkActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueProposition.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueProposition.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueShop.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueShop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueShopActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueShopActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/control/Generator.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/control/Generator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/control/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/control/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/control/Observer.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/control/Observer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/control/Schedul.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/control/Schedul.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateAccount/DBUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateAccount/DBUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateAccount/hiberAccount.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateAccount/hiberAccount.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateAgent/DBAgAtt.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateAgent/DBAgAtt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateAgent/DBAttribute.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateAgent/DBAttribute.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateAgent/hiberAgent.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateAgent/hiberAgent.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateFeed/hiberFeed.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateFeed/hiberFeed.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/Main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Main$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/Main$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/AccountRepo/UserRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/AccountRepo/UserRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/AgentRepo/AgentRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/AgentRepo/AgentRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/AgentRepo/AttributeRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/AgentRepo/AttributeRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/AgentRepo/TypeRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/AgentRepo/TypeRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/FeedRepo/FeedRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/FeedRepo/FeedRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/FeedRepo/InstanceRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/FeedRepo/InstanceRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/FeedRepo/SimulationRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/FeedRepo/SimulationRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/configuration$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/configuration$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/configuration$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/configuration$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/configuration$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/configuration$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/configuration$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/configuration$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/configuration$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/configuration$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/configuration$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/configuration$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/configuration.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/configuration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createAgent$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createAgent$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createAgent$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createAgent$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createAgent$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createAgent$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createAgent$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createAgent$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createAgent$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createAgent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/funct.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/funct.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/login$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/login$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/login$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/login$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/login$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/login$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/login$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/login$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/login.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/simulate$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/simulate$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/simulate$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/simulate$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/simulate$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/simulate$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/simulate$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/simulate$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/simulate$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/simulate$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/simulate$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/simulate$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/simulate.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/simulate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat1$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat1$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat1$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat2$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat3$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat3$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat3$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat3$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat3$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat3$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/topBar.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/topBar.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/css/dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/css/dark.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/css/light.css" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/css/light.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/images/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/model/simulation.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/model/simulation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/model/type.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/model/type.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/DBconf.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/view/DBconf.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/configuration.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/view/configuration.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/createAgent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/view/createAgent.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/createFile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/view/createFile.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/createUser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/view/createUser.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/view/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/view/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/stat1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/view/stat1.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/stat2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/view/stat2.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/stat3.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/view/stat3.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/topBar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/ihm3/view/topBar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/MDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bmosim/model/MDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/AbsAgents/AbstractMAN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/AbsAgents/AbstractMAN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/agents/ANA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/agents/ANA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/META-INF/BMOSim.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/AbsAgents/AbsBMOAgent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/AbsAgents/AbsEtsAgent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/AbsAgents/AbstractANA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/AbsAgents/AbstractCOM.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/AbsAgents/AbstractDB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/AbsAgents/AbstractMAN.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/AbsAgents/AbstractSUP.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/agents/ANA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/agents/COM$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/agents/COM.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/agents/CUS$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/agents/CUS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/agents/DB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/agents/MAN.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/agents/SUP.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/Activity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/Actor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/BMElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/CoreCapability.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/CostAccount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/CustomerSegment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/DistributionChannel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/DistributionLink.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/MyFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/PartnershipAgreement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/RelationshipMechanism.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/Resource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/RevenueStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/ValueChain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/ValueChainActivity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/ValueConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/ValueNetwork.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/ValueNetworkActivity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/ValueProposition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/ValueShop.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/ValueShopActivity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/Vocabulary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultActivity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultActor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultBMElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultCoreCapability.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultCostAccount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultCustomerSegment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultDistributionChannel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultDistributionLink.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultPartnershipAgreement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultRelationshipMechanism.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultRevenueStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueChain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueChainActivity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueNetwork.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueNetworkActivity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueProposition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueShop.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/bmo/impl/DefaultValueShopActivity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/control/Generator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/control/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/control/Observer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/control/Schedul.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/anaManMess.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/dialog/Collaboration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/dialog/Conversation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/dialog/Queries.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/filters/CollaborationEnumFilter$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/filters/CollaborationEnumFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/filters/ConversationEnumFilter$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/filters/ConversationEnumFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/filters/QueriesEnumFilter$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/filters/QueriesEnumFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/filters/ReceiverFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/filters/TypeFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/objects/ConvAct.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/objects/ObjectOfValue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/objects/Offer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/objects/Order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/objects/Query.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/objects/Seller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/param/ParamAnaAgent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/param/ParamComAgent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/param/ParamCusAgent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/param/ParamEntAgent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/param/ParamManAgent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/exchange/param/ParamSupAgent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/hibernateDB/DBchannel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/hibernateDB/DBcustomer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/hibernateDB/DBneed.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/hibernateDB/DBoffer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/hibernateDB/DBorder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/hibernateDB/DBproduct.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/hibernateDB/DBtype.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/hibernateDB/hibernate.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm/Controller$Ent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm/NewEnt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm/SimulationSchema.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm/newEnt.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm2/AnnalysteController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm2/ClientController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm2/CommercialController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm2/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm2/ManagerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm2/Menu.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm2/MenuController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm2/SupportController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateAccount/DBUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateAccount/hiberAccount.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateAgent/DBAgAtt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateAgent/DBAgent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateAgent/DBAttribute.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateAgent/DBAtttype.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateAgent/hiberAgent.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateFeed/DBFeed.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateFeed/DBInstance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateFeed/DBSimulation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Hibernate/hibernateFeed/hiberFeed.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Main$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/AccountRepo/UserRepo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/AgentRepo/AgRepo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/AgentRepo/AgentRepo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/AgentRepo/AttributeRepo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/AgentRepo/TypeRepo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/FeedRepo/FeedRepo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/FeedRepo/InstanceRepo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/FeedRepo/SimulationRepo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/FeedRepo/StatRepo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/Repository/Repo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/conf/conf.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/DBconf.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/Enceyption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/NamedNodeMapIterable$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/NamedNodeMapIterable$NamedNodeMapIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/NamedNodeMapIterable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/XmlUtil$NodeListWrapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/XmlUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/accounts.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/agXmlStruct.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/atXmlStruct.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/conf$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/conf$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/conf$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/conf$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/conf.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/configuration$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/configuration$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/configuration$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/configuration$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/configuration$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/configuration$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/configuration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createAgent$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createAgent$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createAgent$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createAgent$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createAgent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/createUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/funct.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/home.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/login$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/login$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/login$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/login$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/login.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/sideBar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/simulate$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/simulate$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/simulate$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/simulate$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/simulate$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/simulate$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/simulate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat1$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat3$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat3$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat3$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/stat3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/topBar$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/topBar$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/controller/topBar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/css/dark.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/css/light.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/Thumbs.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/bulb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/code.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/connection.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/cross.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/database.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/fan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/gloves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/group(1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/group.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/home1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/idea.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/key.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/light-bulb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/line-chart (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/line-chart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/login.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/logo10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/logo11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/logo4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/logo5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/logo6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/logout.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/minus-blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/minus-white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/minus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/password (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/power-red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/power-white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/power.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/setting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/settings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/statistics.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/stats (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/stats.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/stopwatch.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/success.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/user (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/images/user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/model/Agent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/model/Attribute.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/model/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/model/instance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/model/simulation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/model/type.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/model/vals.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/model/vars.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/DBconf.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/accounts.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/conf.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/configuration.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/createAgent.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/createFile.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/createUser.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/home.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/login.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/sideBar.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/simulate.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/stat.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/stat1.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/stat2.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/stat3.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/ihm3/view/topBar.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/AGR.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/MCS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/MDK.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/MDK2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/OrderState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Ana$Fb.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Ana$Lead.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Ana$Prof.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Ana.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Com$Adv.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Com$Bil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Com$Del.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Com$Mcs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Com$Pre.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Com$Rec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Com$Ref.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Com$Tre.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Com.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Man$Enab.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Man$Perf.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Man$Strat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Man.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Sup$Anarep.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Sup$Loyman.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Sup$Surv.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role$Sup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/model/dummm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/onto/BusModelOWL.owl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bmosim/onto/protege.rdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/BMOSim_jar/BMOSim.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bmosim/agents/MAN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/agents/MAN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/bmo/MyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/bmo/MyFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/bmo/Vocabulary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/bmo/Vocabulary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultActor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultBMElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultBMElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultCoreCapability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultCoreCapability.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultCostAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultCostAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultCustomerSegment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultCustomerSegment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultDistributionChannel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultDistributionChannel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultDistributionLink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultDistributionLink.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultPartnershipAgreement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultPartnershipAgreement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultRelationshipMechanism.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultRelationshipMechanism.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultRevenueStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultRevenueStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultValueChain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultValueChain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultValueChainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultValueChainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultValueConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultValueConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultValueNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultValueNetwork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultValueNetworkActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultValueNetworkActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultValueProposition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultValueProposition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultValueShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultValueShop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultValueShopActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultValueShopActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/control/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/control/Generator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/control/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/control/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/control/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/control/Observer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/control/Schedul.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/control/Schedul.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Controller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Hibernate/hibernateAccount/DBUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Hibernate/hibernateAccount/DBUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Hibernate/hibernateAccount/hiberAccount.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Hibernate/hibernateAccount/hiberAccount.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Hibernate/hibernateAgent/DBAgAtt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Hibernate/hibernateAgent/DBAgAtt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Hibernate/hibernateAgent/DBAttribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Hibernate/hibernateAgent/DBAttribute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Hibernate/hibernateAgent/hiberAgent.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Hibernate/hibernateAgent/hiberAgent.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Hibernate/hibernateFeed/hiberFeed.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Hibernate/hibernateFeed/hiberFeed.cfg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/AccountRepo/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/AccountRepo/UserRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/AgentRepo/AgentRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/AgentRepo/AgentRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/AgentRepo/AttributeRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/AgentRepo/AttributeRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/AgentRepo/TypeRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/AgentRepo/TypeRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/FeedRepo/FeedRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/FeedRepo/FeedRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/FeedRepo/InstanceRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/FeedRepo/InstanceRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/FeedRepo/SimulationRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/FeedRepo/SimulationRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/AgentRepo/AgRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/AgentRepo/AgRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/FeedRepo/StatRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/Repository/FeedRepo/StatRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/conf/conf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/conf/conf.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/DBconf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/DBconf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/accounts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/accounts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/conf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/conf.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/createAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/createAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/createFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/createFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/createUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/createUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/funct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/funct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/home.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/sideBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/sideBar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/simulate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/simulate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/stat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/stat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/stat1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/stat1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/stat2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/stat2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/stat3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/stat3.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/controller/topBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/controller/topBar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/css/dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/css/dark.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/css/light.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/css/light.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/images/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/images/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/model/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/model/Agent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/model/simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/model/simulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/model/type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/model/type.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/view/DBconf.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/view/DBconf.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/view/accounts.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/view/accounts.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/view/configuration.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/view/configuration.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/view/createAgent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/view/createAgent.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/view/createFile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/view/createFile.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/view/createUser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/view/createUser.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/view/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/view/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/view/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/view/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/view/sideBar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/view/sideBar.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/view/simulate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/view/simulate.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/view/stat1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/view/stat1.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/view/stat2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/view/stat2.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/view/stat3.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/view/stat3.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/ihm3/view/topBar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/ihm3/view/topBar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bmosim/model/MDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bmosim/model/MDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/statData.sql" beforeDir="false" afterPath="$PROJECT_DIR$/statData.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -267,67 +388,83 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/login.java">
+        <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/DBconf.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="84" column="44" selection-start-line="84" selection-start-column="44" selection-end-line="84" selection-end-column="44" />
+            <state relative-caret-position="2091">
+              <caret line="132" column="13" selection-start-line="132" selection-start-column="13" selection-end-line="132" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#createUser#0;class#login#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/view/topBar.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/conf/conf.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/topBar.java">
+        <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/stat1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="227" selection-start-line="227" selection-end-line="227" />
+            <state relative-caret-position="1479">
+              <caret line="111" column="27" selection-start-line="111" selection-start-column="27" selection-end-line="111" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#changeLight#0;class#topBar#0" />
-                <element signature="method#appusers#0;class#topBar#0" />
-                <element signature="method#alert#0;class#topBar#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/Repository/AccountRepo/UserRepo.java">
+        <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/stat2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="69" column="23" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="23" />
+            <state relative-caret-position="1547">
+              <caret line="114" column="27" selection-start-line="114" selection-start-column="27" selection-end-line="114" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/css/dark.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="61" column="72" selection-start-line="61" selection-start-column="72" selection-end-line="61" selection-end-column="72" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="306">
+              <caret line="90" column="58" selection-start-line="90" selection-start-column="58" selection-end-line="90" selection-end-column="58" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/createUser.java">
+        <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/css/light.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="120" column="39" selection-start-line="120" selection-start-column="39" selection-end-line="120" selection-end-column="39" />
+            <state relative-caret-position="1547">
+              <caret line="91" column="58" selection-start-line="76" selection-end-line="91" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/stat3.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/funct.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7106">
+              <caret line="453" column="52" selection-start-line="453" selection-start-column="52" selection-end-line="453" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#9253#10514#1" />
+                <element signature="method#getAgentByCategory#0;class#funct#0" />
               </folding>
             </state>
           </provider>
@@ -347,15 +484,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>new</find>
-      <find>u</find>
-      <find>userrepo</find>
-      <find>rep</find>
       <find>repo</find>
       <find>x</find>
       <find>logle</find>
       <find>getagca</find>
-      <find>alert</find>
       <find>type</find>
       <find>agenttype</find>
       <find>agentt</find>
@@ -377,6 +509,11 @@
       <find>head</find>
       <find>header</find>
       <find>text</find>
+      <find>excep</find>
+      <find>alert</find>
+      <find>sys</find>
+      <find>go</find>
+      <find>!=n</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\BRAHIM\Downloads\3juil2019\demo\BMOSim\BMOSim\src\bmosim\ihm3\images</dir>
@@ -388,17 +525,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultValueChain.java" />
-        <option value="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultValueConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultRelationshipMechanism.java" />
-        <option value="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultBMElement.java" />
-        <option value="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultValueShopActivity.java" />
         <option value="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultCostAccount.java" />
         <option value="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultValueNetworkActivity.java" />
         <option value="$PROJECT_DIR$/src/bmosim/bmo/impl/DefaultActivity.java" />
         <option value="$PROJECT_DIR$/src/bmosim/ihm3/Hibernate/hibernateAccount/hiberAccount.cfg.xml" />
         <option value="$PROJECT_DIR$/src/bmosim/control/Generator.java" />
-        <option value="$PROJECT_DIR$/src/bmosim/agents/MAN.java" />
         <option value="$PROJECT_DIR$/src/bmosim/agents/ANA.java" />
         <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/atXmlStruct.java" />
         <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/NamedNodeMapIterable.java" />
@@ -412,33 +543,39 @@
         <option value="$PROJECT_DIR$/src/bmosim/ihm3/Repository/AgentRepo/TypeRepo.java" />
         <option value="$PROJECT_DIR$/src/bmosim/ihm3/Repository/AgentRepo/AttributeRepo.java" />
         <option value="$PROJECT_DIR$/src/bmosim/ihm3/Repository/FeedRepo/FeedRepo.java" />
-        <option value="$PROJECT_DIR$/src/bmosim/ihm3/Repository/FeedRepo/StatRepo.java" />
         <option value="$PROJECT_DIR$/src/bmosim/control/Main.java" />
         <option value="$PROJECT_DIR$/src/bmosim/control/Observer.java" />
         <option value="$PROJECT_DIR$/src/bmosim/control/Schedul.java" />
         <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/stat3.java" />
-        <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/stat2.java" />
-        <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/stat1.java" />
-        <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/stat.java" />
-        <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/simulate.java" />
-        <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/sideBar.java" />
         <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/configuration.java" />
         <option value="$PROJECT_DIR$/src/bmosim/model/MDK.xml" />
-        <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/funct.java" />
         <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/createFile.java" />
-        <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/createAgent.java" />
-        <option value="$PROJECT_DIR$/src/bmosim/ihm3/Repository/AgentRepo/AgRepo.java" />
         <option value="$PROJECT_DIR$/src/bmosim/ihm3/view/accounts.fxml" />
         <option value="$PROJECT_DIR$/src/bmosim/ihm3/Repository/AccountRepo/appUser.java" />
         <option value="$PROJECT_DIR$/src/bmosim/ihm3/Hibernate/hibernateAccount/DBUser.java" />
-        <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/accounts.java" />
         <option value="$PROJECT_DIR$/src/bmosim/ihm3/Repository/AccountRepo/UserRepo.java" />
-        <option value="$PROJECT_DIR$/src/bmosim/ihm3/css/light.css" />
-        <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/login.java" />
-        <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/topBar.java" />
-        <option value="$PROJECT_DIR$/src/bmosim/ihm3/css/dark.css" />
+        <option value="$PROJECT_DIR$/src/bmosim/agents/MAN.java" />
         <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/createUser.java" />
+        <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/accounts.java" />
+        <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/login.java" />
+        <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/simulate.java" />
+        <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/stat.java" />
+        <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/conf.java" />
+        <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/sideBar.java" />
+        <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/home.java" />
+        <option value="$PROJECT_DIR$/src/bmosim/ihm3/css/light.css" />
+        <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/createAgent.java" />
+        <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/DBconfStruct.java" />
+        <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/DBconf.java" />
+        <option value="$PROJECT_DIR$/src/bmosim/ihm3/Repository/FeedRepo/StatRepo.java" />
         <option value="$PROJECT_DIR$/src/bmosim/ihm3/Main.java" />
+        <option value="$PROJECT_DIR$/src/bmosim/ihm3/Repository/AgentRepo/AgRepo.java" />
+        <option value="$PROJECT_DIR$/src/bmosim/ihm3/conf/conf.xml" />
+        <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/topBar.java" />
+        <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/funct.java" />
+        <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/stat1.java" />
+        <option value="$PROJECT_DIR$/src/bmosim/ihm3/controller/stat2.java" />
+        <option value="$PROJECT_DIR$/src/bmosim/ihm3/css/dark.css" />
       </list>
     </option>
   </component>
@@ -456,8 +593,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -474,22 +611,7 @@
               <item name="BMOSim" type="b2602c69:ProjectViewProjectNode" />
               <item name="BMOSim" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="bmosim" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BMOSim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BMOSim" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="bmosim" type="462c0819:PsiDirectoryNode" />
-              <item name="ihm3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BMOSim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BMOSim" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="bmosim" type="462c0819:PsiDirectoryNode" />
-              <item name="ihm3" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -505,16 +627,16 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1595792781703" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1596401600698" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Compressed/jar libs/jena-base-3.7.0.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/bmosim/ihm3" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.291954" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -527,26 +649,26 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="bmosim.ihm3.controller" />
-      <recent name="bmosim.ihm3" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\BRAHIM\Downloads\3juil2019\demo\BMOSim\BMOSim" />
-      <recent name="C:\Users\BRAHIM\Downloads\3juil2019\demo\BMOSim\BMOSim\src\bmosim\ihm3\images" />
-      <recent name="C:\Users\BRAHIM\Downloads\3juil2019\demo\BMOSim\BMOSim\src\bmosim\ihm3\view" />
-      <recent name="C:\Users\BRAHIM\Downloads\3juil2019\demo\BMOSim\BMOSim\src\bmosim\model" />
-      <recent name="C:\Users\BRAHIM\Downloads\3juil2019\demo\BMOSim\BMOSim\src\bmosim\ihm3\Hibernate\hibernateAccount" />
-    </key>
-    <key name="OPEN_URL_DIALOG">
-      <recent name="https://github.com/H-BADSI/BMOSim.git" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\BRAHIM\Downloads\3juil2019\demo\BMOSim\BMOSim\src\bmosim\ihm3\css" />
       <recent name="C:\Users\BRAHIM\Downloads\3juil2019\demo\BMOSim\BMOSim\src\bmosim\ihm3\Resource" />
       <recent name="C:\Users\BRAHIM\Downloads\3juil2019\demo\BMOSim\BMOSim\src\bmosim\ihm3" />
       <recent name="C:\Users\BRAHIM\Downloads\3juil2019\demo\BMOSim\BMOSim\src\bmosim\ihm3\images" />
       <recent name="C:\Users\BRAHIM\Downloads\3juil2019\demo\BMOSim\BMOSim\src\bmosim\ihm3\view" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="bmosim.ihm3.controller" />
+      <recent name="bmosim.ihm3" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\BRAHIM\Downloads\3juil2019\demo\BMOSim\BMOSim\src\bmosim\ihm3\images" />
+      <recent name="C:\Users\BRAHIM\Downloads\3juil2019\demo\BMOSim\BMOSim" />
+      <recent name="C:\Users\BRAHIM\Downloads\3juil2019\demo\BMOSim\BMOSim\src\bmosim\ihm3\view" />
+      <recent name="C:\Users\BRAHIM\Downloads\3juil2019\demo\BMOSim\BMOSim\src\bmosim\model" />
+      <recent name="C:\Users\BRAHIM\Downloads\3juil2019\demo\BMOSim\BMOSim\src\bmosim\ihm3\Hibernate\hibernateAccount" />
+    </key>
+    <key name="OPEN_URL_DIALOG">
+      <recent name="https://github.com/H-BADSI/BMOSim.git" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -561,7 +683,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JAR Application.BMOSim.jar">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="bmosim.ihm2.Main" />
       <module name="BMOSim" />
@@ -614,8 +736,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BMOSim.jar" type="JarApplication" factoryName="JAR Application" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/BMOSim_jar/BMOSim.jar" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JAR Application.BMOSim.jar" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
@@ -747,7 +874,19 @@
       <workItem from="1595696025042" duration="1466000" />
       <workItem from="1595697866064" duration="371000" />
       <workItem from="1595702622365" duration="3234000" />
-      <workItem from="1595788137476" duration="4504000" />
+      <workItem from="1595788137476" duration="5390000" />
+      <workItem from="1595845566617" duration="1000000" />
+      <workItem from="1596277840175" duration="6061000" />
+      <workItem from="1596299430479" duration="4104000" />
+      <workItem from="1596303700510" duration="315000" />
+      <workItem from="1596304042618" duration="488000" />
+      <workItem from="1596304555066" duration="298000" />
+      <workItem from="1596304880379" duration="518000" />
+      <workItem from="1596305424280" duration="1185000" />
+      <workItem from="1596306635870" duration="275000" />
+      <workItem from="1596306936362" duration="2391000" />
+      <workItem from="1596395459446" duration="5575000" />
+      <workItem from="1596401074967" duration="831000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1590865544903</created>
@@ -774,13 +913,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="619469000" />
+    <option name="totallyTimeSpent" value="643396000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49268293" visible="true" weight="0.27987897" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49268293" visible="true" weight="0.33661118" />
       <window_info id="Structure" order="1" sideWeight="0.50731707" side_tool="true" weight="0.24432677" />
       <window_info id="Designer" order="2" />
       <window_info id="Persistence" order="3" sideWeight="0.50487804" side_tool="true" weight="0.2677761" />
@@ -823,199 +961,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/Repository/AgentRepo/AttributeRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="194" column="5" lean-forward="true" selection-start-line="32" selection-start-column="3" selection-end-line="194" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/Repository/AgentRepo/TypeRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="41" column="5" selection-start-line="26" selection-start-column="4" selection-end-line="41" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/Repository/AgentRepo/AgentRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="80" column="5" lean-forward="true" selection-start-line="28" selection-start-column="3" selection-end-line="80" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/Repository/FeedRepo/InstanceRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="83" column="5" lean-forward="true" selection-start-line="28" selection-start-column="3" selection-end-line="83" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/Repository/FeedRepo/SimulationRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="74" column="5" lean-forward="true" selection-start-line="41" selection-start-column="4" selection-end-line="74" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/Repository/FeedRepo/FeedRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="30" column="78" selection-start-line="30" selection-start-column="66" selection-end-line="30" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/Repository/FeedRepo/StatRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="215" column="31" selection-start-line="215" selection-start-column="27" selection-end-line="215" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/control/Generator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="176" column="41" selection-start-line="176" selection-start-column="41" selection-end-line="176" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/control/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/control/Observer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/control/Schedul.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/XmlUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/stat3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/stat2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/stat1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/stat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/simulate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/sideBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/NamedNodeMapIterable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/home.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/Enceyption.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/DBconf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/model/myfile.xml" />
     <entry file="file://$PROJECT_DIR$/src/bmosim/model/new.xml" />
     <entry file="file://$PROJECT_DIR$/src/bmosim/model/brahim.xml" />
     <entry file="file://$PROJECT_DIR$/src/bmosim/model/rahim.xml" />
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/funct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="241" selection-start-line="241" selection-end-line="241" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setDBSet#0;class#funct#0" />
-            <element signature="method#getDBSet#0;class#funct#0" />
-            <element signature="method#getAgentByCategory#0;class#funct#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bmosim/model/MDK.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
@@ -1030,28 +978,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/createFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3978">
-          <caret line="266" column="26" selection-start-line="266" selection-start-column="26" selection-end-line="266" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initFade#0;class#createFile#0" />
-            <element signature="method#fillAgCat#0;class#createFile#0" />
-            <element signature="method#getFile#0;class#createFile#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bmosim/model/dummm.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/Repository/AgentRepo/AgRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="168" column="42" lean-forward="true" selection-start-line="161" selection-start-column="8" selection-end-line="168" selection-end-column="42" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/Repository/AccountRepo/appUser.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1071,117 +999,18 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/view/accounts.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
           <caret line="46" column="151" lean-forward="true" selection-start-line="46" selection-start-column="151" selection-end-line="46" selection-end-column="151" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/accounts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2016">
-          <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/conf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1067">
-          <caret line="47" column="12" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/configuration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4195">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/createAgent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="27" column="27" selection-start-line="26" selection-start-column="4" selection-end-line="27" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#fillCombobox#0;class#createAgent#0" />
-            <element signature="method#getAgentClasses#0;class#createAgent#0" />
-          </folding>
-        </state>
-      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/view/topBar.fxml">
+      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/Repository/AccountRepo/UserRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="69" column="23" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/css/light.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="186" selection-start-line="186" selection-end-line="577" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/topBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="227" selection-start-line="227" selection-end-line="227" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#changeLight#0;class#topBar#0" />
-            <element signature="method#appusers#0;class#topBar#0" />
-            <element signature="method#alert#0;class#topBar#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="84" column="44" selection-start-line="84" selection-start-column="44" selection-end-line="84" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#createUser#0;class#login#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/css/dark.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="263" column="12" selection-start-line="263" selection-start-column="8" selection-end-line="263" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/createUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="120" column="39" selection-start-line="120" selection-start-column="39" selection-end-line="120" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/statData.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/statData.sql" />
     <entry file="file://$PROJECT_DIR$/src/bmosim/exchange/objects/Offer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1203,13 +1032,298 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/bmosim/agents/MAN.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="61" column="72" selection-start-line="61" selection-start-column="72" selection-end-line="61" selection-end-column="72" />
+        <state relative-caret-position="1914">
+          <caret line="142" selection-start-line="142" selection-end-line="142" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/accounts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="197" column="71" selection-start-line="197" selection-start-column="69" selection-end-line="197" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#go#0;class#accounts#0" />
+            <element signature="method#alertRemove#0;class#accounts#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/configuration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/createFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="272" column="49" selection-start-line="272" selection-start-column="47" selection-end-line="272" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initFade#0;class#createFile#0" />
+            <element signature="method#fillAgCat#0;class#createFile#0" />
+            <element signature="method#getFile#0;class#createFile#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/createUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="46" column="39" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="119" column="14" selection-start-line="119" selection-start-column="12" selection-end-line="119" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#createUser#0;class#login#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/simulate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="167" column="10" selection-start-line="167" selection-start-column="8" selection-end-line="167" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/view/configuration.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-953" />
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/images/logo111.png" />
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/images/logo112.png" />
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/images/logo333.png" />
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/images/logo444.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/images/logo555.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/images/logo-dark.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/images/logo-light.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/sideBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2754">
+          <caret line="187" column="46" selection-start-line="187" selection-start-column="46" selection-end-line="187" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/createAgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="237" column="103" selection-start-line="237" selection-start-column="103" selection-end-line="237" selection-end-column="103" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#fillCombobox#0;class#createAgent#0" />
+            <element signature="method#getAgentClasses#0;class#createAgent#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/home.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/stat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="119" selection-start-line="119" selection-end-line="119" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/conf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="107" column="24" selection-start-line="107" selection-start-column="18" selection-end-line="107" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/view/DBconf.fxml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/DBconfStruct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#399#400#0" expanded="true" />
+            <element signature="e#425#426#0" expanded="true" />
+            <element signature="e#463#464#0" expanded="true" />
+            <element signature="e#493#494#0" expanded="true" />
+            <element signature="e#524#525#0" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+            <element signature="e#591#592#0" expanded="true" />
+            <element signature="e#623#624#0" expanded="true" />
+            <element signature="e#654#655#0" expanded="true" />
+            <element signature="e#681#682#0" expanded="true" />
+            <element signature="e#721#722#0" expanded="true" />
+            <element signature="e#753#754#0" expanded="true" />
+            <element signature="e#784#785#0" expanded="true" />
+            <element signature="e#811#812#0" expanded="true" />
+            <element signature="e#851#852#0" expanded="true" />
+            <element signature="e#883#884#0" expanded="true" />
+            <element signature="e#914#915#0" expanded="true" />
+            <element signature="e#941#942#0" expanded="true" />
+            <element signature="e#981#982#0" expanded="true" />
+            <element signature="e#1013#1014#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/Repository/FeedRepo/StatRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/Repository/AgentRepo/AgRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="24" column="77" selection-start-line="24" selection-start-column="77" selection-end-line="24" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/Repository/AccountRepo/UserRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="69" column="23" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/topBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="73" column="33" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#changeLight#0;class#topBar#0" />
+            <element signature="method#alert#0;class#topBar#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/DBconf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2091">
+          <caret line="132" column="13" selection-start-line="132" selection-start-column="13" selection-end-line="132" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/conf/conf.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/stat1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1479">
+          <caret line="111" column="27" selection-start-line="111" selection-start-column="27" selection-end-line="111" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/stat2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="114" column="27" selection-start-line="114" selection-start-column="27" selection-end-line="114" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/css/light.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="91" column="58" selection-start-line="76" selection-end-line="91" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/stat3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/controller/funct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7106">
+          <caret line="453" column="52" selection-start-line="453" selection-start-column="52" selection-end-line="453" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#9253#10514#1" />
+            <element signature="method#getAgentByCategory#0;class#funct#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bmosim/ihm3/css/dark.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="90" column="58" selection-start-line="90" selection-start-column="58" selection-end-line="90" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -1223,7 +1337,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.291954" />
                 <option value="0.5" />
               </list>
             </option>

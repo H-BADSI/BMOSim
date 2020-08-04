@@ -164,6 +164,7 @@ public class simulate implements Initializable{
     @FXML
     void stop(ActionEvent event) throws IOException {
         Main.simState="SHUTDOWN";
+        bmosim.ihm3.Main.path="simulate";
         go("../view/simulate.fxml",event);
     }
 

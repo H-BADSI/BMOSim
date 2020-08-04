@@ -11,10 +11,16 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.effect.Bloom;
 import javafx.scene.effect.BoxBlur;
+import javafx.scene.effect.Effect;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.CycleMethod;
+import javafx.scene.paint.RadialGradient;
+import javafx.scene.paint.Stop;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -109,7 +115,9 @@ public class sideBar implements Initializable{
 
     @FXML
     void goHome(MouseEvent event) throws Exception {
+        Main.path="home";
         go("../view/home.fxml",event);
+
     }
 
     @FXML
@@ -127,16 +135,19 @@ public class sideBar implements Initializable{
 
     @FXML
     void goMetaModel(MouseEvent event) throws IOException {
+        Main.path="createAgent";
         go("../view/createAgent.fxml",event);
     }
 
     @FXML
     void goModel(MouseEvent event) throws IOException {
+        Main.path="createFile";
         go("../view/createFile.fxml",event);
     }
 
     @FXML
     void goSimulate(MouseEvent event) throws IOException {
+        Main.path="simulate";
         go("../view/simulate.fxml",event);
     }
 
@@ -168,6 +179,27 @@ public class sideBar implements Initializable{
             drawer2.setSidePane(box2);
         } catch (IOException e) {
             e.printStackTrace();
+        }
+
+        Effect ef = new Bloom(0.2);
+
+        switch (Main.path){
+            case "home": {
+                ((Bloom) ef).setThreshold(0.86);
+                home.setEffect(ef);
+            }break;
+            case "stat1": stat.setEffect(ef);break;
+            case "stat2": stat.setEffect(ef);break;
+            case "stat3": stat.setEffect(ef);break;
+            case "createFile": model.setEffect(ef);break;
+            case "createAgent": metaModel.setEffect(ef);break;
+            case "configuration": conf.setEffect(ef);break;
+            case "DBconf": conf.setEffect(ef);break;
+            case "simulate": {
+                ((Bloom) ef).setThreshold(0.7);
+                simulate.setEffect(ef);
+            }break;
+            default: break;
         }
 
         home.hoverProperty().addListener(new ChangeListener<Boolean>() {

@@ -5,6 +5,7 @@ import bmosim.ihm3.Hibernate.hibernateAgent.DBAgent;
 import bmosim.ihm3.Hibernate.hibernateAgent.DBAttribute;
 import bmosim.ihm3.Hibernate.hibernateAgent.DBAtttype;
 import bmosim.ihm3.Repository.Repo;
+import bmosim.ihm3.controller.DBconfStruct;
 import bmosim.ihm3.controller.funct;
 import bmosim.ihm3.model.type;
 import org.hibernate.Session;
@@ -18,10 +19,10 @@ import java.util.Arrays;
 public class AgRepo extends Repo {
     public AgRepo() {
         super("bmosim/ihm3/Hibernate/hibernateAgent/hiberAgent.cfg.xml");
-        ArrayList<String> dbconf = funct.getDBSet();
-        c.setProperty("hibernate.connection.url","jdbc:mysql://"+dbconf.get(2)+":"+dbconf.get(3)+"/"+dbconf.get(0));
-        c.setProperty("hibernate.connection.username",dbconf.get(4));
-        c.setProperty("hibernate.connection.password",dbconf.get(1));
+        ArrayList<DBconfStruct> dbconf = funct.getDBSet();
+        c.setProperty("hibernate.connection.url","jdbc:mysql://"+dbconf.get(0).getAdd()+":"+dbconf.get(0).getPort()+"/"+dbconf.get(0).getName());
+        c.setProperty("hibernate.connection.username",dbconf.get(0).getUser());
+        c.setProperty("hibernate.connection.password",dbconf.get(0).getPass());
         sessionFactory= ((Configuration) o).buildSessionFactory();
     }
 

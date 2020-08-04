@@ -10,8 +10,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.effect.Bloom;
 import javafx.scene.effect.BlurType;
 import javafx.scene.effect.DropShadow;
+import javafx.scene.effect.Effect;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
@@ -84,18 +86,28 @@ public class conf implements Initializable{
 
     @FXML
     void goConf1(MouseEvent event) throws IOException {
+        Main.path="configuration";
         go("../view/configuration.fxml",event);
 
     }
 
     @FXML
     void goConf2(MouseEvent event) throws IOException {
+        Main.path="DBconf";
         go("../view/DBconf.fxml",event);
 
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        Effect ef = new Bloom(0.2);
+
+        switch (Main.path){
+            case "configuration": conf1.setEffect(ef);break;
+            case "DBconf": conf2.setEffect(ef);break;
+            default: break;
+        }
 
         conf1.hoverProperty().addListener(new ChangeListener<Boolean>() {
 

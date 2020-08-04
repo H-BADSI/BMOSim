@@ -24,10 +24,6 @@
                   <Font name="Calibri Bold" size="29.0" />
                </font>
             </Label>
-      
-              <VBox prefHeight="600" prefWidth="94">
-                  <fx:include source="sideBar.fxml" />
-              </VBox>
             <ScrollPane layoutX="275.0" layoutY="115.0" prefHeight="329.0" prefWidth="658.0">
                <content>
                   <TableView fx:id="table" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="328.0" prefWidth="655.0">
@@ -45,6 +41,10 @@
             <JFXButton fx:id="adm" layoutX="361.0" layoutY="491.0" onAction="#makeAdm" ripplerFill="#1ec979" style="-fx-background-color: #1ec979;" text="make admin" />
             <JFXButton fx:id="sadm" layoutX="490.0" layoutY="491.0" onAction="#makeSAdm" ripplerFill="#1ec979" style="-fx-background-color: #1ec979;" text="make super admin" />
             <JFXButton fx:id="ordianry" layoutX="634.0" layoutY="491.0" onAction="#makeOrd" ripplerFill="#1ec979" style="-fx-background-color: #1ec979;" text="make ordinary" />
+      
+              <VBox prefHeight="600" prefWidth="94">
+                  <fx:include source="sideBar.fxml" />
+              </VBox>
       
           </children>
       </AnchorPane>

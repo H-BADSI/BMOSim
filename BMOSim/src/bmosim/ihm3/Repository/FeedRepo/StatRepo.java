@@ -4,6 +4,7 @@ import bmosim.ihm3.Hibernate.hibernateFeed.DBFeed;
 import bmosim.ihm3.Hibernate.hibernateFeed.DBInstance;
 import bmosim.ihm3.Hibernate.hibernateFeed.DBSimulation;
 import bmosim.ihm3.Repository.Repo;
+import bmosim.ihm3.controller.DBconfStruct;
 import bmosim.ihm3.controller.funct;
 import bmosim.ihm3.model.vals;
 import bmosim.ihm3.model.vars;
@@ -17,10 +18,10 @@ import java.util.ArrayList;
 public class StatRepo extends Repo {
     public StatRepo() {
         super("bmosim/ihm3/Hibernate/hibernateFeed/hiberFeed.cfg.xml");
-        ArrayList<String> dbconf = funct.getDBSet();
-        c.setProperty("hibernate.connection.url","jdbc:mysql://"+dbconf.get(7)+":"+dbconf.get(8)+"/"+dbconf.get(5));
-        c.setProperty("hibernate.connection.username",dbconf.get(9));
-        c.setProperty("hibernate.connection.password",dbconf.get(6));
+        ArrayList<DBconfStruct> dbconf = funct.getDBSet();
+        c.setProperty("hibernate.connection.url","jdbc:mysql://"+dbconf.get(1).getAdd()+":"+dbconf.get(1).getPort()+"/"+dbconf.get(1).getName());
+        c.setProperty("hibernate.connection.username",dbconf.get(1).getUser());
+        c.setProperty("hibernate.connection.password",dbconf.get(1).getPass());
         sessionFactory= ((Configuration) o).buildSessionFactory();
     }
 

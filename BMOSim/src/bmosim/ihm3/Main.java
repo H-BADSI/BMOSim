@@ -2,10 +2,9 @@ package bmosim.ihm3;
 
 import bmosim.ihm3.Hibernate.hibernateAccount.DBUser;
 import bmosim.ihm3.Repository.AccountRepo.UserRepo;
-//import bmosim.ihm3.Repository.AccountRepo.appUser;
 import bmosim.ihm3.Repository.AgentRepo.AgRepo;
 import bmosim.ihm3.Repository.FeedRepo.StatRepo;
-import bmosim.ihm3.controller.Enceyption;
+import bmosim.ihm3.controller.DBconfStruct;
 import bmosim.ihm3.controller.funct;
 import com.jfoenix.controls.*;
 import javafx.application.Application;
@@ -27,9 +26,7 @@ public class Main extends Application {
 
     public Scene scene;
 
-//    public static Connection conAgent;
-//    public static Connection conStat;
-//    public static Connection conAccount;
+    public static String path;
 
     private double xOffset = 0;
     private double yOffset = 0;
@@ -43,15 +40,13 @@ public class Main extends Application {
 
     public static DBUser loginUser=new DBUser("admin","admin","admin");
 
-//    public static Controller controller ;
-
     @Override
     public void start(Stage primaryStage) throws Exception{
 
         primaryStage.initStyle(StageStyle.TRANSPARENT);
         dark_light= funct.getDarkLight();
 
-        ArrayList<String> dbconf = funct.getDBSet();
+        ArrayList<DBconfStruct> dbconf = funct.getDBSet();
 //        conAgent=bdd.connect(dbconf.get(2),dbconf.get(3),dbconf.get(0),dbconf.get(4),p1);
 //        conStat=bdd.connect(dbconf.get(7),dbconf.get(8),dbconf.get(5),dbconf.get(9),p2);
 //        conAccount=bdd.connect(dbconf.get(7),dbconf.get(8),"acc",dbconf.get(9),p2);
@@ -60,6 +55,7 @@ public class Main extends Application {
 //        conAccount=bdd.connect("localhost","3306","acc","root","emplacement44");
 
         Parent root = FXMLLoader.load(getClass().getResource("view/login.fxml"));
+        path="login";
 
         root.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
@@ -118,61 +114,7 @@ public class Main extends Application {
         dialogLayout.setActions(confirm);
         dialog.show();
     }
-    public static void main(String[] args) throws Exception {
-//        Enceyption e = new Enceyption();
-//        System.out.println(e.encrypt("admin"));
+    public static void main(String[] args){
         launch(args);
-//        UserRepo user = new UserRepo("KHALED","KHALED");
-//        System.out.println(user.isAdmin());
-//        new AttributeRepo().disJoinAttAgent("versality","ANA");
-
-//        System.out.println(new AttributeRepo().getAttributesByAgent("COM").toString());
-
-
-//        System.out.println(new AgentRepo().getAgClass("Brahim"));
-//        System.out.println(new InstanceRepo().getIdInstByIdSimAndOrd(2,1));
-//            new SimulationRepo().insertSim("braaaaaa");
-//        SessionFactory sessionFactory = new Configuration().configure("bmosim/ihm3/hibernateFeed/hiberFeed.cfg.xml").buildSessionFactory();
-//
-//        Session session = sessionFactory.openSession();
-
-//        ArrayList<Integer> dbs = new InstanceRepo().getIdInstBySim("sim1");
-//        for (Integer s:dbs
-//             ) {
-//            System.out.println("**** "+s+" "+s);
-//        }
-//        ArrayList<Double> i= new FeedRepo().getFeed(3);
-//        for (Double s:i
-//             ) {
-//            System.out.println("**** "+s+" "+s);
-//        }
-//        System.out.println("****"+i);
-
-//        ArrayList<vals> d = new FeedRepo().getFeeds("3");
-//        for (vals s : d
-//        ) {
-//            System.out.println("**** " + s.getVars().get(0).getVal() + " " + s.getVars().get(1).getVal());
-//        }
     }
-
-
-//    public void start(Stage stage,String a) throws Exception{
-//
-////        ;
-////        if(dark_light){
-////            System.out.println("++++++");
-////            scene.getStylesheets().clear();
-////            scene.getStylesheets().add(dark);
-////        }else{
-////            System.out.println("****");
-////            scene.getStylesheets().clear();
-////            scene.getStylesheets().add(light);
-////        }
-//
-//        stage.setScene(scene);
-//        stage.show();
-//
-//    }
-
-
 }

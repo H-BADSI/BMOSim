@@ -46,6 +46,15 @@ public class createAgent implements Initializable{
     private JFXTextField attVal1;
 
     @FXML
+    private Separator sep2;
+
+    @FXML
+    private Separator sep3;
+
+    @FXML
+    private Separator sep1;
+
+    @FXML
     private JFXButton delete1;
 
     AgRepo agrepo = Main.agRepo;
@@ -66,6 +75,9 @@ public class createAgent implements Initializable{
 
     @FXML
     void addOneAttribute(String name,String type,String val){
+        sep1.setMinHeight(sep1.getHeight()+70);
+        sep2.setMinHeight(sep2.getHeight()+70);
+        sep3.setMinHeight(sep3.getHeight()+70);
         attLine++;
         int range = attLine;
         JFXComboBox<String> cb1 = new JFXComboBox<String>();
@@ -132,11 +144,16 @@ public class createAgent implements Initializable{
             JFXTextField attval = (JFXTextField) scene.lookup("#attVal"+range);
             JFXButton attbt = (JFXButton) scene.lookup("#"+range);
             String att = (String) attname.getValue();
-            agrepo.disJoinAttAgent(att,String.valueOf(agenttype.getValue()));
+            if(attname.getValue()!=null && agenttype.getValue()!=null){
+                agrepo.disJoinAttAgent(att,String.valueOf(agenttype.getValue()));
+            }
             vbox1.getChildren().remove(attname);
             vbox2.getChildren().remove(atttype);
             vbox3.getChildren().remove(attval);
             vbox4.getChildren().remove(attbt);
+            sep1.setMinHeight(sep1.getHeight()-70);
+            sep2.setMinHeight(sep2.getHeight()-70);
+            sep3.setMinHeight(sep3.getHeight()-70);
         });
         vbox4.getChildren().add(bt);
     }
@@ -218,7 +235,9 @@ public class createAgent implements Initializable{
 
         delete1.setOnAction(event -> {
             String att = (String) ((JFXComboBox)vbox1.getChildren().get(0)).getValue();
-            agrepo.disJoinAttAgent(att,String.valueOf(agenttype.getValue()));
+            if(((JFXComboBox)vbox1.getChildren().get(0)).getValue()!=null && agenttype.getValue()!=null){
+                agrepo.disJoinAttAgent(att,String.valueOf(agenttype.getValue()));
+            }
             vbox1.getChildren().remove(0);
             vbox2.getChildren().remove(0);
             vbox3.getChildren().remove(0);

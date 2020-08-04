@@ -255,31 +255,49 @@ public class funct {
         return b;
     }
 
-    public static void setDBSet(String n1,String p1,String n2,String p2,String a1,String a2,
-                                String pr1,String pr2,String u1,String u2){
+    public static void setDBSet(ArrayList<DBconfStruct> array){
         Document doc =getConfDoc();
         Node root=doc.getElementsByTagName("root").item(0);
         Node db;
-        Node db1,db2;
+        Node db1,db2,db3,db4;
         Node name1,name2,pass1,pass2,address1,address2,port1,port2,user1,user2;
+        Node name3,name4,pass3,pass4,address3,address4,port3,port4,user3,user4;
 
-        if(doc.getElementsByTagName("db").item(0)==null){
-            db = doc.createElement("db");
-            root.appendChild(db);
-        }else {
-            db=doc.getElementsByTagName("db").item(0);
-        }
-        if(doc.getElementsByTagName("db1").item(0)==null){
-            db1 = doc.createElement("db1");
-            db.appendChild(db1);
-        }else{
-            db1=doc.getElementsByTagName("db1").item(0);
-        }
-        if(doc.getElementsByTagName("db2").item(0)==null){
-            db2 = doc.createElement("db2");
-            db.appendChild(db2);
-        }else{
-            db2=doc.getElementsByTagName("db2").item(0);
+        {
+            if (doc.getElementsByTagName("db").item(0) == null) {
+                db = doc.createElement("db");
+                root.appendChild(db);
+            } else {
+                db = doc.getElementsByTagName("db").item(0);
+            }
+
+            if (doc.getElementsByTagName("db1").item(0) == null) {
+                db1 = doc.createElement("db1");
+                db.appendChild(db1);
+            } else {
+                db1 = doc.getElementsByTagName("db1").item(0);
+            }
+
+            if (doc.getElementsByTagName("db2").item(0) == null) {
+                db2 = doc.createElement("db2");
+                db.appendChild(db2);
+            } else {
+                db2 = doc.getElementsByTagName("db2").item(0);
+            }
+
+            if (doc.getElementsByTagName("db3").item(0) == null) {
+                db3 = doc.createElement("db3");
+                db.appendChild(db3);
+            } else {
+                db3 = doc.getElementsByTagName("db3").item(0);
+            }
+
+            if (doc.getElementsByTagName("db4").item(0) == null) {
+                db4 = doc.createElement("db4");
+                db.appendChild(db4);
+            } else {
+                db4 = doc.getElementsByTagName("db4").item(0);
+            }
         }
 
         Node e1 = doc.getElementsByTagName("name").item(0);
@@ -302,96 +320,286 @@ public class funct {
         if (e5 != null) {
             e5.getParentNode().removeChild(e5);
         }
+
         name1 = doc.createElement("name");
-        name1.setTextContent(n1);
+        name1.setTextContent(array.get(0).name);
         pass1 = doc.createElement("pass");
-        pass1.setTextContent(p1);
+        pass1.setTextContent(array.get(0).pass);
         address1 = doc.createElement("address");
-        address1.setTextContent(a1);
+        address1.setTextContent(array.get(0).add);
         port1 = doc.createElement("port");
-        port1.setTextContent(pr1);
+        port1.setTextContent(array.get(0).port);
         user1 = doc.createElement("username");
-        user1.setTextContent(u1);
+        user1.setTextContent(array.get(0).user);
         db1.appendChild(address1);
         db1.appendChild(port1);
         db1.appendChild(name1);
         db1.appendChild(user1);
         db1.appendChild(pass1);
 
-        e1 = doc.getElementsByTagName("name").item(1);
-        if (e1 != null) {
-            e1.getParentNode().removeChild(e1);
+        Node e6 = doc.getElementsByTagName("name").item(1);
+        if (e6 != null) {
+            e6.getParentNode().removeChild(e6);
         }
-        e2 = doc.getElementsByTagName("pass").item(1);
-        if (e2 != null) {
-            e2.getParentNode().removeChild(e2);
+        Node e7 = doc.getElementsByTagName("pass").item(1);
+        if (e7 != null) {
+            e7.getParentNode().removeChild(e7);
         }
-        e3 = doc.getElementsByTagName("address").item(1);
-        if (e3 != null) {
-            e3.getParentNode().removeChild(e3);
+        Node e8 = doc.getElementsByTagName("address").item(1);
+        if (e8 != null) {
+            e8.getParentNode().removeChild(e8);
         }
-        e4 = doc.getElementsByTagName("port").item(1);
-        if (e4 != null) {
-            e4.getParentNode().removeChild(e4);
+        Node e9 = doc.getElementsByTagName("port").item(1);
+        if (e9 != null) {
+            e9.getParentNode().removeChild(e9);
         }
-        e5 = doc.getElementsByTagName("username").item(1);
-        if (e5 != null) {
-            e5.getParentNode().removeChild(e5);
+        Node e10 = doc.getElementsByTagName("username").item(1);
+        if (e10 != null) {
+            e10.getParentNode().removeChild(e10);
         }
+
         name2 = doc.createElement("name");
-        name2.setTextContent(n2);
+        name2.setTextContent(array.get(1).name);
         pass2 = doc.createElement("pass");
-        pass2.setTextContent(p2);
+        pass2.setTextContent(array.get(1).pass);
         address2 = doc.createElement("address");
-        address2.setTextContent(a2);
+        address2.setTextContent(array.get(1).add);
         port2 = doc.createElement("port");
-        port2.setTextContent(pr2);
+        port2.setTextContent(array.get(1).port);
         user2 = doc.createElement("username");
-        user2.setTextContent(u2);
+        user2.setTextContent(array.get(1).user);
         db2.appendChild(address2);
         db2.appendChild(port2);
         db2.appendChild(name2);
         db2.appendChild(user2);
         db2.appendChild(pass2);
 
+        Node e11 = doc.getElementsByTagName("name").item(2);
+        if (e11 != null) {
+            e11.getParentNode().removeChild(e11);
+        }
+        Node e12 = doc.getElementsByTagName("pass").item(2);
+        if (e12 != null) {
+            e12.getParentNode().removeChild(e12);
+        }
+        Node e13 = doc.getElementsByTagName("address").item(2);
+        if (e13 != null) {
+            e13.getParentNode().removeChild(e13);
+        }
+        Node e14 = doc.getElementsByTagName("port").item(2);
+        if (e14 != null) {
+            e14.getParentNode().removeChild(e14);
+        }
+        Node e15 = doc.getElementsByTagName("username").item(2);
+        if (e15 != null) {
+            e15.getParentNode().removeChild(e15);
+        }
+
+        name3 = doc.createElement("name");
+        name3.setTextContent(array.get(2).name);
+        pass3 = doc.createElement("pass");
+        pass3.setTextContent(array.get(2).pass);
+        address3 = doc.createElement("address");
+        address3.setTextContent(array.get(2).add);
+        port3 = doc.createElement("port");
+        port3.setTextContent(array.get(2).port);
+        user3 = doc.createElement("username");
+        user3.setTextContent(array.get(2).user);
+        db3.appendChild(address3);
+        db3.appendChild(port3);
+        db3.appendChild(name3);
+        db3.appendChild(user3);
+        db3.appendChild(pass3);
+
+        Node e16 = doc.getElementsByTagName("name").item(3);
+        if (e16 != null) {
+            e16.getParentNode().removeChild(e16);
+        }
+        Node e17 = doc.getElementsByTagName("pass").item(3);
+        if (e17 != null) {
+            e17.getParentNode().removeChild(e17);
+        }
+        Node e18 = doc.getElementsByTagName("address").item(3);
+        if (e18 != null) {
+            e18.getParentNode().removeChild(e18);
+        }
+        Node e19 = doc.getElementsByTagName("port").item(3);
+        if (e19 != null) {
+            e19.getParentNode().removeChild(e19);
+        }
+        Node e20 = doc.getElementsByTagName("username").item(3);
+        if (e20 != null) {
+            e20.getParentNode().removeChild(e20);
+        }
+
+        name4 = doc.createElement("name");
+        name4.setTextContent(array.get(3).name);
+        pass4 = doc.createElement("pass");
+        pass4.setTextContent(array.get(3).pass);
+        address4 = doc.createElement("address");
+        address4.setTextContent(array.get(3).add);
+        port4 = doc.createElement("port");
+        port4.setTextContent(array.get(3).port);
+        user4 = doc.createElement("username");
+        user4.setTextContent(array.get(3).user);
+        db4.appendChild(address4);
+        db4.appendChild(port4);
+        db4.appendChild(name4);
+        db4.appendChild(user4);
+        db4.appendChild(pass4);
+
         funct.writeXML(doc,"src/bmosim/ihm3/conf/conf.xml");
     }
 
-    public static ArrayList<String> getDBSet(){
-        ArrayList<String> as = new ArrayList<>();
+    public static ArrayList<DBconfStruct> getDBSet(){
+        ArrayList<DBconfStruct> as = new ArrayList<>();
         Document doc = getConfDoc();
+        DBconfStruct conf1=new DBconfStruct(),conf2=new DBconfStruct(),conf3=new DBconfStruct(),conf4=new DBconfStruct();
         Node n= doc.getElementsByTagName("name").item(0);
-        as.add(n==null?"":n.getTextContent());
+        if (n == null) {
+            conf1.setName("");
+        } else {
+            conf1.setName(n.getTextContent());
+        }
         n= doc.getElementsByTagName("pass").item(0);
         try {
-            as.add(n==null?"":new Enceyption().decrypt(n.getTextContent()));
+            if (n == null) {
+                conf1.setPass("");
+            } else {
+                conf1.setPass(new Enceyption().decrypt(n.getTextContent()));
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
         n= doc.getElementsByTagName("address").item(0);
-        as.add(n==null?"":n.getTextContent());
+        if (n == null) {
+            conf1.setAdd("");
+        } else {
+            conf1.setAdd(n.getTextContent());
+        }
         n= doc.getElementsByTagName("port").item(0);
-        as.add(n==null?"":n.getTextContent());
+        if (n == null) {
+            conf1.setPort("");
+        } else {
+            conf1.setPort(n.getTextContent());
+        }
         n= doc.getElementsByTagName("username").item(0);
-        as.add(n==null?"":n.getTextContent());
+        if (n == null) {
+            conf1.setUser("");
+        } else {
+            conf1.setUser(n.getTextContent());
+        }
+        as.add(conf1);
 
         n= doc.getElementsByTagName("name").item(1);
-        as.add(n==null?"":n.getTextContent());
+        if (n == null) {
+            conf2.setName("");
+        } else {
+            conf2.setName(n.getTextContent());
+        }
         n= doc.getElementsByTagName("pass").item(1);
         try {
-            as.add(n==null?"":new Enceyption().decrypt(n.getTextContent()));
+            if (n == null) {
+                conf2.setPass("");
+            } else {
+                conf2.setPass(new Enceyption().decrypt(n.getTextContent()));
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
         n= doc.getElementsByTagName("address").item(1);
-        as.add(n==null?"":n.getTextContent());
+        if (n == null) {
+            conf2.setAdd("");
+        } else {
+            conf2.setAdd(n.getTextContent());
+        }
         n= doc.getElementsByTagName("port").item(1);
-        as.add(n==null?"":n.getTextContent());
+        if (n == null) {
+            conf2.setPort("");
+        } else {
+            conf2.setPort(n.getTextContent());
+        }
         n= doc.getElementsByTagName("username").item(1);
-        as.add(n==null?"":n.getTextContent());
+        if (n == null) {
+            conf2.setUser("");
+        } else {
+            conf2.setUser(n.getTextContent());
+        }
+        as.add(conf2);
+
+        n= doc.getElementsByTagName("name").item(2);
+        if (n == null) {
+            conf3.setName("");
+        } else {
+            conf3.setName(n.getTextContent());
+        }
+        n= doc.getElementsByTagName("pass").item(2);
+        try {
+            if (n == null) {
+                conf3.setPass("");
+            } else {
+                conf3.setPass(new Enceyption().decrypt(n.getTextContent()));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        n= doc.getElementsByTagName("address").item(2);
+        if (n == null) {
+            conf3.setAdd("");
+        } else {
+            conf3.setAdd(n.getTextContent());
+        }
+        n= doc.getElementsByTagName("port").item(2);
+        if (n == null) {
+            conf3.setPort("");
+        } else {
+            conf3.setPort(n.getTextContent());
+        }
+        n= doc.getElementsByTagName("username").item(2);
+        if (n == null) {
+            conf3.setUser("");
+        } else {
+            conf3.setUser(n.getTextContent());
+        }
+        as.add(conf3);
+
+        n= doc.getElementsByTagName("name").item(3);
+        if (n == null) {
+            conf4.setName("");
+        } else {
+            conf4.setName(n.getTextContent());
+        }
+        n= doc.getElementsByTagName("pass").item(3);
+        try {
+            if (n == null) {
+                conf4.setPass("");
+            } else {
+                conf4.setPass(new Enceyption().decrypt(n.getTextContent()));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        n= doc.getElementsByTagName("address").item(3);
+        if (n == null) {
+            conf4.setAdd("");
+        } else {
+            conf4.setAdd(n.getTextContent());
+        }
+        n= doc.getElementsByTagName("port").item(3);
+        if (n == null) {
+            conf4.setPort("");
+        } else {
+            conf4.setPort(n.getTextContent());
+        }
+        n= doc.getElementsByTagName("username").item(3);
+        if (n == null) {
+            conf4.setUser("");
+        } else {
+            conf4.setUser(n.getTextContent());
+        }
+        as.add(conf4);
 
         return as;
-
     }
 
     public static agXmlStruct getAgentByCategory(String path,String cat){
