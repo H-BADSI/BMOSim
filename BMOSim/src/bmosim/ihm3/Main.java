@@ -18,15 +18,13 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-import java.util.ArrayList;
-
 public class Main extends Application {
 
     public static boolean dark_light;
 
     public Scene scene;
 
-    public static String path;
+    public static String path="";
 
     private double xOffset = 0;
     private double yOffset = 0;
@@ -46,16 +44,19 @@ public class Main extends Application {
         primaryStage.initStyle(StageStyle.TRANSPARENT);
         dark_light= funct.getDarkLight();
 
-        ArrayList<DBconfStruct> dbconf = funct.getDBSet();
-//        conAgent=bdd.connect(dbconf.get(2),dbconf.get(3),dbconf.get(0),dbconf.get(4),p1);
-//        conStat=bdd.connect(dbconf.get(7),dbconf.get(8),dbconf.get(5),dbconf.get(9),p2);
-//        conAccount=bdd.connect(dbconf.get(7),dbconf.get(8),"acc",dbconf.get(9),p2);
-//        conAgent=bdd.connect("localhost","3306","agentdb","root","emplacement44");
-//        conStat=bdd.connect("localhost","3306","stat","root","emplacement44");
-//        conAccount=bdd.connect("localhost","3306","acc","root","emplacement44");
-
-        Parent root = FXMLLoader.load(getClass().getResource("view/login.fxml"));
-        path="login";
+        Parent root;
+        if(funct.firstTime()){
+            root= FXMLLoader.load(getClass().getResource("view/install1.fxml"));
+            path="login";
+        }else{
+            if(funct.getAppType()){
+                root= FXMLLoader.load(getClass().getResource("view/login.fxml"));
+                path="login";
+            }else {
+                root= FXMLLoader.load(getClass().getResource("view/home.fxml"));
+                path="home";
+            }
+        }
 
         root.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override

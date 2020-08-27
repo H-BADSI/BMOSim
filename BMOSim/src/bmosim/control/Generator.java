@@ -13,13 +13,12 @@ import bmosim.agents.DB;
 //import bmosim.exchange.param.ParamCusAgent;
 //import bmosim.exchange.param.ParamManAgent;
 //import bmosim.exchange.param.ParamSupAgent;
-import bmosim.ihm.Controller.Ent;
 import bmosim.model.AGR;
 
 public class Generator extends Agent{
 	
 	ReturnCode code =null;
-	static Ent enterprise ;
+//	static Ent enterprise ;
 	public static boolean alive = true;
 
 	static int idSim;
@@ -36,14 +35,6 @@ public class Generator extends Agent{
 		executeThisAgent(1,false);
 
 	}
-
-	public static void main(Ent ent) {
-		enterprise = ent;
-		executeThisAgent(1,true
-//				Madkit.LevelOption.agentLogLevel.toString(),"OFF"
-				);
-	}
-	
 
 	public void activate () {	
 		createGroupIfAbsent(AGR.COMMUNITY, AGR.GROUP);

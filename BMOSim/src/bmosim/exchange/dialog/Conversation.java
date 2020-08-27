@@ -18,6 +18,7 @@ object_of_value,
 complaint,
 complaint_offer,
 compensation_response,
+//profiling_report,
 credit_note;
 
 }

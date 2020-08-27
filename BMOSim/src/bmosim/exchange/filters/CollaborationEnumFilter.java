@@ -30,6 +30,9 @@ public class CollaborationEnumFilter implements MessageFilter{
 		case REFUND_ORDER:{
 			if (m.getCode() == Collaboration.REFUND_ORDER) tf = true;
 		};break;
+		case PROFILING_REPORT:{
+			if (m.getCode() == Collaboration.PROFILING_REPORT) tf = true;
+		};break;
 		default:{
 			System.out.println("CollaborationEnumFilter --> filter does not exist");
 			tf = false;

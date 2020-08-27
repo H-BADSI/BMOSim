@@ -203,7 +203,7 @@ public class simulate implements Initializable{
                 Main.simState="RUNNING";
 
                 try {
-//                    Main.execute(1,"aasa","src/bmosim/model/MDK.xml",simSet);
+//                    Main.execute(1,"aasa","src/bmosim/model/MDK3.xml",simSet);
                     Main.execute(Integer.valueOf(nbSim.getText()),simName.getText(), funct.getXmlDirectory()+"\\"+simFile.getValue(),simSet);
                 } catch (Exception e) {
                     e.printStackTrace();

@@ -7,6 +7,8 @@ import bmosim.ihm3.controller.funct;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.exception.SQLGrammarException;
+import org.hibernate.service.spi.ServiceException;
 
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
@@ -29,7 +31,17 @@ public class UserRepo extends Repo {
         c.setProperty("hibernate.connection.url","jdbc:mysql://localhost:3306/acc");
         c.setProperty("hibernate.connection.username","root");
         c.setProperty("hibernate.connection.password","emplacement44");
-        sessionFactory= ((Configuration) o).buildSessionFactory();
+        try {
+            sessionFactory= ((Configuration) o).buildSessionFactory();
+        }catch (SQLGrammarException e){
+            System.out.println("ERROR**************1");
+        }catch (ExceptionInInitializerError e){
+            System.out.println("ERROR**************2");
+        }catch (ServiceException e){
+            System.out.println("ERROR**************3");
+        }
+
+
     }
 
     public void insertUser(DBUser u){

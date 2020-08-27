@@ -3,7 +3,9 @@ package bmosim.AbsAgents;
 import java.util.ArrayList;
 import java.util.List;
 import bmosim.exchange.dialog.Collaboration;
+import bmosim.exchange.dialog.Conversation;
 import bmosim.exchange.dialog.Queries;
+import bmosim.exchange.objects.report;
 import bmosim.exchange.param.ParamManAgent;
 import bmosim.hibernateDB.DBcustomer;
 import bmosim.hibernateDB.DBoffer;
@@ -76,7 +78,20 @@ public abstract class AbstractMAN extends AbsEtsAgent{
 	    		}
 	    };break;
 		case Role.Man.PERF:{
-			//System.out.println("performance assessment");
+			System.out.println("performance assessment");//////brahim recieve message
+			@SuppressWarnings("unchecked")
+			EnumMessage<Collaboration> quest = checkAgentMessage(Collaboration.PROFILING_REPORT);
+			if (quest != null) {
+				report rep = (report) quest.getContent()[0];
+				System.out.println("rep++ " + rep.toString());
+			}
+////				DBcustomer customerInformation = (DBcustomer) quest.getContent()[1];
+//////	    		if (logger != null) logger.info("customerInfo -----------------------------> "+customerInformation);
+////				@SuppressWarnings("unchecked")
+////				DBoffer bestOffer = selectOffer((ArrayList<DBoffer>) quest.getContent()[0],customerInformation);
+////				EnumMessage<Collaboration> answer = new EnumMessage<Collaboration>(Collaboration.BEST_OFFER,bestOffer);
+////				sendReply(quest,answer);
+
 		};break;
 		case Role.Man.STRAT:{
 			//System.out.println("strategy selection");

@@ -141,12 +141,12 @@ public class MAN extends AbstractMAN{
 //			List<InferredAxiomGenerator<? extends OWLAxiom>> isTargeted = new ArrayList<InferredAxiomGenerator<? extends OWLAxiom>>();
 //			isTargeted.add
 
-			try {
-				manager.saveOntology(bmoTest);
-			} catch (OWLOntologyStorageException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+//			try {
+//				manager.saveOntology(bmoTest);
+//			} catch (OWLOntologyStorageException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
 
 
 	}

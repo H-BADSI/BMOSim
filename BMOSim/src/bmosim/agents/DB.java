@@ -371,6 +371,8 @@ public class DB extends AbstractDB{
 		ArrayList<DBcustomer> cusinfo = gettingCustomers();
 		sendReply(query,new EnumMessage<Queries>(Queries.CUSTOMER_INFO,cusinfo));
 	}
+
+	//NEEDS
 	public ArrayList<DBneed> gettingTreatedNeed(Integer cus){
 
 		Session session = sessionFactory.openSession();
@@ -386,7 +388,52 @@ public class DB extends AbstractDB{
 		ArrayList<DBneed> dBneeds = gettingTreatedNeed(cus);
 		sendReply(query,new EnumMessage<Queries>(Queries.CUSTOMER_DATA,dBneeds));
 	}
+	//ORDERS
+	public ArrayList<DBorder> gettingOrders(Integer cus){
 
+		Session session = sessionFactory.openSession();
+		@SuppressWarnings("unchecked")
+		List<DBorder> x = (List<DBorder>)session
+				.createQuery("from DBorder as order where order.customer_id="+cus)
+				.list();
+		session.close();
+		if (x.isEmpty()) return null; else return (ArrayList<DBorder>)x;
+	}
+
+	public void getCustomerOrders(Integer cus){
+		ArrayList<DBorder> dborders = gettingOrders(cus);
+		sendReply(query,new EnumMessage<Queries>(Queries.ORDER_DATA,dborders));
+	}
+	//OFFERS
+	public DBoffer gettingOffer(Integer offer){
+
+		Session session = sessionFactory.openSession();
+		@SuppressWarnings("unchecked")
+		DBoffer x = ((DBoffer) session
+				.createQuery("from DBoffer as offer where offer.offer_id=" + offer));
+		session.close();
+		if (x==null) return null; else return x;
+	}
+
+	public void getCustomerOffer(Integer offer){
+		DBoffer dboffer = gettingOffer(offer);
+		sendReply(query,new EnumMessage<Queries>(Queries.OFFER_DATA,dboffer));
+	}
+	//PRODUCT
+	public DBproduct gettingProduct(Integer prod){
+
+		Session session = sessionFactory.openSession();
+		@SuppressWarnings("unchecked")
+		DBproduct x = (DBproduct)session
+				.createQuery("from DBproduct as product where product.product_id="+prod);
+		session.close();
+		if (x==null) return null; else return x;
+	}
+
+	public void getCustomerPoduct(Integer prod){
+		DBproduct dBproducts = gettingProduct(prod);
+		sendReply(query,new EnumMessage<Queries>(Queries.PRODUCT_DATA,dBproducts));
+	}
 	/*brahim*/
     
     public void getOrder(int ordID){

@@ -6,6 +6,7 @@ import javafx.scene.image.ImageView;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 
+import javax.print.Doc;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -125,6 +126,49 @@ public class funct {
             }
         }
         return as;
+    }
+
+    public static void unfirstTime(){
+        Document doc = getConfDoc();
+        Node n = doc.getElementsByTagName("firstTime").item(0);
+        if(n!=null){
+            n.getParentNode().removeChild(n);
+            writeXML(doc,"src/bmosim/ihm3/conf/conf.xml");
+        }
+    }
+
+    public static boolean firstTime(){
+        Document doc = getConfDoc();
+        if(doc.getElementsByTagName("firstTime").item(0)==null){
+            Element e = doc.createElement("firstTime");
+
+            doc.getFirstChild().appendChild(e);
+            writeXML(doc,"src/bmosim/ihm3/conf/conf.xml");
+            return true;
+        }
+        return false;
+    }
+
+    public static void setAppType(boolean b){
+        Document doc = getConfDoc();
+        Node e =doc.getElementsByTagName("firstTime").item(0);
+        if(doc.getElementsByTagName("firstTime").item(0)!=null){
+            e.setTextContent(b?"true":"false");
+            writeXML(doc,"src/bmosim/ihm3/conf/conf.xml");
+        }
+    }
+
+    public static boolean getAppType(){
+        Document doc = getConfDoc();
+        Node e =doc.getElementsByTagName("firstTime").item(0);
+        if(doc.getElementsByTagName("firstTime").item(0)!=null){
+            switch (e.getTextContent()){
+                case "true":return true;
+                case "false":return false;
+                default:return false;
+            }
+        }
+        return true;
     }
 
     public static ArrayList<Integer> getSimSet(){
@@ -642,6 +686,8 @@ public class funct {
         return agXmlStruct;
 
     }
+
+
 
 
 }

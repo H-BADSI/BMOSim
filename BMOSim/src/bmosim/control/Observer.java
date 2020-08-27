@@ -191,12 +191,12 @@ public class Observer extends Watcher{
 	}
 
 	public void updateDB()  {
-		Main.statRepo.insertFeeds(Generator.idInst,Observer.globalScore,Observer.satOffersNb,Observer.accOffersNb,
-					Observer.unAccOffersNb,Observer.avgT,Observer.ordersTotalNb.intValue(),Observer.purchasesTotalNb.intValue()
-                    ,Observer.turnover,Observer.refund);
-//			System.out.println("FEEDS: "+Generator.idInst+" "+Observer.globalScore+" "+Observer.satOffersNb+" "+Observer.accOffersNb+" "+
-//                    Observer.unAccOffersNb+" "+Observer.avgT+" "+Observer.ordersTotalNb.intValue()+" "+Observer.purchasesTotalNb.intValue()
-//                    +" "+Observer.turnover+" "+Observer.refund);
+//		Main.statRepo.insertFeeds(Generator.idInst,Observer.globalScore,Observer.satOffersNb,Observer.accOffersNb,
+//					Observer.unAccOffersNb,Observer.avgT,Observer.ordersTotalNb.intValue(),Observer.purchasesTotalNb.intValue()
+//                    ,Observer.turnover,Observer.refund);
+			System.out.println("FEEDS: "+Generator.idInst+" "+Observer.globalScore+" "+Observer.satOffersNb+" "+Observer.accOffersNb+" "+
+                    Observer.unAccOffersNb+" "+Observer.avgT+" "+Observer.ordersTotalNb.intValue()+" "+Observer.purchasesTotalNb.intValue()
+                    +" "+Observer.turnover+" "+Observer.refund);
 	}
 
 }

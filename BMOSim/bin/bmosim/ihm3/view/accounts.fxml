@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bmosim.ihm3.controller.accounts">
+   <children>
+      <AnchorPane id="anchor" fx:id="an" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1045.0" styleClass="anchorpane">
+      
+          <children>
+              <Pane layoutX="240.0" prefHeight="34.0" prefWidth="806.0" style="-fx-background-color: #dddddd;">
+                  <fx:include source="topBar.fxml" />
+              </Pane>
+            <Label alignment="CENTER" layoutX="240.0" layoutY="34.0" prefHeight="44.0" prefWidth="227.0" styleClass="title" text="Users">
+               <font>
+                  <Font name="Calibri Bold" size="29.0" />
+               </font>
+            </Label>
+            <ScrollPane layoutX="275.0" layoutY="115.0" prefHeight="329.0" prefWidth="658.0">
+               <content>
+                  <TableView fx:id="table" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="328.0" prefWidth="655.0">
+                    <columns>
+                        <TableColumn fx:id="id" prefWidth="61.999969482421875" text="ID" />
+                      <TableColumn fx:id="username" maxWidth="122.00003051757812" minWidth="-1.0" prefWidth="119.00003051757812" text="Username" />
+                      <TableColumn fx:id="admin" maxWidth="247.00003051757812" minWidth="-Infinity" prefWidth="83.0" text="Admin" />
+                        <TableColumn fx:id="login" maxWidth="309.0" minWidth="-Infinity" prefWidth="182.0" text="last login" />
+                        <TableColumn fx:id="logout" maxWidth="336.0" minWidth="-Infinity" prefWidth="198.0" text="last logout" />
+                    </columns>
+                  </TableView>
+               </content>
+            </ScrollPane>
+            <JFXButton fx:id="delete" layoutX="973.0" layoutY="280.0" onAction="#delete" ripplerFill="#b11d1d" style="-fx-background-color: #b11d1d;" text="delete" textFill="WHITE" />
+            <JFXButton fx:id="adm" layoutX="361.0" layoutY="491.0" onAction="#makeAdm" ripplerFill="#1ec979" style="-fx-background-color: #1ec979;" text="make admin" />
+            <JFXButton fx:id="sadm" layoutX="490.0" layoutY="491.0" onAction="#makeSAdm" ripplerFill="#1ec979" style="-fx-background-color: #1ec979;" text="make super admin" />
+            <JFXButton fx:id="ordianry" layoutX="634.0" layoutY="491.0" onAction="#makeOrd" ripplerFill="#1ec979" style="-fx-background-color: #1ec979;" text="make ordinary" />
+      
+              <VBox prefHeight="600" prefWidth="94">
+                  <fx:include source="sideBar.fxml" />
+              </VBox>
+      
+          </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bmosim.ihm3.controller.install1">
+   <children>
+      <AnchorPane id="anchor" fx:id="an" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="424.0" prefWidth="848.0" style="-fx-background-color: linear-gradient(from 300px 70px to 280px 500px,#43cea2, #185a9d);" styleClass="anchorpane">
+         <children>
+            <Pane layoutX="25.0" layoutY="82.0" prefHeight="280.0" prefWidth="182.0">
+               <children>
+                  <Label text="Agents database">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="name1" focusColor="#16d7d4" layoutX="14.0" layoutY="40.0" prefHeight="25.0" prefWidth="117.0" promptText="DB Name" unFocusColor="#2ea1a1" />
+                  <JFXTextField fx:id="port1" focusColor="#16d7d4" layoutX="14.0" layoutY="78.0" prefHeight="25.0" prefWidth="55.0" promptText="Port" unFocusColor="#2ea1a1" />
+                  <JFXTextField fx:id="add1" focusColor="#16d7d4" layoutX="14.0" layoutY="115.0" prefHeight="25.0" prefWidth="117.0" promptText="Address" unFocusColor="#2ea1a1" />
+                  <JFXPasswordField fx:id="pass1" focusColor="#16d7d4" layoutX="14.0" layoutY="155.0" prefHeight="25.0" prefWidth="117.0" promptText="password" unFocusColor="#2ea1a1" />
+                  <JFXTextField fx:id="user1" focusColor="#16d7d4" layoutX="14.0" layoutY="196.0" prefHeight="25.0" prefWidth="117.0" promptText="User Name" unFocusColor="#2ea1a1" />
+               </children>
+            </Pane>
+            <Pane layoutX="225.0" layoutY="81.0" prefHeight="280.0" prefWidth="182.0">
+               <children>
+                  <Label text="Statistics database">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="name2" focusColor="#16d7d4" layoutX="7.0" layoutY="50.0" prefHeight="25.0" prefWidth="117.0" promptText="DB Name" unFocusColor="#2ea1a1" />
+                  <JFXTextField fx:id="port2" focusColor="#16d7d4" layoutX="7.0" layoutY="84.0" prefHeight="25.0" prefWidth="55.0" promptText="Port" unFocusColor="#2ea1a1" />
+                  <JFXTextField fx:id="add2" focusColor="#16d7d4" layoutX="7.0" layoutY="115.0" prefHeight="25.0" prefWidth="117.0" promptText="Address" unFocusColor="#2ea1a1" />
+                  <JFXPasswordField fx:id="pass2" focusColor="#16d7d4" layoutX="7.0" layoutY="160.0" prefHeight="25.0" prefWidth="117.0" promptText="password" unFocusColor="#2ea1a1" />
+                  <JFXTextField fx:id="user2" focusColor="#16d7d4" layoutX="7.0" layoutY="200.0" prefHeight="25.0" prefWidth="117.0" promptText="User Name" unFocusColor="#2ea1a1" />
+               </children>
+            </Pane>
+            <Pane layoutX="433.0" layoutY="82.0" prefHeight="280.0" prefWidth="182.0">
+               <children>
+                  <Label text="Enterprise database">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="name4" focusColor="#16d7d4" layoutX="14.0" layoutY="53.0" prefHeight="25.0" prefWidth="117.0" promptText="DB Name" unFocusColor="#2ea1a1" />
+                  <JFXTextField fx:id="port4" focusColor="#16d7d4" layoutX="14.0" layoutY="78.0" prefHeight="25.0" prefWidth="55.0" promptText="Port" unFocusColor="#2ea1a1" />
+                  <JFXTextField fx:id="add4" focusColor="#16d7d4" layoutX="14.0" layoutY="115.0" prefHeight="25.0" prefWidth="117.0" promptText="Address" unFocusColor="#2ea1a1" />
+                  <JFXPasswordField fx:id="pass4" focusColor="#16d7d4" layoutX="14.0" layoutY="162.0" prefHeight="25.0" prefWidth="117.0" promptText="password" unFocusColor="#2ea1a1" />
+                  <JFXTextField fx:id="user4" focusColor="#16d7d4" layoutX="14.0" layoutY="202.0" prefHeight="25.0" prefWidth="117.0" promptText="User Name" unFocusColor="#2ea1a1" />
+               </children>
+            </Pane>
+            <Pane fx:id="accPane" layoutX="637.0" layoutY="81.0" prefHeight="280.0" prefWidth="182.0">
+               <children>
+                  <Label text="Accounts database">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="name3" focusColor="#16d7d4" layoutX="8.0" layoutY="48.0" prefHeight="25.0" prefWidth="117.0" promptText="DB Name" unFocusColor="#2ea1a1" />
+                  <JFXTextField fx:id="port3" focusColor="#16d7d4" layoutX="14.0" layoutY="82.0" prefHeight="25.0" prefWidth="55.0" promptText="Port" unFocusColor="#2ea1a1" />
+                  <JFXTextField fx:id="add3" focusColor="#16d7d4" layoutX="11.0" layoutY="115.0" prefHeight="25.0" prefWidth="117.0" promptText="Address" unFocusColor="#2ea1a1" />
+                  <JFXPasswordField fx:id="pass3" focusColor="#16d7d4" layoutX="11.0" layoutY="165.0" prefHeight="25.0" prefWidth="117.0" promptText="password" unFocusColor="#2ea1a1" />
+                  <JFXTextField fx:id="user3" focusColor="#16d7d4" layoutX="11.0" layoutY="207.0" prefHeight="25.0" prefWidth="117.0" promptText="User Name" unFocusColor="#2ea1a1" />
+               </children>
+            </Pane>
+            <JFXComboBox fx:id="appType" layoutX="179.0" layoutY="33.0" />
+            <Label layoutX="46.0" layoutY="36.0" text="Application type">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="768.0" layoutY="385.0" onAction="#next" style="-fx-background-color: white;" text="next &gt;" />
+            <ImageView fx:id="cls" fitHeight="20.0" fitWidth="26.0" layoutX="809.0" layoutY="14.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true" styleClass="close">
+               <image>
+                  <Image url="@../images/power.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

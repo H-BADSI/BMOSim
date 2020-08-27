@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import org.controlsfx.control.CheckComboBox?>
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bmosim.ihm3.controller.stat1">
+   <children>
+      <AnchorPane id="anchor" fx:id="an" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1045.0" styleClass="anchorpane">
+      
+          <children>
+              <Pane layoutX="240.0" prefHeight="34.0" prefWidth="806.0" style="-fx-background-color: #dddddd;">
+                  <fx:include source="topBar.fxml" />
+              </Pane>
+              <JFXComboBox fx:id="sim" editable="true" focusColor="#16d7d4" layoutX="347.0" layoutY="152.0" prefHeight="25.0" prefWidth="132.0" promptText="simulation" unFocusColor="#2ea1a1" />
+            <JFXComboBox fx:id="inst" editable="true" focusColor="#16d7d4" layoutX="577.0" layoutY="152.0" prefHeight="25.0" prefWidth="132.0" promptText="instance" unFocusColor="#2ea1a1" />
+            <Label layoutX="796.0" layoutY="135.0" text="Comparison" />
+            <CheckComboBox fx:id="vars" disable="true" layoutX="796.0" layoutY="152.0" prefHeight="25.0" prefWidth="107.0" />
+              <LineChart id="chart" fx:id="chart" layoutX="266.0" layoutY="198.0" prefHeight="390.0" prefWidth="740.0" titleSide="BOTTOM">
+                  <xAxis>
+                      <CategoryAxis side="BOTTOM" fx:id="x" />
+                  </xAxis>
+                  <yAxis>
+                      <NumberAxis fx:id="y" side="LEFT" />
+                  </yAxis>
+              </LineChart>
+      
+              <VBox prefHeight="600" prefWidth="94">
+                  <fx:include source="sideBar.fxml" />
+              </VBox>
+      
+          </children>
+      </AnchorPane>
+   </children>
+</StackPane>
